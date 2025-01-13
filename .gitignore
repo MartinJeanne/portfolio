@@ -1,0 +1,16 @@
+# Ignore everything in the root
+/*
+/*/
+
+# Except
+!.gitignore
+!wp-content/
+!compose.yml
+
+# Ignore wp-content expect
+wp-content/*
+!wp-content/languages/
+!wp-content/plugins/
+!wp-content/themes/
+!wp-content/upgrade/
+!wp-content/index.php
