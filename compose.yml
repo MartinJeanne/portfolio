@@ -1,5 +1,4 @@
 services:
-
   wordpress:
     container_name: wordpress
     image: wordpress
