@@ -1,6 +1,6 @@
 # Portfolio
 Work in progress of a new portfolio.\
-Made with Wordpress.
+Made with using Wordpress with Docker.
 
 ## Dump wordpress database
 ```bash
