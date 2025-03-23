@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 interface BaseCardProps {
   defaultContent?: ReactNode;
-  hoverContent: ReactNode;
+  hoverContent?: ReactNode;
   background?: string;
   color?: string;
   icon?: ReactNode;
@@ -83,15 +83,16 @@ export const BaseCard = ({
       }}
     >
       <div
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        onMouseEnter={() => hoverContent && setIsHovered(true)}
+        onMouseLeave={() => hoverContent && setIsHovered(false)}
         style={{ 
           height: '100%',
           width: '100%',
           position: 'relative',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          cursor: hoverContent ? 'pointer' : 'default'
         }}
       >
         <motion.div
@@ -112,23 +113,25 @@ export const BaseCard = ({
           {renderDefaultContent()}
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isHovered ? 1 : 0 }}
-          transition={{ duration: 0.2 }}
-          style={{ 
-            display: isHovered ? 'flex' : 'none',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: '100%',
-            width: '100%',
-            overflowY: 'auto',
-            paddingRight: '10px'
-          }}
-        >
-          {hoverContent}
-        </motion.div>
+        {hoverContent && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: isHovered ? 1 : 0 }}
+            transition={{ duration: 0.2 }}
+            style={{ 
+              display: isHovered ? 'flex' : 'none',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              height: '100%',
+              width: '100%',
+              overflowY: 'auto',
+              paddingRight: '10px'
+            }}
+          >
+            {hoverContent}
+          </motion.div>
+        )}
       </div>
     </Card>
   );

@@ -2,7 +2,7 @@ import { AppContainer, CardGrid } from './styles/StyledComponents';
 import { HeaderComponent } from './components/Header';
 import {
   IntroCard,
-  JavaCard,
+  SkillsCard,
   RemoteWorkCard,
   ProjectCard,
   DeveloperCard,
@@ -20,7 +20,7 @@ function App() {
       <HeaderComponent />
       <CardGrid>
         <IntroCard />
-        <JavaCard />
+        <SkillsCard />
         <RemoteWorkCard />
         <ProjectCard />
         <DeveloperCard />

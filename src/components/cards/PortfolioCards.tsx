@@ -1,7 +1,8 @@
-import { FaMapMarkerAlt, FaJava, FaGraduationCap, FaLanguage, FaRunning,FaLinkedin, FaGithub, FaGlobe } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaJava, FaGraduationCap, FaLanguage, FaRunning, FaLinkedin, FaGithub, FaGlobe } from 'react-icons/fa';
 import { AiOutlineHome } from 'react-icons/ai';
 import { BsBuilding } from 'react-icons/bs';
 import { MdInterests } from 'react-icons/md';
+import { SiTypescript } from 'react-icons/si';
 import { BaseCard } from './BaseCard';
 import { Button } from '../../styles/StyledComponents';
 import styled from '@emotion/styled';
@@ -13,7 +14,11 @@ interface LanguageBarProps {
 const LanguageBar = styled.div<LanguageBarProps>`
   width: ${(props: LanguageBarProps) => props.level}%;
   height: 50px;
-  background: #ff4757;
+  background: ${(props: LanguageBarProps) => {
+    if (props.level >= 80) return '#c40414';
+    if (props.level >= 60) return '#e02232';
+    if (props.level >= 40) return '#ff7182';
+  }};
   color: white;
   display: flex;
   align-items: center;
@@ -55,51 +60,85 @@ const SocialLink = styled.a`
 export const IntroCard = () => (
   <BaseCard
     icon={<FaMapMarkerAlt size={40} />}
-    title="Mon portfolio"
+    title="Qui suis-je ?"
     subtitle="Caen, FR"
     actionText="A propos de moi"
     hoverContent={
       <>
-        <h2 style={{ fontSize: '1.75rem', marginBottom: '15px' }}>Qui suis-je ?</h2>
-        <p style={{ marginTop: '15px', lineHeight: '1.6', fontSize: '1.1rem' }}>
-          This is a longer description of me, of my backstory, my backyard, my backfire, my backend, my frontend and my friends.
-        </p>
-        <p style={{ marginTop: '15px', color: '#ff4757', fontSize: '1.1rem' }}>
-          J'ai besoin d'un visa de travail
-        </p>
-        <div style={{ marginTop: '20px' }}>
-          <h3 style={{ color: '#ff4757', fontSize: '1.4rem' }}>Expérience Pro</h3>
-          <p style={{ marginTop: '10px', fontSize: '1.1rem' }}>
-            2 années en tant que développeur et 3 années d'autres expériences professionnelles
-          </p>
-        </div>
-        <p style={{ marginTop: '15px', fontStyle: 'italic', fontSize: '1.1rem' }}>
-          Je suis en recherche active
+        <h3 style={{ color: '#ff4757', fontSize: '1.4rem' }}>À propos de moi</h3>
+        <p style={{ marginTop: '10px', fontSize: '1.1rem' }}>
+          Je suis un développeur diplômé d'un
+          master en informatique, avec trois
+          années d'expérience dans des
+          environnements Agile. <br /> <br />
+          Aujourd'hui, je suis à la recherche de
+          nouveaux défis techniques !
+
         </p>
       </>
     }
   />
 );
 
-export const JavaCard = () => (
+export const SkillsCard = () => (
   <BaseCard
     variant="primary"
     icon={<FaJava size={40} color="white" />}
-    title="Je code avec Java"
+    title="Compétences"
     actionText="Voir plus"
     hoverContent={
       <>
-        <h2 style={{ color: 'white' }}>Compétences Java</h2>
-        <ul style={{ color: 'white', marginTop: '15px', lineHeight: '1.6' }}>
-          <li>Spring Boot</li>
-          <li>JPA / Hibernate</li>
-          <li>REST APIs</li>
-          <li>Microservices</li>
-          <li>Tests unitaires (JUnit)</li>
-        </ul>
-        <p style={{ color: 'white', marginTop: '15px' }}>
-          3 ans d'expérience en développement Java
-        </p>
+        <div style={{ 
+          width: '150px', 
+          height: '150px', 
+          margin: '0 auto',
+          background: 'conic-gradient(rgba(255, 255, 255, 0.32) 0% 33%, rgba(255, 255, 255, 0.65) 33% 66%, rgba(255, 255, 255, 0.88) 66% 100%)',
+          borderRadius: '50%',
+          position: 'relative',
+        }}>
+          <div style={{
+            position: 'absolute',
+            top: '0',
+            left: '50%',
+            transform: 'translate(-50%, -100%)',
+            color: 'white',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '2px'
+          }}>
+            <FaJava size={35} />
+            <span>Java</span>
+          </div>
+          <div style={{
+            position: 'absolute',
+            bottom: '0',
+            left: '10px',
+            transform: 'translate(-50%, 100%)',
+            color: 'white',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '2px'
+          }}>
+            <SiTypescript size={35} />
+            <span>TS</span>
+          </div>
+          <div style={{
+            position: 'absolute',
+            bottom: '0',
+            right: '10px',
+            transform: 'translate(50%, 100%)',
+            color: 'white',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '2px'
+          }}>
+            <img src="/src/assets/react.svg" alt="React" style={{ width: '35px', height: '35px', filter: 'brightness(0) invert(1)' }} />
+             <span>React</span>
+          </div>
+        </div>
       </>
     }
   />
@@ -129,8 +168,8 @@ export const RemoteWorkCard = () => (
 
 export const ProjectCard = () => (
   <BaseCard
-    title="Mon projet coup de coeur ❤️ : Discord Bot"
-    actionText="Voir 1 projet"
+    title="Mes projets coups de coeur ❤️"
+    actionText="Voir les projets"
     hoverContent={
       <>
         <h2>Détails du projet</h2>
@@ -173,23 +212,17 @@ export const DeveloperCard = () => (
 
 export const EducationCard = () => (
   <BaseCard
+    variant='primary'
     icon={<FaGraduationCap size={40} />}
-    title="Je suis diplômé de ISEN"
+    title="Je suis diplômé du CESI"
     actionText="Toutes mes études"
     hoverContent={
       <>
         <h2>Formation</h2>
-        <div style={{ marginTop: '15px' }}>
-          <h3 style={{ color: '#ff4757' }}>ISEN - Ingénieur</h3>
+        <div style={{ marginTop: '15px', color: 'white' }}>
+          <h3>ISEN - Ingénieur</h3>
           <p>2018 - 2021</p>
           <p>Spécialisation en développement logiciel</p>
-        </div>
-        <div style={{ marginTop: '15px' }}>
-          <h3 style={{ color: '#ff4757' }}>Certifications</h3>
-          <ul>
-            <li>Java SE 11 Developer</li>
-            <li>Spring Professional</li>
-          </ul>
         </div>
       </>
     }
@@ -280,50 +313,19 @@ export const SocialNetworksCard = () => (
     title="Mes réseaux"
     defaultContent={
       <div style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', gap: '15px' }}>
-        <SocialLink href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+        <SocialLink href="https://linkedin.com/in/MartinJeanne" target="_blank" rel="noopener noreferrer">
           <FaLinkedin size={24} />
           <span>Mon profil Linkedin</span>
         </SocialLink>
-        <SocialLink href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">
+        <SocialLink href="https://github.com/MartinJeanne" target="_blank" rel="noopener noreferrer">
           <FaGithub size={24} />
           <span>Mon profil Github</span>
         </SocialLink>
-        <SocialLink href="https://leetcode.com/your-profile" target="_blank" rel="noopener noreferrer">
+        <SocialLink href="https://leetcode.com/Martin-jnne" target="_blank" rel="noopener noreferrer">
           <FaGlobe size={24} />
           <span>LeetCode</span>
         </SocialLink>
       </div>
-    }
-    hoverContent={
-      <>
-        <h2>Connect with me</h2>
-        <div style={{ marginTop: '20px' }}>
-          <p style={{ marginBottom: '15px' }}>Let's connect and collaborate on exciting projects!</p>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-            <SocialLink href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin size={24} />
-              <div>
-                <div>LinkedIn</div>
-                <small style={{ color: '#666' }}>Professional Network</small>
-              </div>
-            </SocialLink>
-            <SocialLink href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">
-              <FaGithub size={24} />
-              <div>
-                <div>GitHub</div>
-                <small style={{ color: '#666' }}>Code Repository</small>
-              </div>
-            </SocialLink>
-            <SocialLink href="https://leetcode.com/your-profile" target="_blank" rel="noopener noreferrer">
-              <FaGlobe size={24} />
-              <div>
-                <div>LeetCode</div>
-                <small style={{ color: '#666' }}>Coding Skills</small>
-              </div>
-            </SocialLink>
-          </div>
-        </div>
-      </>
     }
   />
 ); 
