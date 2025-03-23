@@ -1,5 +1,4 @@
-import { motion } from 'framer-motion';
-import { FaMapMarkerAlt, FaJava, FaGraduationCap, FaLanguage, FaLinkedin, FaGithub, FaGlobe } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaJava, FaGraduationCap, FaLanguage, FaRunning,FaLinkedin, FaGithub, FaGlobe } from 'react-icons/fa';
 import { AiOutlineHome } from 'react-icons/ai';
 import { BsBuilding } from 'react-icons/bs';
 import { MdInterests } from 'react-icons/md';
@@ -13,22 +12,24 @@ interface LanguageBarProps {
 
 const LanguageBar = styled.div<LanguageBarProps>`
   width: ${(props: LanguageBarProps) => props.level}%;
-  height: 40px;
+  height: 50px;
   background: #ff4757;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  border-radius: 4px;
+  border-radius: 8px;
   transition: width 0.3s ease;
+  font-size: 1.1rem;
 `;
 
 const LanguageContainer = styled.div`
-  margin: 15px 0;
+  margin: 5px 0;
+  width: 100%;
   h3 {
-    margin-bottom: 8px;
-    font-size: 18px;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
   }
 `;
 
@@ -53,18 +54,10 @@ const SocialLink = styled.a`
 
 export const IntroCard = () => (
   <BaseCard
-    defaultContent={
-      <>
-        <h2 style={{ fontSize: '1.75rem', marginBottom: '15px' }}>Mon portfolio</h2>
-        <p style={{ fontSize: '1.1rem' }}><FaMapMarkerAlt /> Caen, FR</p>
-        <motion.p
-          style={{ marginTop: '20px', color: '#ff4757', cursor: 'pointer', fontSize: '1.1rem' }}
-          whileHover={{ x: 5 }}
-        >
-          A propos de moi →
-        </motion.p>
-      </>
-    }
+    icon={<FaMapMarkerAlt size={40} />}
+    title="Mon portfolio"
+    subtitle="Caen, FR"
+    actionText="A propos de moi"
     hoverContent={
       <>
         <h2 style={{ fontSize: '1.75rem', marginBottom: '15px' }}>Qui suis-je ?</h2>
@@ -90,20 +83,10 @@ export const IntroCard = () => (
 
 export const JavaCard = () => (
   <BaseCard
-    background="#ff4757"
-    color="white"
-    defaultContent={
-      <>
-        <FaJava size={40} color="white" />
-        <h2 style={{ color: 'white', marginTop: '20px' }}>Je code avec Java</h2>
-        <motion.p
-          style={{ marginTop: '20px', color: 'white', cursor: 'pointer' }}
-          whileHover={{ x: 5 }}
-        >
-          Voir plus →
-        </motion.p>
-      </>
-    }
+    variant="primary"
+    icon={<FaJava size={40} color="white" />}
+    title="Je code avec Java"
+    actionText="Voir plus"
     hoverContent={
       <>
         <h2 style={{ color: 'white' }}>Compétences Java</h2>
@@ -124,18 +107,9 @@ export const JavaCard = () => (
 
 export const RemoteWorkCard = () => (
   <BaseCard
-    defaultContent={
-      <>
-        <AiOutlineHome size={40} color="#ff4757" />
-        <h2>J'aimerais travailler en remote</h2>
-        <motion.p
-          style={{ marginTop: '20px', color: '#ff4757', cursor: 'pointer' }}
-          whileHover={{ x: 5 }}
-        >
-          Découvrez mon job de rêve →
-        </motion.p>
-      </>
-    }
+    icon={<AiOutlineHome size={40} />}
+    title="J'aimerais travailler en remote"
+    actionText="Découvrez mon job de rêve"
     hoverContent={
       <>
         <h2>Pourquoi le remote ?</h2>
@@ -155,18 +129,8 @@ export const RemoteWorkCard = () => (
 
 export const ProjectCard = () => (
   <BaseCard
-    defaultContent={
-      <>
-        <img src="/tools.jpg" alt="Outils" style={{ width: '100%', height: '150px', objectFit: 'cover', borderRadius: '10px' }} />
-        <h2 style={{ marginTop: '20px' }}>Mon projet coup de coeur ❤️ : Discord Bot</h2>
-        <motion.p
-          style={{ marginTop: '20px', color: '#ff4757', cursor: 'pointer' }}
-          whileHover={{ x: 5 }}
-        >
-          Voir 1 projet →
-        </motion.p>
-      </>
-    }
+    title="Mon projet coup de coeur ❤️ : Discord Bot"
+    actionText="Voir 1 projet"
     hoverContent={
       <>
         <h2>Détails du projet</h2>
@@ -187,18 +151,9 @@ export const ProjectCard = () => (
 
 export const DeveloperCard = () => (
   <BaseCard
-    defaultContent={
-      <>
-        <BsBuilding size={40} color="#ff4757" />
-        <h2>Développeur back-end Java @Sinay</h2>
-        <motion.p
-          style={{ marginTop: '20px', color: '#ff4757', cursor: 'pointer' }}
-          whileHover={{ x: 5 }}
-        >
-          Voir toutes les expériences →
-        </motion.p>
-      </>
-    }
+    icon={<BsBuilding size={40} />}
+    title="Développeur back-end Java @Sinay"
+    actionText="Voir toutes les expériences"
     hoverContent={
       <>
         <h2>Expérience @Sinay</h2>
@@ -218,18 +173,9 @@ export const DeveloperCard = () => (
 
 export const EducationCard = () => (
   <BaseCard
-    defaultContent={
-      <>
-        <FaGraduationCap size={40} color="#ff4757" />
-        <h2>Je suis diplômé de ISEN</h2>
-        <motion.p
-          style={{ marginTop: '20px', color: '#ff4757', cursor: 'pointer' }}
-          whileHover={{ x: 5 }}
-        >
-          Toutes mes études →
-        </motion.p>
-      </>
-    }
+    icon={<FaGraduationCap size={40} />}
+    title="Je suis diplômé de ISEN"
+    actionText="Toutes mes études"
     hoverContent={
       <>
         <h2>Formation</h2>
@@ -252,17 +198,10 @@ export const EducationCard = () => (
 
 export const HobbiesCard = () => (
   <BaseCard
-    background="#ff4757"
-    color="white"
-    defaultContent={
-      <>
-        <h2 style={{ color: 'white' }}>Hobbies</h2>
-        <p style={{ color: 'white', marginTop: '10px' }}>Vous n'avez pas encore ajouté de hobbies !</p>
-        <Button style={{ marginTop: '20px', background: 'transparent', border: '1px solid white', color: 'white' }}>
-          Ajouter un hobby
-        </Button>
-      </>
-    }
+    icon={<FaRunning size={40} />}
+    variant="primary"
+    title="Hobbies"
+    subtitle="Todo"
     hoverContent={
       <>
         <h2 style={{ color: 'white' }}>Mes passions</h2>
@@ -282,15 +221,10 @@ export const HobbiesCard = () => (
 
 export const InterestsCard = () => (
   <BaseCard
-    background="#333"
-    color="white"
-    defaultContent={
-      <>
-        <MdInterests size={40} color="white" />
-        <h2 style={{ color: 'white', marginTop: '20px' }}>Intéressé par :</h2>
-        <p style={{ color: 'white', marginTop: '10px' }}>React, l'IA, la blochaine et les chiots.</p>
-      </>
-    }
+    variant="dark"
+    icon={<MdInterests size={40} color="white" />}
+    title="Intéressé par :"
+    subtitle="React, l'IA, la blochaine et les chiots."
     hoverContent={
       <>
         <h2 style={{ color: 'white' }}>Centres d'intérêt</h2>
@@ -311,38 +245,19 @@ export const InterestsCard = () => (
 
 export const LanguagesCard = () => (
   <BaseCard
-    defaultContent={
-      <>
-        <FaLanguage size={40} color="#ff4757" />
-        <h2>Je parle</h2>
-        <p style={{ marginTop: '8px', fontSize: '22px', color: '#ff4757' }}>
-          Français<br />
-          Anglais<br />
-          Allemand
-        </p>
-        <motion.p
-          style={{ marginTop: '15px', color: '#ff4757', cursor: 'pointer' }}
-          whileHover={{ x: 5 }}
-        >
-        </motion.p>
-      </>
-    }
+    icon={<FaLanguage size={40} />}
+    title="Je parle Français, Anglais et Allemand"
     hoverContent={
       <>
-        <h2 style={{ color: '#ff4757', marginBottom: '20px' }}>Languages</h2>
-        <div style={{ marginTop: '10px' }}>
-          <LanguageContainer>
-            <LanguageBar level={100}>Français</LanguageBar>
-          </LanguageContainer>
-
-          <LanguageContainer>
-            <LanguageBar level={75}>Anglais</LanguageBar>
-          </LanguageContainer>
-
-          <LanguageContainer>
-            <LanguageBar level={40}>Allemand</LanguageBar>
-          </LanguageContainer>
-        </div>
+        <LanguageContainer>
+          <LanguageBar level={100}>Français</LanguageBar>
+        </LanguageContainer>
+        <LanguageContainer>
+          <LanguageBar level={75}>Anglais</LanguageBar>
+        </LanguageContainer>
+        <LanguageContainer>
+          <LanguageBar level={40}>Allemand</LanguageBar>
+        </LanguageContainer>
       </>
     }
   />
@@ -352,7 +267,7 @@ export const SpotifyCard = () => (
   <iframe
     src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWl7MndYYxge"
     width="100%"
-    height="100%"
+    height="360px"
     frameBorder="0"
     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
     loading="lazy"
@@ -362,24 +277,22 @@ export const SpotifyCard = () => (
 
 export const SocialNetworksCard = () => (
   <BaseCard
+    title="Mes réseaux"
     defaultContent={
-      <>
-        <h2>Mes réseaux</h2>
-        <div style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', gap: '15px' }}>
-          <SocialLink href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin size={24} />
-            <span>Mon profil Linkedin</span>
-          </SocialLink>
-          <SocialLink href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">
-            <FaGithub size={24} />
-            <span>Mon profil Github</span>
-          </SocialLink>
-          <SocialLink href="https://leetcode.com/your-profile" target="_blank" rel="noopener noreferrer">
-            <FaGlobe size={24} />
-            <span>LeetCode</span>
-          </SocialLink>
-        </div>
-      </>
+      <div style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', gap: '15px' }}>
+        <SocialLink href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin size={24} />
+          <span>Mon profil Linkedin</span>
+        </SocialLink>
+        <SocialLink href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">
+          <FaGithub size={24} />
+          <span>Mon profil Github</span>
+        </SocialLink>
+        <SocialLink href="https://leetcode.com/your-profile" target="_blank" rel="noopener noreferrer">
+          <FaGlobe size={24} />
+          <span>LeetCode</span>
+        </SocialLink>
+      </div>
     }
     hoverContent={
       <>
