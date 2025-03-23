@@ -1,0 +1,83 @@
+import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
+
+export const AppContainer = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+`;
+
+export const Header = styled.header`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+`;
+
+export const Profile = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+`;
+
+export const ProfileImage = styled.img`
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+`;
+
+export const ProfileInfo = styled.div`
+  h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  p {
+    margin: 5px 0;
+    color: #666;
+  }
+`;
+
+export const ButtonGroup = styled.div`
+  display: flex;
+  gap: 10px;
+`;
+
+export const Button = styled.button`
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  
+  &:hover {
+    background: #f5f5f5;
+  }
+`;
+
+export const CardGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+`;
+
+export const Card = styled(motion.div)`
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  
+  h2 {
+    font-size: 28px;
+    margin: 0 0 15px 0;
+    color: #ff4757;
+  }
+  
+  p {
+    color: #666;
+    margin: 0;
+  }
+`; 
