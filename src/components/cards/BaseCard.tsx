@@ -14,20 +14,43 @@ export const BaseCard = ({ defaultContent, hoverContent, background = 'white', c
 
   return (
     <Card
-      whileHover={{ scale: 1.03 }}
-      transition={{ type: "spring", stiffness: 300 }}
-      style={{ background, color }}
+      style={{ 
+        background, 
+        color,
+        height: '360px',
+        padding: '35px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+      }}
     >
       <div
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        style={{ height: '100%' }}
+        style={{ 
+          height: '100%',
+          width: '100%',
+          position: 'relative',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
       >
         <motion.div
           initial={{ opacity: 1 }}
           animate={{ opacity: isHovered ? 0 : 1 }}
           transition={{ duration: 0.2 }}
-          style={{ display: isHovered ? 'none' : 'block' }}
+          style={{ 
+            display: isHovered ? 'none' : 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '100%',
+            width: '100%',
+            overflowY: 'auto',
+            paddingRight: '10px'
+          }}
         >
           {defaultContent}
         </motion.div>
@@ -37,8 +60,14 @@ export const BaseCard = ({ defaultContent, hoverContent, background = 'white', c
           animate={{ opacity: isHovered ? 1 : 0 }}
           transition={{ duration: 0.2 }}
           style={{ 
-            display: isHovered ? 'block' : 'none',
-            height: '100%'
+            display: isHovered ? 'flex' : 'none',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '100%',
+            width: '100%',
+            overflowY: 'auto',
+            paddingRight: '10px'
           }}
         >
           {hoverContent}

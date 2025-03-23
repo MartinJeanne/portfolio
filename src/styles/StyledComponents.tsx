@@ -58,17 +58,22 @@ export const Button = styled.button`
 
 export const CardGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
   margin-top: 20px;
 `;
 
 export const Card = styled(motion.div)`
   background: white;
   border-radius: 15px;
-  padding: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+  
+  &:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
   
   h2 {
     font-size: 28px;
@@ -79,5 +84,23 @@ export const Card = styled(motion.div)`
   p {
     color: #666;
     margin: 0;
+  }
+
+  div {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+    }
   }
 `; 

@@ -1,19 +1,64 @@
 import { motion } from 'framer-motion';
-import { FaMapMarkerAlt, FaJava, FaGraduationCap, FaLanguage } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaJava, FaGraduationCap, FaLanguage, FaLinkedin, FaGithub, FaGlobe } from 'react-icons/fa';
 import { AiOutlineHome } from 'react-icons/ai';
 import { BsBuilding } from 'react-icons/bs';
 import { MdInterests } from 'react-icons/md';
 import { BaseCard } from './BaseCard';
 import { Button } from '../../styles/StyledComponents';
+import styled from '@emotion/styled';
+
+interface LanguageBarProps {
+  level: number;
+}
+
+const LanguageBar = styled.div<LanguageBarProps>`
+  width: ${(props: LanguageBarProps) => props.level}%;
+  height: 40px;
+  background: #ff4757;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+`;
+
+const LanguageContainer = styled.div`
+  margin: 15px 0;
+  h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+  }
+`;
+
+const SocialLink = styled.a`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgba(255, 71, 87, 0.1);
+  }
+
+  svg {
+    color: #ff4757;
+  }
+`;
 
 export const IntroCard = () => (
   <BaseCard
     defaultContent={
       <>
-        <h2>Mon portfolio</h2>
-        <p><FaMapMarkerAlt /> Caen, FR</p>
+        <h2 style={{ fontSize: '1.75rem', marginBottom: '15px' }}>Mon portfolio</h2>
+        <p style={{ fontSize: '1.1rem' }}><FaMapMarkerAlt /> Caen, FR</p>
         <motion.p
-          style={{ marginTop: '20px', color: '#ff4757', cursor: 'pointer' }}
+          style={{ marginTop: '20px', color: '#ff4757', cursor: 'pointer', fontSize: '1.1rem' }}
           whileHover={{ x: 5 }}
         >
           A propos de moi →
@@ -22,20 +67,20 @@ export const IntroCard = () => (
     }
     hoverContent={
       <>
-        <h2>Qui suis-je ?</h2>
-        <p style={{ marginTop: '15px', lineHeight: '1.6' }}>
+        <h2 style={{ fontSize: '1.75rem', marginBottom: '15px' }}>Qui suis-je ?</h2>
+        <p style={{ marginTop: '15px', lineHeight: '1.6', fontSize: '1.1rem' }}>
           This is a longer description of me, of my backstory, my backyard, my backfire, my backend, my frontend and my friends.
         </p>
-        <p style={{ marginTop: '15px', color: '#ff4757' }}>
+        <p style={{ marginTop: '15px', color: '#ff4757', fontSize: '1.1rem' }}>
           J'ai besoin d'un visa de travail
         </p>
         <div style={{ marginTop: '20px' }}>
-          <h3 style={{ color: '#ff4757', fontSize: '20px' }}>Expérience Pro</h3>
-          <p style={{ marginTop: '10px' }}>
+          <h3 style={{ color: '#ff4757', fontSize: '1.4rem' }}>Expérience Pro</h3>
+          <p style={{ marginTop: '10px', fontSize: '1.1rem' }}>
             2 années en tant que développeur et 3 années d'autres expériences professionnelles
           </p>
         </div>
-        <p style={{ marginTop: '15px', fontStyle: 'italic' }}>
+        <p style={{ marginTop: '15px', fontStyle: 'italic', fontSize: '1.1rem' }}>
           Je suis en recherche active
         </p>
       </>
@@ -270,29 +315,100 @@ export const LanguagesCard = () => (
       <>
         <FaLanguage size={40} color="#ff4757" />
         <h2>Je parle</h2>
-        <p style={{ marginTop: '10px', fontSize: '24px', color: '#ff4757' }}>
+        <p style={{ marginTop: '8px', fontSize: '22px', color: '#ff4757' }}>
           Français<br />
           Anglais<br />
           Allemand
         </p>
         <motion.p
-          style={{ marginTop: '20px', color: '#ff4757', cursor: 'pointer' }}
+          style={{ marginTop: '15px', color: '#ff4757', cursor: 'pointer' }}
           whileHover={{ x: 5 }}
         >
-          Niveau de langues →
         </motion.p>
       </>
     }
     hoverContent={
       <>
-        <h2>Niveaux de langue</h2>
-        <div style={{ marginTop: '15px' }}>
-          <h3 style={{ color: '#ff4757' }}>Français</h3>
-          <p>Langue maternelle (C2)</p>
-          <h3 style={{ marginTop: '10px', color: '#ff4757' }}>Anglais</h3>
-          <p>Courant (C1)</p>
-          <h3 style={{ marginTop: '10px', color: '#ff4757' }}>Allemand</h3>
-          <p>Intermédiaire (B1)</p>
+        <h2 style={{ color: '#ff4757', marginBottom: '20px' }}>Languages</h2>
+        <div style={{ marginTop: '10px' }}>
+          <LanguageContainer>
+            <LanguageBar level={100}>Français</LanguageBar>
+          </LanguageContainer>
+
+          <LanguageContainer>
+            <LanguageBar level={75}>Anglais</LanguageBar>
+          </LanguageContainer>
+
+          <LanguageContainer>
+            <LanguageBar level={40}>Allemand</LanguageBar>
+          </LanguageContainer>
+        </div>
+      </>
+    }
+  />
+);
+
+export const SpotifyCard = () => (
+  <iframe
+    src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWl7MndYYxge"
+    width="100%"
+    height="100%"
+    frameBorder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"
+    style={{ borderRadius: '12px' }}
+  />
+);
+
+export const SocialNetworksCard = () => (
+  <BaseCard
+    defaultContent={
+      <>
+        <h2>Mes réseaux</h2>
+        <div style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', gap: '15px' }}>
+          <SocialLink href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin size={24} />
+            <span>Mon profil Linkedin</span>
+          </SocialLink>
+          <SocialLink href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">
+            <FaGithub size={24} />
+            <span>Mon profil Github</span>
+          </SocialLink>
+          <SocialLink href="https://leetcode.com/your-profile" target="_blank" rel="noopener noreferrer">
+            <FaGlobe size={24} />
+            <span>LeetCode</span>
+          </SocialLink>
+        </div>
+      </>
+    }
+    hoverContent={
+      <>
+        <h2>Connect with me</h2>
+        <div style={{ marginTop: '20px' }}>
+          <p style={{ marginBottom: '15px' }}>Let's connect and collaborate on exciting projects!</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+            <SocialLink href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin size={24} />
+              <div>
+                <div>LinkedIn</div>
+                <small style={{ color: '#666' }}>Professional Network</small>
+              </div>
+            </SocialLink>
+            <SocialLink href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">
+              <FaGithub size={24} />
+              <div>
+                <div>GitHub</div>
+                <small style={{ color: '#666' }}>Code Repository</small>
+              </div>
+            </SocialLink>
+            <SocialLink href="https://leetcode.com/your-profile" target="_blank" rel="noopener noreferrer">
+              <FaGlobe size={24} />
+              <div>
+                <div>LeetCode</div>
+                <small style={{ color: '#666' }}>Coding Skills</small>
+              </div>
+            </SocialLink>
+          </div>
         </div>
       </>
     }

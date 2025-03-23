@@ -9,7 +9,9 @@ import {
   EducationCard,
   HobbiesCard,
   InterestsCard,
-  LanguagesCard
+  LanguagesCard,
+  SpotifyCard,
+  SocialNetworksCard
 } from './components/cards/PortfolioCards';
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
         <HobbiesCard />
         <InterestsCard />
         <LanguagesCard />
+        <SpotifyCard />
+        <SocialNetworksCard />
       </CardGrid>
     </AppContainer>
   );
