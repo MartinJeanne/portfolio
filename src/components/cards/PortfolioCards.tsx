@@ -106,7 +106,7 @@ export const SkillsCard = () => (
             alignItems: 'center',
             gap: '2px'
           }}>
-            <FaJava />
+            <FaJava size={40} />
             <span>Java</span>
           </div>
           <div style={{
@@ -120,7 +120,7 @@ export const SkillsCard = () => (
             alignItems: 'center',
             gap: '2px'
           }}>
-            <SiTypescript />
+            <SiTypescript size={40} />
             <span>TS</span>
           </div>
           <div style={{
@@ -228,6 +228,11 @@ export const EducationCard = () => (
           <h3>CaenSup - Licence</h3>
           <p style={{ color: 'white' }}>2021 - 2022</p>
           <p style={{ color: 'white' }}>Licence Dev applicatif, optimisation, développement logiciel</p>
+        </div>
+        <div style={{ marginTop: '25px' }}>
+          <h3>CaenSup - BTS</h3>
+          <p style={{ color: 'white' }}>2018 - 2021</p>
+          <p style={{ color: 'white' }}>BTS SIO, développement logiciel</p>
         </div>
         <div style={{ marginTop: '25px' }}>
           <h3>CaenSup - BTS</h3>
