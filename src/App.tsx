@@ -3,7 +3,7 @@ import { HeaderComponent } from './components/Header';
 import {
   IntroCard,
   SkillsCard,
-  RemoteWorkCard,
+  WhatImLookingForCard,
   ProjectCard,
   DeveloperCard,
   EducationCard,
@@ -21,7 +21,7 @@ function App() {
       <CardGrid>
         <IntroCard />
         <SkillsCard />
-        <RemoteWorkCard />
+        <WhatImLookingForCard />
         <ProjectCard />
         <DeveloperCard />
         <EducationCard />

@@ -1,4 +1,4 @@
-import { FaMapMarkerAlt, FaJava, FaGraduationCap, FaLanguage, FaRunning, FaLinkedin, FaGithub, FaGlobe } from 'react-icons/fa';
+import { FaQuestion, FaJava, FaGraduationCap, FaLanguage, FaRunning, FaLinkedin, FaGithub, FaGlobe, FaMailBulk } from 'react-icons/fa';
 import { AiOutlineHome } from 'react-icons/ai';
 import { BsBuilding } from 'react-icons/bs';
 import { MdInterests } from 'react-icons/md';
@@ -59,10 +59,10 @@ const SocialLink = styled.a`
 
 export const IntroCard = () => (
   <BaseCard
-    icon={<FaMapMarkerAlt size={40} />}
+    icon={<FaQuestion size={40} />}
     title="Qui suis-je ?"
     subtitle="Caen, FR"
-    actionText="A propos de moi"
+    actionText="À propos de moi"
     hoverContent={
       <>
         <h3 style={{ color: '#ff4757', fontSize: '1.4rem' }}>À propos de moi</h3>
@@ -88,9 +88,9 @@ export const SkillsCard = () => (
     actionText="Voir plus"
     hoverContent={
       <>
-        <div style={{ 
-          width: '150px', 
-          height: '150px', 
+        <div style={{
+          width: '150px',
+          height: '150px',
           margin: '0 auto',
           background: 'conic-gradient(rgba(255, 255, 255, 0.32) 0% 33%, rgba(255, 255, 255, 0.65) 33% 66%, rgba(255, 255, 255, 0.88) 66% 100%)',
           borderRadius: '50%',
@@ -136,7 +136,7 @@ export const SkillsCard = () => (
             gap: '2px'
           }}>
             <img src="/src/assets/react.svg" alt="React" style={{ width: '35px', height: '35px', filter: 'brightness(0) invert(1)' }} />
-             <span>React</span>
+            <span>React</span>
           </div>
         </div>
       </>
@@ -144,23 +144,20 @@ export const SkillsCard = () => (
   />
 );
 
-export const RemoteWorkCard = () => (
+export const WhatImLookingForCard = () => (
   <BaseCard
     icon={<AiOutlineHome size={40} />}
-    title="J'aimerais travailler en remote"
-    actionText="Découvrez mon job de rêve"
+    title="Mon job de rêve"
+    actionText="Découvrez le"
     hoverContent={
       <>
-        <h2>Pourquoi le remote ?</h2>
-        <ul style={{ marginTop: '15px', lineHeight: '1.6' }}>
-          <li>Meilleure productivité</li>
-          <li>Équilibre vie pro/perso</li>
-          <li>Flexibilité horaire</li>
-          <li>Collaboration internationale</li>
+        <h2>Un poste de développeur avec</h2>
+        <ul style={{ marginTop: '15px', lineHeight: '1.6', textAlign: 'left' }}>
+          <li>du challenge</li>
+          <li>un équilibre vie pro/perso</li>
+          <li>un contrat CDI/CDD/VIE</li>
+          <li>une collaboration internationale</li>
         </ul>
-        <p style={{ marginTop: '15px', color: '#ff4757' }}>
-          Expérience en travail à distance pendant 2 ans
-        </p>
       </>
     }
   />
@@ -234,15 +231,15 @@ export const HobbiesCard = () => (
     icon={<FaRunning size={40} />}
     variant="primary"
     title="Hobbies"
-    subtitle="Todo"
+    subtitle=""
     hoverContent={
       <>
         <h2 style={{ color: 'white' }}>Mes passions</h2>
-        <ul style={{ color: 'white', marginTop: '15px', lineHeight: '1.6' }}>
-          <li>Développement open source</li>
-          <li>Nouvelles technologies</li>
-          <li>Photographie</li>
-          <li>Voyages</li>
+        <ul style={{ color: 'white', marginTop: '15px', lineHeight: '1.6', textAlign: 'left' }}>
+          <li>développement open source</li>
+          <li>échanges interculturels</li>
+          <li>nouvelles technologies</li>
+          <li>escalade, badminton, spikeball</li>
         </ul>
         <Button style={{ marginTop: '20px', background: 'transparent', border: '1px solid white', color: 'white' }}>
           Ajouter un hobby
@@ -313,6 +310,10 @@ export const SocialNetworksCard = () => (
     title="Mes réseaux"
     defaultContent={
       <div style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', gap: '15px' }}>
+        <SocialLink href="mailto:martinjeanne.dev@gmail.com">
+          <FaMailBulk size={24} />
+          <span>Mon email</span>
+        </SocialLink>
         <SocialLink href="https://linkedin.com/in/MartinJeanne" target="_blank" rel="noopener noreferrer">
           <FaLinkedin size={24} />
           <span>Mon profil Linkedin</span>
@@ -323,7 +324,7 @@ export const SocialNetworksCard = () => (
         </SocialLink>
         <SocialLink href="https://leetcode.com/Martin-jnne" target="_blank" rel="noopener noreferrer">
           <FaGlobe size={24} />
-          <span>LeetCode</span>
+          <span>Profil LeetCode</span>
         </SocialLink>
       </div>
     }

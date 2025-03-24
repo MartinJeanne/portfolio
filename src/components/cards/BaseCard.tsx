@@ -8,7 +8,7 @@ interface BaseCardProps {
   background?: string;
   color?: string;
   icon?: ReactNode;
-  title?: string;
+  title: string;
   subtitle?: string;
   actionText?: string;
   variant?: 'default' | 'primary' | 'dark';
@@ -74,7 +74,7 @@ export const BaseCard = ({
       style={{ 
         ...variantStyles,
         height: '360px',
-        padding: '35px',
+        padding: '20px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
