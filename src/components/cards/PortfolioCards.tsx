@@ -209,19 +209,30 @@ export const ProjectCard = () => (
   <BaseCard
     title="Mes projets coups de coeur ❤️"
     actionText="Voir les projets"
+    justifyContent="flex-start"
     hoverContent={
       <>
-        <h2>Détails du projet</h2>
-        <p style={{ marginTop: '15px', lineHeight: '1.6' }}>
-          Description détaillée du projet, technologies utilisées, défis rencontrés et solutions apportées.
-        </p>
-        <div style={{ marginTop: '15px' }}>
-          <h3 style={{ color: '#ff4757' }}>Technologies</h3>
-          <p>Java, Spring Boot, React, Docker</p>
+        <div>
+          <h3>Bot discord DJ</h3>
+          <p style={{ marginTop: '10px' }}>
+            Un bot discord qui peut de jouer de la musique dans les salons vocaux
+          </p>
+          <p style={{ marginTop: '10px', color: '#ff4757' }}>TypeScript, Java, Spring Boot, Docker</p>
         </div>
-        <p style={{ marginTop: '15px', color: '#ff4757' }}>
-          Voir le code sur GitHub →
-        </p>
+        <div style={{ marginTop: '25px' }}>
+          <h3>Who's bigger</h3>
+          <p style={{ marginTop: '10px' }}>
+            Une application web où le but est trouver la plus grande ville parmi deux villes de Normandie
+          </p>
+          <p style={{ marginTop: '10px', color: '#ff4757' }}>TypeScript, React, Java, Spring Boot, Docker</p>
+        </div>
+        <div style={{ marginTop: '25px' }}>
+          <h3>Live chat</h3>
+          <p style={{ marginTop: '10px' }}>
+            Une application web de messagerie instantanée
+          </p>
+          <p style={{ marginTop: '10px', color: '#ff4757' }}>JavaScript ,Vue.js, Firebase, GCP</p>
+        </div>
       </>
     }
   />
@@ -288,7 +299,7 @@ export const EducationCard = () => (
 
 export const HobbiesCard = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  
+
   const gifs = [
     { src: "/src/assets/climbing.gif", alt: "Escalade" },
     { src: "/src/assets/badminton.gif", alt: "Badminton" },
@@ -316,8 +327,8 @@ export const HobbiesCard = () => {
             <CarouselButton className="prev" onClick={prevGif}>
               <FaChevronLeft />
             </CarouselButton>
-            <CarouselImage 
-              src={gifs[currentIndex].src} 
+            <CarouselImage
+              src={gifs[currentIndex].src}
               alt={gifs[currentIndex].alt}
             />
             <CarouselButton className="next" onClick={nextGif}>
