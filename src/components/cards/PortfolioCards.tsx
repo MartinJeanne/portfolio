@@ -60,8 +60,10 @@ const SocialLink = styled.a`
 const CarouselContainer = styled.div`
   position: relative;
   width: 100%;
-  max-width: 300px;
-  margin: 20px auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const CarouselImage = styled.img`
@@ -85,17 +87,18 @@ const CarouselButton = styled.button`
   cursor: pointer;
   color: white;
   transition: background-color 0.2s;
+  z-index: 10;
 
   &:hover {
     background: rgba(255, 255, 255, 0.3);
   }
 
   &.prev {
-    left: -20px;
+    left: 20px;
   }
 
   &.next {
-    right: -20px;
+    right: 20px;
   }
 `;
 
@@ -322,19 +325,27 @@ export const HobbiesCard = () => {
       subtitle=""
       hoverContent={
         <>
-          <h2 style={{ color: 'white' }}>{gifs[currentIndex].alt}</h2>
-          <CarouselContainer>
-            <CarouselButton className="prev" onClick={prevGif}>
-              <FaChevronLeft />
-            </CarouselButton>
-            <CarouselImage
-              src={gifs[currentIndex].src}
-              alt={gifs[currentIndex].alt}
-            />
-            <CarouselButton className="next" onClick={nextGif}>
-              <FaChevronRight />
-            </CarouselButton>
-          </CarouselContainer>
+          <div style={{
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'space-between'
+          }}>
+            <h2 style={{ color: 'white', marginTop: '20px' }}>{gifs[currentIndex].alt}</h2>
+            <CarouselContainer>
+              <CarouselButton className="prev" onClick={prevGif}>
+                <FaChevronLeft />
+              </CarouselButton>
+              <CarouselButton className="next" onClick={nextGif}>
+                <FaChevronRight />
+              </CarouselButton>
+              <CarouselImage
+                src={gifs[currentIndex].src}
+                alt={gifs[currentIndex].alt}
+              />
+            </CarouselContainer>
+          </div>
         </>
       }
     />
