@@ -24,11 +24,12 @@ interface BaseCardProps {
   title: string;
   subtitle?: string;
   actionText?: string;
+  justifyContent?: 'center' | 'flex-start';
   variant?: 'default' | 'primary' | 'dark';
   onAction?: () => void;
 }
 
-const getVariantStyles = (variant: string, customBackground?: string, customColor?: string) => {
+const getVariantStyles = (variant: string) => {
   const variants = {
     default: { background: 'white', color: '#ff4757' },
     primary: { background: '#ff4757', color: 'white' },
@@ -37,25 +38,24 @@ const getVariantStyles = (variant: string, customBackground?: string, customColo
 
   const style = variants[variant as keyof typeof variants] || variants.default;
   return {
-    background: customBackground || style.background,
-    color: customColor || style.color
+    background: style.background,
+    color: style.color
   };
 };
 
 export const BaseCard = ({
   defaultContent,
   hoverContent,
-  background,
-  color,
   icon,
   title,
   subtitle,
   actionText,
+  justifyContent = 'center',
   variant = 'default',
   onAction
 }: BaseCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
-  const variantStyles = getVariantStyles(variant, background, color);
+  const variantStyles = getVariantStyles(variant);
 
   const renderContent = () => {
     if (isHovered && hoverContent) return hoverContent;
@@ -85,21 +85,19 @@ export const BaseCard = ({
 
   return (
     <Card
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       style={{
         ...variantStyles,
         height: '360px',
         padding: '20px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
         textAlign: 'center',
-        fontSize: '1.1rem'
+        fontSize: '1.1rem',
+        overflowY: 'auto',
       }}
     >
       <AnimatePresence mode="wait">
         <motion.div
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
           key={isHovered && hoverContent ? 'hover' : 'default'}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -109,11 +107,9 @@ export const BaseCard = ({
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            justifyContent: 'center',
+            justifyContent: isHovered && hoverContent ? justifyContent : 'center',
             height: '100%',
             width: '100%',
-            overflowY: 'auto',
-            paddingRight: '10px',
             cursor: hoverContent ? 'pointer' : 'default'
           }}
         >

@@ -189,6 +189,7 @@ export const DeveloperCard = () => (
     icon={<BsBuilding />}
     title="Développeur back-end Java @Sinay"
     actionText="Voir toutes les expériences"
+    justifyContent="flex-start"
     hoverContent={
       <>
         <div>
@@ -216,9 +217,9 @@ export const EducationCard = () => (
     icon={<FaGraduationCap />}
     title="Je suis diplômé du CESI"
     actionText="Toutes mes études"
+    justifyContent="flex-start"
     hoverContent={
       <>
-        <h2>Formation</h2>
         <div>
           <h3>CESI - Master</h3>
           <p style={{ color: 'white' }}>2022 - 2024</p>

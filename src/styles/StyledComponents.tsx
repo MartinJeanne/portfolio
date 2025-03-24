@@ -86,7 +86,7 @@ export const Card = styled(motion.div)`
     margin: 0;
   }
 
-  div {
+
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
 
@@ -101,6 +101,6 @@ export const Card = styled(motion.div)`
     &::-webkit-scrollbar-thumb {
       background-color: rgba(0, 0, 0, 0.2);
       border-radius: 3px;
-    }
+    
   }
 `; 
