@@ -58,51 +58,28 @@ export const BaseCard = ({
   const variantStyles = getVariantStyles(variant, background, color);
 
   const renderContent = () => {
-    const content = isHovered && hoverContent ? hoverContent :
-      defaultContent ? defaultContent : (
-        <>
-          {icon && <IconContainer>{icon}</IconContainer>}
-          {title && <h2 style={{ fontSize: '1.75rem', marginBottom: '15px', color: variantStyles.color }}>{title}</h2>}
-          {subtitle && <p style={{ fontSize: '1.1rem', marginBottom: '20px', color: variantStyles.color }}>{subtitle}</p>}
-          {actionText && (
-            <motion.p
-              style={{
-                marginTop: '20px',
-                color: variantStyles.color,
-                cursor: 'pointer',
-                fontSize: '1.1rem'
-              }}
-              whileHover={{ x: 5 }}
-              onClick={onAction}
-            >
-              {actionText} →
-            </motion.p>
-          )}
-        </>
-      );
-
+    if (isHovered && hoverContent) return hoverContent;
+    if (defaultContent) return defaultContent;
     return (
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={isHovered && hoverContent ? 'hover' : 'default'}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.2 }}
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: '100%',
-            width: '100%',
-            overflowY: 'auto',
-            paddingRight: '10px'
-          }}
-        >
-          {content}
-        </motion.div>
-      </AnimatePresence>
+      <>
+        {icon && <IconContainer>{icon}</IconContainer>}
+        {title && <h2 style={{ fontSize: '1.75rem', marginBottom: '15px', color: variantStyles.color }}>{title}</h2>}
+        {subtitle && <p style={{ fontSize: '1.1rem', marginBottom: '20px', color: variantStyles.color }}>{subtitle}</p>}
+        {actionText && (
+          <motion.p
+            style={{
+              marginTop: '20px',
+              color: variantStyles.color,
+              cursor: 'pointer',
+              fontSize: '1.1rem'
+            }}
+            whileHover={{ x: 5 }}
+            onClick={onAction}
+          >
+            {actionText} →
+          </motion.p>
+        )}
+      </>
     );
   };
 
@@ -119,21 +96,30 @@ export const BaseCard = ({
         fontSize: '1.1rem'
       }}
     >
-      <div
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        style={{
-          height: '100%',
-          width: '100%',
-          position: 'relative',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          cursor: hoverContent ? 'pointer' : 'default'
-        }}
-      >
-        {renderContent()}
-      </div>
+      <AnimatePresence mode="wait">
+        <motion.div
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          key={isHovered && hoverContent ? 'hover' : 'default'}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '100%',
+            width: '100%',
+            overflowY: 'auto',
+            paddingRight: '10px',
+            cursor: hoverContent ? 'pointer' : 'default'
+          }}
+        >
+          {renderContent()}
+        </motion.div>
+      </AnimatePresence>
     </Card>
   );
 };
