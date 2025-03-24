@@ -4,7 +4,6 @@ import { BsBuilding } from 'react-icons/bs';
 import { MdInterests } from 'react-icons/md';
 import { SiTypescript } from 'react-icons/si';
 import { BaseCard } from './BaseCard';
-import { Button } from '../../styles/StyledComponents';
 import styled from '@emotion/styled';
 
 interface LanguageBarProps {
@@ -216,10 +215,20 @@ export const EducationCard = () => (
     hoverContent={
       <>
         <h2>Formation</h2>
-        <div style={{ marginTop: '15px', color: 'white' }}>
-          <h3>ISEN - Ingénieur</h3>
-          <p>2018 - 2021</p>
-          <p>Spécialisation en développement logiciel</p>
+        <div>
+          <h3>CESI - Master</h3>
+          <p style={{ color: 'white' }}>2022 - 2024</p>
+          <p style={{ color: 'white' }}>Master MAALSI, développement logiciel, management, gestion de projet</p>
+        </div>
+        <div style={{ marginTop: '25px' }}>
+          <h3>CaenSup - Licence</h3>
+          <p style={{ color: 'white' }}>2021 - 2022</p>
+          <p style={{ color: 'white' }}>Licence Dev applicatif, optimisation, développement logiciel</p>
+        </div>
+        <div style={{ marginTop: '25px' }}>
+          <h3>CaenSup - BTS</h3>
+          <p style={{ color: 'white' }}>2018 - 2021</p>
+          <p style={{ color: 'white' }}>BTS SIO, développement logiciel</p>
         </div>
       </>
     }
@@ -241,9 +250,6 @@ export const HobbiesCard = () => (
           <li>nouvelles technologies</li>
           <li>escalade, badminton, spikeball</li>
         </ul>
-        <Button style={{ marginTop: '20px', background: 'transparent', border: '1px solid white', color: 'white' }}>
-          Ajouter un hobby
-        </Button>
       </>
     }
   />
