@@ -90,7 +90,7 @@ export const BaseCard = ({
       style={{
         ...variantStyles,
         height: '360px',
-        padding: '0',
+        padding: '5px',
         textAlign: 'center',
         fontSize: '1.1rem',
         overflowY: 'auto',
