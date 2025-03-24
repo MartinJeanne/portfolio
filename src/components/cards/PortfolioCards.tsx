@@ -304,9 +304,9 @@ export const HobbiesCard = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const gifs = [
-    { src: "/src/assets/climbing.gif", alt: "Escalade" },
-    { src: "/src/assets/badminton.gif", alt: "Badminton" },
-    { src: "/src/assets/spikeball.gif", alt: "Spikeball" }
+    { src: "climbing.gif", alt: "Escalade" },
+    { src: "badminton.gif", alt: "Badminton" },
+    { src: "spikeball.gif", alt: "Spikeball" }
   ];
 
   const nextGif = () => {
