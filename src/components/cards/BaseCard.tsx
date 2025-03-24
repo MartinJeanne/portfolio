@@ -1,6 +1,19 @@
 import { ReactNode, useState } from 'react';
 import { Card } from '../../styles/StyledComponents';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import styled from '@emotion/styled';
+
+const IconContainer = styled.div`
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  svg, img {
+    width: 50px;
+    height: 50px;
+  }
+`;
 
 interface BaseCardProps {
   defaultContent?: ReactNode;
@@ -21,7 +34,7 @@ const getVariantStyles = (variant: string, customBackground?: string, customColo
     primary: { background: '#ff4757', color: 'white' },
     dark: { background: '#333', color: 'white' }
   };
-  
+
   const style = variants[variant as keyof typeof variants] || variants.default;
   return {
     background: customBackground || style.background,
@@ -29,10 +42,10 @@ const getVariantStyles = (variant: string, customBackground?: string, customColo
   };
 };
 
-export const BaseCard = ({ 
-  defaultContent, 
-  hoverContent, 
-  background, 
+export const BaseCard = ({
+  defaultContent,
+  hoverContent,
+  background,
   color,
   icon,
   title,
@@ -44,34 +57,58 @@ export const BaseCard = ({
   const [isHovered, setIsHovered] = useState(false);
   const variantStyles = getVariantStyles(variant, background, color);
 
-  const renderDefaultContent = () => {
-    if (defaultContent) return defaultContent;
+  const renderContent = () => {
+    const content = isHovered && hoverContent ? hoverContent :
+      defaultContent ? defaultContent : (
+        <>
+          {icon && <IconContainer>{icon}</IconContainer>}
+          {title && <h2 style={{ fontSize: '1.75rem', marginBottom: '15px', color: variantStyles.color }}>{title}</h2>}
+          {subtitle && <p style={{ fontSize: '1.1rem', marginBottom: '20px', color: variantStyles.color }}>{subtitle}</p>}
+          {actionText && (
+            <motion.p
+              style={{
+                marginTop: '20px',
+                color: variantStyles.color,
+                cursor: 'pointer',
+                fontSize: '1.1rem'
+              }}
+              whileHover={{ x: 5 }}
+              onClick={onAction}
+            >
+              {actionText} →
+            </motion.p>
+          )}
+        </>
+      );
+
     return (
-      <>
-        {icon && <div style={{ marginBottom: '20px' }}>{icon}</div>}
-        {title && <h2 style={{ fontSize: '1.75rem', marginBottom: '15px', color: variantStyles.color }}>{title}</h2>}
-        {subtitle && <p style={{ fontSize: '1.1rem', marginBottom: '20px', color: variantStyles.color }}>{subtitle}</p>}
-        {actionText && (
-          <motion.p
-            style={{ 
-              marginTop: '20px', 
-              color: variantStyles.color, 
-              cursor: 'pointer',
-              fontSize: '1.1rem'
-            }}
-            whileHover={{ x: 5 }}
-            onClick={onAction}
-          >
-            {actionText} →
-          </motion.p>
-        )}
-      </>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={isHovered && hoverContent ? 'hover' : 'default'}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '100%',
+            width: '100%',
+            overflowY: 'auto',
+            paddingRight: '10px'
+          }}
+        >
+          {content}
+        </motion.div>
+      </AnimatePresence>
     );
   };
 
   return (
     <Card
-      style={{ 
+      style={{
         ...variantStyles,
         height: '360px',
         padding: '20px',
@@ -83,9 +120,9 @@ export const BaseCard = ({
       }}
     >
       <div
-        onMouseEnter={() => hoverContent && setIsHovered(true)}
-        onMouseLeave={() => hoverContent && setIsHovered(false)}
-        style={{ 
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        style={{
           height: '100%',
           width: '100%',
           position: 'relative',
@@ -95,43 +132,7 @@ export const BaseCard = ({
           cursor: hoverContent ? 'pointer' : 'default'
         }}
       >
-        <motion.div
-          initial={{ opacity: 1 }}
-          animate={{ opacity: isHovered ? 0 : 1 }}
-          transition={{ duration: 0.2 }}
-          style={{ 
-            display: isHovered ? 'none' : 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: '100%',
-            width: '100%',
-            overflowY: 'auto',
-            paddingRight: '10px'
-          }}
-        >
-          {renderDefaultContent()}
-        </motion.div>
-
-        {hoverContent && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: isHovered ? 1 : 0 }}
-            transition={{ duration: 0.2 }}
-            style={{ 
-              display: isHovered ? 'flex' : 'none',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              height: '100%',
-              width: '100%',
-              overflowY: 'auto',
-              paddingRight: '10px'
-            }}
-          >
-            {hoverContent}
-          </motion.div>
-        )}
+        {renderContent()}
       </div>
     </Card>
   );

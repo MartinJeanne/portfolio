@@ -58,7 +58,7 @@ const SocialLink = styled.a`
 
 export const IntroCard = () => (
   <BaseCard
-    icon={<FaQuestion size={40} />}
+    icon={<FaQuestion />}
     title="Qui suis-je ?"
     subtitle="Caen, FR"
     actionText="À propos de moi"
@@ -82,7 +82,7 @@ export const IntroCard = () => (
 export const SkillsCard = () => (
   <BaseCard
     variant="primary"
-    icon={<FaJava size={40} color="white" />}
+    icon={<FaJava color="white" />}
     title="Compétences"
     actionText="Voir plus"
     hoverContent={
@@ -106,7 +106,7 @@ export const SkillsCard = () => (
             alignItems: 'center',
             gap: '2px'
           }}>
-            <FaJava size={35} />
+            <FaJava />
             <span>Java</span>
           </div>
           <div style={{
@@ -120,7 +120,7 @@ export const SkillsCard = () => (
             alignItems: 'center',
             gap: '2px'
           }}>
-            <SiTypescript size={35} />
+            <SiTypescript />
             <span>TS</span>
           </div>
           <div style={{
@@ -134,7 +134,7 @@ export const SkillsCard = () => (
             alignItems: 'center',
             gap: '2px'
           }}>
-            <img src="/src/assets/react.svg" alt="React" style={{ width: '35px', height: '35px', filter: 'brightness(0) invert(1)' }} />
+            <img src="/src/assets/react.svg" alt="React" style={{ filter: 'brightness(0) invert(1)' }} />
             <span>React</span>
           </div>
         </div>
@@ -145,7 +145,7 @@ export const SkillsCard = () => (
 
 export const WhatImLookingForCard = () => (
   <BaseCard
-    icon={<AiOutlineHome size={40} />}
+    icon={<AiOutlineHome />}
     title="Mon job de rêve"
     actionText="Découvrez le"
     hoverContent={
@@ -186,21 +186,25 @@ export const ProjectCard = () => (
 
 export const DeveloperCard = () => (
   <BaseCard
-    icon={<BsBuilding size={40} />}
+    icon={<BsBuilding />}
     title="Développeur back-end Java @Sinay"
     actionText="Voir toutes les expériences"
     hoverContent={
       <>
-        <h2>Expérience @Sinay</h2>
-        <p style={{ marginTop: '15px', lineHeight: '1.6' }}>
-          Développement et maintenance d'applications Java/Spring Boot.
-          Mise en place de microservices et d'APIs REST.
-        </p>
-        <ul style={{ marginTop: '15px' }}>
-          <li>Architecture microservices</li>
-          <li>CI/CD avec Jenkins</li>
-          <li>Monitoring avec ELK</li>
-        </ul>
+        <div>
+          <h2>Développeur back-end Java</h2>
+          <h3>Sinay, Caen 2022-2024</h3>
+          <p style={{ marginTop: '15px', lineHeight: '1.6' }}>
+            Développement avec Java Spring Boot d'API REST, servant pour des SaaS. Dans un cadre Agile Scrum avec du CI/CD.
+          </p>
+        </div>
+        <div>
+          <h2>Développeur back-end Java</h2>
+          <h3>Sinay, Caen 2022-2024</h3>
+          <p style={{ marginTop: '15px', lineHeight: '1.6' }}>
+            Développement avec Java Spring Boot d'API REST, servant pour des SaaS. Dans un cadre Agile Scrum avec du CI/CD.
+          </p>
+        </div>
       </>
     }
   />
@@ -209,7 +213,7 @@ export const DeveloperCard = () => (
 export const EducationCard = () => (
   <BaseCard
     variant='primary'
-    icon={<FaGraduationCap size={40} />}
+    icon={<FaGraduationCap />}
     title="Je suis diplômé du CESI"
     actionText="Toutes mes études"
     hoverContent={
@@ -237,7 +241,7 @@ export const EducationCard = () => (
 
 export const HobbiesCard = () => (
   <BaseCard
-    icon={<FaRunning size={40} />}
+    icon={<FaRunning />}
     variant="primary"
     title="Hobbies"
     subtitle=""
@@ -258,7 +262,7 @@ export const HobbiesCard = () => (
 export const InterestsCard = () => (
   <BaseCard
     variant="dark"
-    icon={<MdInterests size={40} color="white" />}
+    icon={<MdInterests color="white" />}
     title="Intéressé par :"
     subtitle="React, l'IA, la blochaine et les chiots."
     hoverContent={
@@ -281,7 +285,7 @@ export const InterestsCard = () => (
 
 export const LanguagesCard = () => (
   <BaseCard
-    icon={<FaLanguage size={40} />}
+    icon={<FaLanguage />}
     title="Je parle Français, Anglais et Allemand"
     hoverContent={
       <>
