@@ -1,2 +1,3 @@
 Séparer le style des fichier tsx ?
-Hobbies mettre des gifs
+Hobbies improve gif carousel
+put links to projects in projects card

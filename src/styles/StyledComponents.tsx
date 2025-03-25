@@ -67,7 +67,6 @@ export const Card = styled(motion.div)`
   background: white;
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
   transition: box-shadow 0.3s ease;
   overflow: hidden;
   

@@ -110,7 +110,6 @@ export const BaseCard = ({
             justifyContent: isHovered && hoverContent ? justifyContent : 'center',
             height: '100%',
             width: '100%',
-            cursor: hoverContent ? 'pointer' : 'default'
           }}
         >
           {renderContent()}

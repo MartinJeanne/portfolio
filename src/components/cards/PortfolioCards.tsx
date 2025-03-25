@@ -180,7 +180,7 @@ export const SkillsCard = () => (
             alignItems: 'center',
             gap: '2px'
           }}>
-            <img src="/src/assets/react.svg" alt="React" style={{ filter: 'brightness(0) invert(1)' }} />
+            <img src="react.svg" alt="React" style={{ filter: 'brightness(0) invert(1)' }} />
             <span>React</span>
           </div>
         </div>
