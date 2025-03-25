@@ -4,7 +4,7 @@ export const HeaderComponent = () => {
   return (
     <Header>
       <Profile>
-        <ProfileImage src="src/assets/profile.jpg" alt="Profile" />
+        <ProfileImage src="profile.jpg" alt="Profile" />
         <ProfileInfo>
           <h1>Martin Jeanne</h1>
           <p>Portfolio</p>

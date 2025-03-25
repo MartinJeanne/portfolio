@@ -21,8 +21,8 @@ export const Profile = styled.div`
 `;
 
 export const ProfileImage = styled.img`
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
 `;
