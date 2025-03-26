@@ -26,7 +26,6 @@ function App() {
         <DeveloperCard />
         <HobbiesCard />
         <EducationCard />
-        
         <InterestsCard />
         <LanguagesCard />
         <SpotifyCard />

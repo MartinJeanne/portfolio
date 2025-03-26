@@ -1,10 +1,18 @@
 import { Carousel } from 'antd';
 import { Card } from "../../styles/StyledComponents";
 
-const txtStyle: React.CSSProperties = {
+const titleStyle: React.CSSProperties = {
     color: 'white',
     marginTop: '10px',
-    marginBottom: '15px'
+    marginRight: '20px',
+    width: '100%',
+    fontSize: '2.9rem',
+    textAlign: 'right'
+};
+
+const hobbieNameStyle: React.CSSProperties = {
+    color: 'white',
+    marginBottom: '30px'
 };
 
 export const HobbiesCard = () => {
@@ -31,8 +39,8 @@ export const HobbiesCard = () => {
                             alignItems: 'center'
                         }}
                         >
-                            <h2 style={txtStyle}>Hobbies</h2>
-                            <h2 style={txtStyle}>{gif.alt}</h2>
+                            <h2 style={titleStyle}>Hobbies</h2>
+                            <h2 style={hobbieNameStyle}>{gif.alt}</h2>
                         </div>
                     </div>
                 ))}
