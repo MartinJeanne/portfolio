@@ -1,4 +1,4 @@
-import { FaQuestion, FaJava, FaGraduationCap, FaLanguage, FaRunning, FaLinkedin, FaGithub, FaGlobe, FaMailBulk, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaQuestion, FaJava, FaGraduationCap, FaLanguage, FaRunning, FaLinkedin, FaGithub, FaGlobe, FaMailBulk, FaChevronLeft, FaChevronRight, FaExternalLinkAlt } from 'react-icons/fa';
 import { AiOutlineHome } from 'react-icons/ai';
 import { BsBuilding } from 'react-icons/bs';
 import { MdInterests } from 'react-icons/md';
@@ -26,12 +26,11 @@ const LanguageBar = styled.div<LanguageBarProps>`
   justify-content: center;
   font-weight: bold;
   border-radius: 8px;
-  transition: width 0.3s ease;
   font-size: 1.1rem;
 `;
 
 const LanguageContainer = styled.div`
-  margin: 5px 0;
+  padding: 6px 10px;
   width: 100%;
   h3 {
     margin-bottom: 12px;
@@ -217,25 +216,27 @@ export const ProjectCard = () => (
     hoverContent={
       <>
         <div>
-          <h3>Bot discord DJ</h3>
-          <p style={{ marginTop: '10px' }}>
+          <h3>Bot discord DJ <FaExternalLinkAlt size={17} /></h3>
+          <p>
             Un bot discord qui peut de jouer de la musique dans les salons vocaux
           </p>
-          <p style={{ marginTop: '10px', color: '#ff4757' }}>TypeScript, Java, Spring Boot, Docker</p>
+          <p style={{ color: '#ff4757' }}>TypeScript, Java, Spring Boot, Docker</p>
         </div>
+
         <div style={{ marginTop: '25px' }}>
-          <h3>Who's bigger</h3>
-          <p style={{ marginTop: '10px' }}>
+          <h3>Who's bigger <FaExternalLinkAlt size={17} /></h3>
+          <p>
             Une application web où le but est trouver la plus grande ville parmi deux villes de Normandie
           </p>
-          <p style={{ marginTop: '10px', color: '#ff4757' }}>TypeScript, React, Java, Spring Boot, Docker</p>
+          <p style={{ color: '#ff4757' }}>TypeScript, React, Java, Spring Boot, Docker</p>
         </div>
+
         <div style={{ marginTop: '25px' }}>
-          <h3>Live chat</h3>
-          <p style={{ marginTop: '10px' }}>
+          <h3>Live chat <FaExternalLinkAlt size={17} /></h3>
+          <p>
             Une application web de messagerie instantanée
           </p>
-          <p style={{ marginTop: '10px', color: '#ff4757' }}>JavaScript ,Vue.js, Firebase, GCP</p>
+          <p style={{ color: '#ff4757' }}>JavaScript ,Vue.js, Firebase, GCP</p>
         </div>
       </>
     }
@@ -384,7 +385,7 @@ export const LanguagesCard = () => (
           <LanguageBar level={100}>Français</LanguageBar>
         </LanguageContainer>
         <LanguageContainer>
-          <LanguageBar level={80}>Anglais</LanguageBar>
+          <LanguageBar level={88}>Anglais</LanguageBar>
         </LanguageContainer>
         <LanguageContainer>
           <LanguageBar level={40}>Allemand</LanguageBar>
