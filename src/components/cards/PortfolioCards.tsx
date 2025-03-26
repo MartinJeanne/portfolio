@@ -17,7 +17,7 @@ const LanguageBar = styled.div<LanguageBarProps>`
   height: 50px;
   background: ${(props: LanguageBarProps) => {
     if (props.level >= 90) return '#c40414';
-    if (props.level >= 60) return '#e02232';
+    if (props.level >= 60) return '#f53344';
     if (props.level >= 40) return '#ff7182';
   }};
   color: white;
