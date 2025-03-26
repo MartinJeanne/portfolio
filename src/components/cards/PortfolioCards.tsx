@@ -16,7 +16,7 @@ const LanguageBar = styled.div<LanguageBarProps>`
   width: ${(props: LanguageBarProps) => props.level}%;
   height: 50px;
   background: ${(props: LanguageBarProps) => {
-    if (props.level >= 80) return '#c40414';
+    if (props.level >= 90) return '#c40414';
     if (props.level >= 60) return '#e02232';
     if (props.level >= 40) return '#ff7182';
   }};
@@ -278,22 +278,19 @@ export const EducationCard = () => (
     icon={<FaGraduationCap />}
     title="Je suis diplômé du CESI"
     actionText="Toutes mes études"
-    justifyContent="flex-start"
+    justifyContent="center"
     hoverContent={
       <>
         <div>
-          <h3>CESI - Master</h3>
-          <h4>2022 - 2024</h4>
+          <h3>CESI - Master, 2022-2024</h3>
           <p style={{ color: 'white' }}>Master MAALSI, développement logiciel, management, gestion de projet</p>
         </div>
         <div style={{ marginTop: '25px' }}>
-          <h3>CaenSup - Licence</h3>
-          <h4 >2021 - 2022</h4>
+          <h3>CaenSup - Licence, 2021-2022</h3>
           <p style={{ color: 'white' }}>Licence Dev applicatif, optimisation, développement logiciel</p>
         </div>
         <div style={{ marginTop: '25px' }}>
-          <h3>CaenSup - BTS</h3>
-          <h4>2018 - 2021</h4>
+          <h3>CaenSup - BTS, 2018-2021</h3>
           <p style={{ color: 'white' }}>BTS SIO, développement logiciel</p>
         </div>
       </>
@@ -387,7 +384,7 @@ export const LanguagesCard = () => (
           <LanguageBar level={100}>Français</LanguageBar>
         </LanguageContainer>
         <LanguageContainer>
-          <LanguageBar level={75}>Anglais</LanguageBar>
+          <LanguageBar level={80}>Anglais</LanguageBar>
         </LanguageContainer>
         <LanguageContainer>
           <LanguageBar level={40}>Allemand</LanguageBar>

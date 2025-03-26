@@ -7,17 +7,29 @@ const titleStyle: React.CSSProperties = {
     marginRight: '20px',
     width: '100%',
     fontSize: '2.9rem',
-    textAlign: 'right'
+    textAlign: 'right',
+    textShadow:
+        '-1px -1px 0 #ff4757, ' +
+        '1px -1px 0 #ff4757, ' +
+        '-1px 1px 0 #ff4757, ' +
+        '1px 1px 0 #ff4757',
 };
 
 const hobbieNameStyle: React.CSSProperties = {
     color: 'white',
-    marginBottom: '30px'
+    marginBottom: '30px',
+    textShadow:
+        '-1px -1px 0 #ff4757, ' +
+        '1px -1px 0 #ff4757, ' +
+        '-1px 1px 0 #ff4757, ' +
+        '1px 1px 0 #ff4757',
 };
 
 export const HobbiesCard = () => {
     const gifs = [
+        { src: "codding.gif", alt: "Code" },
         { src: "climbing.gif", alt: "Escalade" },
+        { src: "reading.gif", alt: "Lire" },
         { src: "badminton.gif", alt: "Badminton" },
         { src: "spikeball.gif", alt: "Spikeball" }
     ];
