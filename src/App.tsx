@@ -7,12 +7,12 @@ import {
   ProjectCard,
   DeveloperCard,
   EducationCard,
-  HobbiesCard,
   InterestsCard,
   LanguagesCard,
   SpotifyCard,
   SocialNetworksCard
 } from './components/cards/PortfolioCards';
+import { HobbiesCard } from './components/cards/HobbiesCard';
 
 function App() {
   return (

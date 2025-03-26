@@ -6,6 +6,7 @@ import { SiTypescript } from 'react-icons/si';
 import { BaseCard } from './BaseCard';
 import styled from '@emotion/styled';
 import { useState } from 'react';
+import { Card } from '../../styles/StyledComponents';
 
 interface LanguageBarProps {
   level: number;
@@ -397,15 +398,16 @@ export const LanguagesCard = () => (
 );
 
 export const SpotifyCard = () => (
-  <iframe
-    src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWl7MndYYxge"
-    width="100%"
-    height="360px"
-    frameBorder="0"
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-    loading="lazy"
-    style={{ borderRadius: '12px' }}
-  />
+  <Card>
+    <iframe
+      src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWl7MndYYxge"
+      width="100%"
+      height="100%"
+      frameBorder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"
+    />
+  </Card>
 );
 
 export const SocialNetworksCard = () => (
