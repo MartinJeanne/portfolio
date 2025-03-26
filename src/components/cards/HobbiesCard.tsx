@@ -1,19 +1,13 @@
-import { useState } from "react";
 import { Carousel } from 'antd';
 import { Card } from "../../styles/StyledComponents";
 
-const contentStyle: React.CSSProperties = {
-    margin: 0,
-    height: '360px',
-    color: '#fff',
-    lineHeight: '160px',
-    textAlign: 'center',
-    background: '#364d79',
+const txtStyle: React.CSSProperties = {
+    color: 'white',
+    marginTop: '10px',
+    marginBottom: '15px'
 };
 
 export const HobbiesCard = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-
     const gifs = [
         { src: "climbing.gif", alt: "Escalade" },
         { src: "badminton.gif", alt: "Badminton" },
@@ -21,21 +15,27 @@ export const HobbiesCard = () => {
     ];
 
     return (
-
         <Card>
-            <Carousel arrows infinite={false}>
-                <div>
-                    <img src={gifs[0].src} alt={gifs[0].alt} />
-                </div>
-                <div>
-                    <img src={gifs[1].src} alt={gifs[0].alt} />
-                </div>
-                <div>
-                    <img src={gifs[2].src} alt={gifs[0].alt} />
-                </div>
-                <div>
-                    <img src={gifs[0].src} alt={gifs[0].alt} />
-                </div>
+            <Carousel arrows infinite={true} autoplay={true}>
+                {gifs.map((gif, index) => (
+                    <div key={index}>
+                        <div style={{
+                            backgroundImage: `url(${gif.src})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            height: '360px',
+                            width: '100%',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'space-between',
+                            alignItems: 'center'
+                        }}
+                        >
+                            <h2 style={txtStyle}>Hobbies</h2>
+                            <h2 style={txtStyle}>{gif.alt}</h2>
+                        </div>
+                    </div>
+                ))}
             </Carousel>
         </Card>
     );

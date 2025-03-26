@@ -24,8 +24,9 @@ function App() {
         <WhatImLookingForCard />
         <ProjectCard />
         <DeveloperCard />
-        <EducationCard />
         <HobbiesCard />
+        <EducationCard />
+        
         <InterestsCard />
         <LanguagesCard />
         <SpotifyCard />
