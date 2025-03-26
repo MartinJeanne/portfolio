@@ -1,6 +1,5 @@
 import { FaQuestion, FaGraduationCap } from 'react-icons/fa';
 import { AiOutlineHome } from 'react-icons/ai';
-import { BsBuilding } from 'react-icons/bs';
 import { MdInterests } from 'react-icons/md';
 import { BaseCard } from './BaseCard';
 
@@ -48,37 +47,6 @@ export const WhatImLookingForCard = () => (
   />
 );
 
-
-
-export const DeveloperCard = () => (
-  <BaseCard
-    icon={<BsBuilding />}
-    title="Développeur back-end Java @Sinay"
-    actionText="Voir toutes les expériences"
-    justifyContent="flex-start"
-    hoverContent={
-      <>
-        <div>
-          <h3>Développeur back-end Java</h3>
-          <h4>Sinay, Caen 2022-2024</h4>
-          <p style={{ marginTop: '10px', lineHeight: '1.6' }}>
-            Développement avec Java Spring Boot d'API REST, servant pour des SaaS. Dans un cadre Agile Scrum avec du CI/CD.
-          </p>
-        </div>
-        <div style={{ marginTop: '25px' }}>
-          <h3>Développeur JavaScript</h3>
-          <h4>Léonard Solutions, Caen 2021-2022</h4>
-          <p style={{ marginTop: '10px', lineHeight: '1.6' }}>
-            Développement en JavaScript, création d'un SaaS
-            permettant de modéliser des batiments en 3D. J'ai
-            beaucoup interagi avec les clients et appris à communiquer à différents niveaux d'abstraction.
-
-          </p>
-        </div>
-      </>
-    }
-  />
-);
 
 export const EducationCard = () => (
   <BaseCard
@@ -130,7 +98,3 @@ export const InterestsCard = () => (
     }
   />
 );
-
-
-
-

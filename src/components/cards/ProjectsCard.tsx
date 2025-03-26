@@ -4,7 +4,6 @@ import styled from '@emotion/styled';
 
 const ProjectTitleLink = styled.a`
     font-size: 1.17em;
-    margin: 0 0 15px 0;
     color: #ff4757;
     text-decoration: none;
     font-weight: bold;
@@ -15,7 +14,7 @@ const ProjectContainer = styled.div`
     &:not(:first-of-type) {
         margin-top: 10px;
     }
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 `;
 
 export const ProjectCard = () => {
