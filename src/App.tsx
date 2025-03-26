@@ -3,7 +3,6 @@ import { HeaderComponent } from './components/Header';
 import {
   IntroCard,
   WhatImLookingForCard,
-  ProjectCard,
   DeveloperCard,
   EducationCard,
   InterestsCard
@@ -13,6 +12,7 @@ import { SpotifyCard } from './components/cards/SpotifyCard';
 import { LanguagesCard } from './components/cards/LanguagesCard';
 import { SocialNetworksCard } from './components/cards/SocialNetworksCard';
 import { SkillsCard } from './components/cards/SkillsCard';
+import { ProjectCard } from './components/cards/ProjectsCard';
 
 function App() {
   return (

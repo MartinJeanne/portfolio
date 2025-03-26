@@ -1,4 +1,4 @@
-import { FaQuestion, FaGraduationCap, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaQuestion, FaGraduationCap } from 'react-icons/fa';
 import { AiOutlineHome } from 'react-icons/ai';
 import { BsBuilding } from 'react-icons/bs';
 import { MdInterests } from 'react-icons/md';
@@ -13,7 +13,7 @@ export const IntroCard = () => (
     actionText="À propos de moi"
     hoverContent={
       <>
-        <h3 style={{ color: '#ff4757', fontSize: '1.4rem' }}>À propos de moi</h3>
+        <h3 style={{ color: '#ff4757'}}>À propos de moi</h3>
         <p style={{ marginTop: '10px', fontSize: '1.1rem' }}>
           Je suis un développeur diplômé d'un
           master en informatique, avec trois
@@ -48,40 +48,7 @@ export const WhatImLookingForCard = () => (
   />
 );
 
-export const ProjectCard = () => (
-  <BaseCard
-    title="Mes projets coups de coeur ❤️"
-    actionText="Voir les projets"
-    justifyContent="flex-start"
-    hoverContent={
-      <>
-        <div>
-          <h3>Bot discord DJ <FaExternalLinkAlt size={17} /></h3>
-          <p>
-            Un bot discord qui peut de jouer de la musique dans les salons vocaux
-          </p>
-          <p style={{ color: '#ff4757' }}>TypeScript, Java, Spring Boot, Docker</p>
-        </div>
 
-        <div style={{ marginTop: '25px' }}>
-          <h3>Who's bigger <FaExternalLinkAlt size={17} /></h3>
-          <p>
-            Une application web où le but est trouver la plus grande ville parmi deux villes de Normandie
-          </p>
-          <p style={{ color: '#ff4757' }}>TypeScript, React, Java, Spring Boot, Docker</p>
-        </div>
-
-        <div style={{ marginTop: '25px' }}>
-          <h3>Live chat <FaExternalLinkAlt size={17} /></h3>
-          <p>
-            Une application web de messagerie instantanée
-          </p>
-          <p style={{ color: '#ff4757' }}>JavaScript ,Vue.js, Firebase, GCP</p>
-        </div>
-      </>
-    }
-  />
-);
 
 export const DeveloperCard = () => (
   <BaseCard
