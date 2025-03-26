@@ -4,9 +4,9 @@ import { Card } from "../../styles/StyledComponents";
 const titleStyle: React.CSSProperties = {
     color: 'white',
     marginTop: '10px',
-    marginRight: '20px',
+    marginRight: '25px',
     width: '100%',
-    fontSize: '2.9rem',
+    fontSize: '2.5rem',
     textAlign: 'right',
     textShadow:
         '-1px -1px 0 #ff4757, ' +

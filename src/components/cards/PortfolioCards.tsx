@@ -1,106 +1,9 @@
-import { FaQuestion, FaJava, FaGraduationCap, FaLanguage, FaRunning, FaLinkedin, FaGithub, FaGlobe, FaMailBulk, FaChevronLeft, FaChevronRight, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaQuestion, FaGraduationCap, FaExternalLinkAlt } from 'react-icons/fa';
 import { AiOutlineHome } from 'react-icons/ai';
 import { BsBuilding } from 'react-icons/bs';
 import { MdInterests } from 'react-icons/md';
-import { SiTypescript } from 'react-icons/si';
 import { BaseCard } from './BaseCard';
-import styled from '@emotion/styled';
-import { useState } from 'react';
-import { Card } from '../../styles/StyledComponents';
 
-interface LanguageBarProps {
-  level: number;
-}
-
-const LanguageBar = styled.div<LanguageBarProps>`
-  width: ${(props: LanguageBarProps) => props.level}%;
-  height: 50px;
-  background: ${(props: LanguageBarProps) => {
-    if (props.level >= 90) return '#c40414';
-    if (props.level >= 60) return '#f53344';
-    if (props.level >= 40) return '#ff7182';
-  }};
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  border-radius: 8px;
-  font-size: 1.1rem;
-`;
-
-const LanguageContainer = styled.div`
-  padding: 6px 10px;
-  width: 100%;
-  h3 {
-    margin-bottom: 12px;
-    font-size: 1.2rem;
-  }
-`;
-
-const SocialLink = styled.a`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: inherit;
-  padding: 10px;
-  border-radius: 8px;
-  transition: background-color 0.2s;
-
-  &:hover {
-    background-color: rgba(255, 71, 87, 0.1);
-  }
-
-  svg {
-    color: #ff4757;
-  }
-`;
-
-const CarouselContainer = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const CarouselImage = styled.img`
-  width: 100%;
-  border-radius: 8px;
-  display: block;
-`;
-
-const CarouselButton = styled.button`
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.5);
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: white;
-  transition: background-color 0.2s;
-  z-index: 10;
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.3);
-  }
-
-  &.prev {
-    left: 20px;
-  }
-
-  &.next {
-    right: 20px;
-  }
-`;
 
 export const IntroCard = () => (
   <BaseCard
@@ -125,69 +28,6 @@ export const IntroCard = () => (
   />
 );
 
-export const SkillsCard = () => (
-  <BaseCard
-    variant="primary"
-    icon={<FaJava color="white" />}
-    title="Compétences"
-    actionText="Voir plus"
-    hoverContent={
-      <>
-        <div style={{
-          width: '150px',
-          height: '150px',
-          margin: '0 auto',
-          background: 'conic-gradient(rgba(255, 255, 255, 0.32) 0% 33%, rgba(255, 255, 255, 0.65) 33% 66%, rgba(255, 255, 255, 0.88) 66% 100%)',
-          borderRadius: '50%',
-          position: 'relative',
-        }}>
-          <div style={{
-            position: 'absolute',
-            top: '0',
-            left: '50%',
-            transform: 'translate(-50%, -100%)',
-            color: 'white',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '2px'
-          }}>
-            <FaJava size={40} />
-            <span>Java</span>
-          </div>
-          <div style={{
-            position: 'absolute',
-            bottom: '0',
-            left: '10px',
-            transform: 'translate(-50%, 100%)',
-            color: 'white',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '2px'
-          }}>
-            <SiTypescript size={40} />
-            <span>TS</span>
-          </div>
-          <div style={{
-            position: 'absolute',
-            bottom: '0',
-            right: '10px',
-            transform: 'translate(50%, 100%)',
-            color: 'white',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '2px'
-          }}>
-            <img src="react.svg" alt="React" style={{ filter: 'brightness(0) invert(1)' }} />
-            <span>React</span>
-          </div>
-        </div>
-      </>
-    }
-  />
-);
 
 export const WhatImLookingForCard = () => (
   <BaseCard
@@ -299,57 +139,6 @@ export const EducationCard = () => (
   />
 );
 
-export const HobbiesCard = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const gifs = [
-    { src: "climbing.gif", alt: "Escalade" },
-    { src: "badminton.gif", alt: "Badminton" },
-    { src: "spikeball.gif", alt: "Spikeball" }
-  ];
-
-  const nextGif = () => {
-    setCurrentIndex((prev) => (prev + 1) % gifs.length);
-  };
-
-  const prevGif = () => {
-    setCurrentIndex((prev) => (prev - 1 + gifs.length) % gifs.length);
-  };
-
-  return (
-    <BaseCard
-      icon={<FaRunning />}
-      variant="primary"
-      title="Hobbies"
-      subtitle=""
-      hoverContent={
-        <>
-          <div style={{
-            height: '100%',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'space-between'
-          }}>
-            <h2 style={{ color: 'white', marginTop: '20px' }}>{gifs[currentIndex].alt}</h2>
-            <CarouselContainer>
-              <CarouselButton className="prev" onClick={prevGif}>
-                <FaChevronLeft />
-              </CarouselButton>
-              <CarouselButton className="next" onClick={nextGif}>
-                <FaChevronRight />
-              </CarouselButton>
-              <CarouselImage
-                src={gifs[currentIndex].src}
-                alt={gifs[currentIndex].alt}
-              />
-            </CarouselContainer>
-          </div>
-        </>
-      }
-    />
-  );
-};
 
 export const InterestsCard = () => (
   <BaseCard
@@ -375,61 +164,6 @@ export const InterestsCard = () => (
   />
 );
 
-export const LanguagesCard = () => (
-  <BaseCard
-    icon={<FaLanguage />}
-    title="Je parle Français, Anglais et Allemand"
-    hoverContent={
-      <>
-        <LanguageContainer>
-          <LanguageBar level={100}>Français</LanguageBar>
-        </LanguageContainer>
-        <LanguageContainer>
-          <LanguageBar level={88}>Anglais</LanguageBar>
-        </LanguageContainer>
-        <LanguageContainer>
-          <LanguageBar level={40}>Allemand</LanguageBar>
-        </LanguageContainer>
-      </>
-    }
-  />
-);
 
-export const SpotifyCard = () => (
-  <Card>
-    <iframe
-      src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWl7MndYYxge"
-      width="100%"
-      height="100%"
-      frameBorder="0"
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy"
-    />
-  </Card>
-);
 
-export const SocialNetworksCard = () => (
-  <BaseCard
-    title="Mes réseaux"
-    defaultContent={
-      <div style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', gap: '15px' }}>
-        <SocialLink href="mailto:martinjeanne.dev@gmail.com">
-          <FaMailBulk size={24} />
-          <span>Mon email</span>
-        </SocialLink>
-        <SocialLink href="https://linkedin.com/in/MartinJeanne" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin size={24} />
-          <span>Mon profil Linkedin</span>
-        </SocialLink>
-        <SocialLink href="https://github.com/MartinJeanne" target="_blank" rel="noopener noreferrer">
-          <FaGithub size={24} />
-          <span>Mon profil Github</span>
-        </SocialLink>
-        <SocialLink href="https://leetcode.com/Martin-jnne" target="_blank" rel="noopener noreferrer">
-          <FaGlobe size={24} />
-          <span>Profil LeetCode</span>
-        </SocialLink>
-      </div>
-    }
-  />
-); 
+

@@ -2,17 +2,17 @@ import { AppContainer, CardGrid } from './styles/StyledComponents';
 import { HeaderComponent } from './components/Header';
 import {
   IntroCard,
-  SkillsCard,
   WhatImLookingForCard,
   ProjectCard,
   DeveloperCard,
   EducationCard,
-  InterestsCard,
-  LanguagesCard,
-  SpotifyCard,
-  SocialNetworksCard
+  InterestsCard
 } from './components/cards/PortfolioCards';
 import { HobbiesCard } from './components/cards/HobbiesCard';
+import { SpotifyCard } from './components/cards/SpotifyCard';
+import { LanguagesCard } from './components/cards/LanguagesCard';
+import { SocialNetworksCard } from './components/cards/SocialNetworksCard';
+import { SkillsCard } from './components/cards/SkillsCard';
 
 function App() {
   return (
