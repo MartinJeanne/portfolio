@@ -2,6 +2,17 @@ import { FaJava } from "react-icons/fa";
 import { BaseCard } from "./BaseCard";
 import { SiTypescript } from "react-icons/si";
 import { Flex, Progress, Tooltip } from 'antd';
+import styled from "@emotion/styled";
+
+export const OtherSkills = styled.div`
+  display: flex;
+  flex-direction: colummn;
+  width: 100%;
+  margin-top: 15px;
+  background-color: grey;
+  gap: 10px;
+  justify-content: space-around;
+`;
 
 export const SkillsCard = () => (
   <BaseCard
@@ -21,10 +32,10 @@ export const SkillsCard = () => (
         <Tooltip title='CI/CD'>
           <Progress percent={63} strokeColor={'#fcb028'} type="circle" format={() => <img src="cicd.png" alt="React" style={{ width: '80px' }} />} size={122} />
         </Tooltip>
-        <Flex>
+        <OtherSkills>
           <img src="react.svg" alt="React" style={{ width: '35px' }} />
           <img src="springboot.png" alt="Spring Boot" style={{ width: '35px' }} />
-        </Flex>
+        </OtherSkills>
       </>
     }
   />
