@@ -20,12 +20,12 @@ function App() {
       <HeaderComponent />
       <CardGrid>
         <IntroCard />
-        <SkillsCard />
-        <WhatImLookingForCard />
-        <ProjectCard />
         <ExperiencesCard />
+        <ProjectCard />
         <HobbiesCard />
+        <SkillsCard />
         <EducationCard />
+        <WhatImLookingForCard />
         <InterestsCard />
         <LanguagesCard />
         <SpotifyCard />

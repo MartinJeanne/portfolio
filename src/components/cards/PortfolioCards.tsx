@@ -6,13 +6,14 @@ import { BaseCard } from './BaseCard';
 
 export const IntroCard = () => (
   <BaseCard
+    variant="primary"
     icon={<FaQuestion />}
     title="Qui suis-je ?"
     subtitle="Caen, FR"
     actionText="À propos de moi"
     hoverContent={
       <>
-        <h3 style={{ color: '#ff4757'}}>À propos de moi</h3>
+        <h3 style={{ color: '#ff4757' }}>À propos de moi</h3>
         <p style={{ marginTop: '10px', fontSize: '1.1rem' }}>
           Je suis un développeur diplômé d'un
           master en informatique, avec trois
