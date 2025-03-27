@@ -29,14 +29,15 @@ export const ExperiencesCard = () => {
 
   return (
     <BaseCard
+      variant="primary"
       icon={<BsBuilding />}
       title="Développeur back-end Java @Sinay"
       actionText="Voir toutes les expériences"
-      justifyContent="flex-start"
+      justifyHoverContent="flex-start"
       hoverContent={
         <>
-          {experiences.map((experience) => (
-            <ExperienceContainer>
+          {experiences.map((experience, index) => (
+            <ExperienceContainer key={index}>
               <h3>{experience.title}</h3>
               <h4>{experience.subtitle}</h4>
               <p>

@@ -15,6 +15,20 @@ const IconContainer = styled.div`
   }
 `;
 
+interface MotionDivProps {
+  hovered: boolean;
+  justifyHoverContent: 'center' | 'flex-start';
+}
+
+const MotionDiv = styled(motion.div) <MotionDivProps>`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  justify-content: ${({ hovered, justifyHoverContent }) => hovered ? justifyHoverContent : 'center'};
+`;
+
 interface BaseCardProps {
   defaultContent?: ReactNode;
   hoverContent?: ReactNode;
@@ -24,7 +38,7 @@ interface BaseCardProps {
   title: string;
   subtitle?: string;
   actionText?: string;
-  justifyContent?: 'center' | 'flex-start';
+  justifyHoverContent?: 'center' | 'flex-start';
   variant?: 'default' | 'primary' | 'dark';
   onAction?: () => void;
 }
@@ -50,7 +64,7 @@ export const BaseCard = ({
   title,
   subtitle,
   actionText,
-  justifyContent = 'center',
+  justifyHoverContent = 'center',
   variant = 'default',
   onAction
 }: BaseCardProps) => {
@@ -70,7 +84,6 @@ export const BaseCard = ({
             style={{
               marginTop: '20px',
               color: variantStyles.color,
-              cursor: 'pointer',
               fontSize: '1.1rem'
             }}
             whileHover={{ x: 5 }}
@@ -88,7 +101,8 @@ export const BaseCard = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
-        ...variantStyles,
+        background: variantStyles.background,
+        color: variantStyles.color,
         height: '360px',
         padding: '15px',
         textAlign: 'center',
@@ -97,23 +111,17 @@ export const BaseCard = ({
       }}
     >
       <AnimatePresence mode="wait">
-        <motion.div
+        <MotionDiv
           key={isHovered && hoverContent ? 'hover' : 'default'}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: isHovered && hoverContent ? justifyContent : 'center',
-            height: '100%',
-            width: '100%',
-          }}
+          hovered={isHovered && hoverContent !== null}
+          justifyHoverContent={justifyHoverContent}
         >
           {renderContent()}
-        </motion.div>
+        </MotionDiv>
       </AnimatePresence>
     </Card>
   );

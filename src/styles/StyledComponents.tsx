@@ -7,42 +7,14 @@ export const AppContainer = styled.div`
   padding: 20px;
 `;
 
-export const Header = styled.header`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 40px;
-`;
-
-export const Profile = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 20px;
-`;
-
-export const ProfileImage = styled.img`
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: 50% 30%;
-`;
-
-export const ProfileInfo = styled.div`
-  h1 {
-    margin: 0;
-    font-size: 2.5em;
-  }
-  p {
-    margin: 5px 0;
-    color: #666;
-    font-size: 1.5em;
-  }
-`;
-
 export const ButtonGroup = styled.div`
   display: flex;
   gap: 10px;
+`;
+
+export const ContentP = styled.p`
+  fontSize: 1.1rem;
+  color:rgb(102, 102, 102)
 `;
 
 export const Button = styled.button`
@@ -81,12 +53,6 @@ export const Card = styled(motion.div)`
     margin: 0 0 15px 0;
     color: #ff4757;
   }
-  
-  p {
-    color: #666;
-    margin: 0;
-  }
-
 
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 0, 0, 0.2) transparent;

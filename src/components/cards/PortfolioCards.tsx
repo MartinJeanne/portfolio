@@ -1,31 +1,8 @@
-import { FaQuestion, FaGraduationCap } from 'react-icons/fa';
+import { FaGraduationCap } from 'react-icons/fa';
 import { AiOutlineHome } from 'react-icons/ai';
 import { MdInterests } from 'react-icons/md';
 import { BaseCard } from './BaseCard';
 
-
-export const IntroCard = () => (
-  <BaseCard
-    icon={<FaQuestion />}
-    title="Qui suis-je ?"
-    subtitle="Caen, FR"
-    actionText="À propos de moi"
-    hoverContent={
-      <>
-        <h3 style={{ color: '#ff4757'}}>À propos de moi</h3>
-        <p style={{ marginTop: '10px', fontSize: '1.1rem' }}>
-          Je suis un développeur diplômé d'un
-          master en informatique, avec trois
-          années d'expérience dans des
-          environnements Agile. <br /> <br />
-          Aujourd'hui, je suis à la recherche de
-          nouveaux défis techniques !
-
-        </p>
-      </>
-    }
-  />
-);
 
 
 export const WhatImLookingForCard = () => (
@@ -36,7 +13,7 @@ export const WhatImLookingForCard = () => (
     hoverContent={
       <>
         <h2>Un poste de développeur avec</h2>
-        <ul style={{ marginTop: '15px', lineHeight: '1.6', textAlign: 'left' }}>
+        <ul style={{ marginTop: '15px', lineHeight: '1.6', textAlign: 'left', color: 'rgb(102, 102, 102)' }}>
           <li>du challenge</li>
           <li>une collaboration internationale</li>
           <li>un contrat CDI/CDD/VIE</li>
@@ -54,7 +31,7 @@ export const EducationCard = () => (
     icon={<FaGraduationCap />}
     title="Je suis diplômé du CESI"
     actionText="Toutes mes études"
-    justifyContent="center"
+    justifyHoverContent="center"
     hoverContent={
       <>
         <div>
