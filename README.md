@@ -6,12 +6,12 @@ Other technologies used: CI/CD (GitHub Action), Emotion, Antd
 - [martinjeanne.com](https://martinjeanne.com/)
 
 ## Running locally
-Install dependencies
+Install dependencies:
 ```bash
 npm i
 ```
 
-Run in dev mode
+Run in dev mode:
 ```bash
 npm run dev
 ```
