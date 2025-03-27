@@ -1,5 +1,6 @@
 import { FaQuestion } from "react-icons/fa";
 import { BaseCard } from "./BaseCard";
+import { ContentP } from "../../styles/StyledComponents";
 
 export const IntroCard = () => (
   <BaseCard
@@ -10,15 +11,14 @@ export const IntroCard = () => (
     hoverContent={
       <>
         <h3>À propos de moi</h3>
-        <p style={{ marginTop: '10px', fontSize: '1.1rem' }}>
+        <ContentP style={{ marginTop: '10px'}}>
           Je suis un développeur diplômé d'un
           master en informatique, avec trois
           années d'expérience dans des
           environnements Agile. <br /> <br />
           Aujourd'hui, je suis à la recherche de
           nouveaux défis techniques !
-
-        </p>
+        </ContentP>
       </>
     }
   />

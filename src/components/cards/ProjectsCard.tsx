@@ -4,6 +4,7 @@ import { BaseCard } from "./BaseCard";
 import styled from '@emotion/styled';
 import type { MenuProps } from 'antd';
 import { Dropdown, Space } from 'antd';
+import { ContentP } from "../../styles/StyledComponents";
 
 const ProjectTitleLink = styled.a`
     font-size: 1.17em;
@@ -58,7 +59,7 @@ export const ProjectCard = () => {
     <BaseCard
       title="Mes projets coups de coeur ❤️"
       actionText="Voir les projets"
-      justifyContent="flex-start"
+      justifyHoverContent="flex-start"
       hoverContent={
         <>
           {projects.map((project) => {
@@ -95,7 +96,7 @@ export const ProjectCard = () => {
                     </Space>
                   </ProjectTitleLink>
                 </Dropdown>
-                <p>{project.content}</p>
+                <ContentP>{project.content}</ContentP>
                 <p style={{ color: '#ff4757' }}>{project.techno}</p>
               </ProjectContainer>
             );

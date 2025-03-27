@@ -13,7 +13,7 @@ export const WhatImLookingForCard = () => (
     hoverContent={
       <>
         <h2>Un poste de développeur avec</h2>
-        <ul style={{ marginTop: '15px', lineHeight: '1.6', textAlign: 'left' }}>
+        <ul style={{ marginTop: '15px', lineHeight: '1.6', textAlign: 'left', color: 'rgb(102, 102, 102)' }}>
           <li>du challenge</li>
           <li>une collaboration internationale</li>
           <li>un contrat CDI/CDD/VIE</li>
@@ -31,7 +31,7 @@ export const EducationCard = () => (
     icon={<FaGraduationCap />}
     title="Je suis diplômé du CESI"
     actionText="Toutes mes études"
-    justifyContent="center"
+    justifyHoverContent="center"
     hoverContent={
       <>
         <div>
