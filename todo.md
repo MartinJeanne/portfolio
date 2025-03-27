@@ -1,3 +1,4 @@
+There's a color problem in the first card, which is actually a problem with baseCard
 skill card need changement
 Improve README.md of projects I show here, and Link front&back in it
 Make sure Linkstart bot is usable by everyone
