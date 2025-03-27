@@ -1,7 +1,6 @@
 import { AppContainer, CardGrid } from './styles/StyledComponents';
 import { HeaderComponent } from './components/Header';
 import {
-  IntroCard,
   WhatImLookingForCard,
   EducationCard,
   InterestsCard
@@ -13,6 +12,7 @@ import { SocialNetworksCard } from './components/cards/SocialNetworksCard';
 import { SkillsCard } from './components/cards/SkillsCard';
 import { ProjectCard } from './components/cards/ProjectsCard';
 import { ExperiencesCard } from './components/cards/ExperiencesCard';
+import { IntroCard } from './components/cards/IntroCard';
 
 function App() {
   return (

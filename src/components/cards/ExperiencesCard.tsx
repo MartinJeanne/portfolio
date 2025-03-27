@@ -29,6 +29,7 @@ export const ExperiencesCard = () => {
 
   return (
     <BaseCard
+      variant="primary"
       icon={<BsBuilding />}
       title="Développeur back-end Java @Sinay"
       actionText="Voir toutes les expériences"

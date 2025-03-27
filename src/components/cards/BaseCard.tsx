@@ -70,7 +70,6 @@ export const BaseCard = ({
             style={{
               marginTop: '20px',
               color: variantStyles.color,
-              cursor: 'pointer',
               fontSize: '1.1rem'
             }}
             whileHover={{ x: 5 }}

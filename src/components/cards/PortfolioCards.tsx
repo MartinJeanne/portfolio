@@ -1,32 +1,8 @@
-import { FaQuestion, FaGraduationCap } from 'react-icons/fa';
+import { FaGraduationCap } from 'react-icons/fa';
 import { AiOutlineHome } from 'react-icons/ai';
 import { MdInterests } from 'react-icons/md';
 import { BaseCard } from './BaseCard';
 
-
-export const IntroCard = () => (
-  <BaseCard
-    variant="primary"
-    icon={<FaQuestion />}
-    title="Qui suis-je ?"
-    subtitle="Caen, FR"
-    actionText="À propos de moi"
-    hoverContent={
-      <>
-        <h3 style={{ color: '#ff4757' }}>À propos de moi</h3>
-        <p style={{ marginTop: '10px', fontSize: '1.1rem' }}>
-          Je suis un développeur diplômé d'un
-          master en informatique, avec trois
-          années d'expérience dans des
-          environnements Agile. <br /> <br />
-          Aujourd'hui, je suis à la recherche de
-          nouveaux défis techniques !
-
-        </p>
-      </>
-    }
-  />
-);
 
 
 export const WhatImLookingForCard = () => (
