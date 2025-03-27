@@ -8,10 +8,15 @@ export const OtherSkills = styled.div`
   display: flex;
   flex-direction: colummn;
   width: 100%;
+  height: 100%;
   margin-top: 15px;
-  background-color: grey;
   gap: 10px;
   justify-content: space-around;
+
+  img {
+    object-fit: contain;
+    width: 55px;
+  }
 `;
 
 export const SkillsCard = () => (
@@ -23,21 +28,30 @@ export const SkillsCard = () => (
       <>
         <Flex gap='middle'>
           <Tooltip title='Java'>
-            <Progress percent={80} strokeColor={'#eb2d2f'} type="circle" format={() => <FaJava size={40} color="#eb2d2f" />} size={122} />
+            <Progress percent={85} strokeColor={'#eb2d2f'} type="circle" format={() => <FaJava size={40} color="#eb2d2f" />} size={122} />
           </Tooltip>
           <Tooltip title='TypeScript'>
-            <Progress percent={70} strokeColor={'#2596be'} type="circle" format={() => <SiTypescript size={40} color='#2596be' />} size={122} />
+            <Progress percent={80} strokeColor={'#2596be'} type="circle" format={() => <SiTypescript size={40} color='#2596be' />} size={122} />
           </Tooltip>
         </Flex>
         <Tooltip title='CI/CD'>
-          <Progress percent={63} strokeColor={'#fcb028'} type="circle" format={() => <img src="cicd.png" alt="React" style={{ width: '80px' }} />} size={122} />
+          <Progress percent={75} strokeColor={'#fcb028'} type="circle" format={() => <img src="cicd.png" alt="React" style={{ width: '80px' }} />} size={122} />
         </Tooltip>
         <OtherSkills>
-          <img src="react.svg" alt="React" style={{ width: '35px' }} />
-          <img src="springboot.png" alt="Spring Boot" style={{ width: '35px' }} />
+          <Tooltip title='Spring Boot'>
+            <img src="springboot.png" alt="Spring Boot" />
+          </Tooltip>
+          <Tooltip title='React'>
+            <img src="react.svg" alt="React" />
+          </Tooltip>
+          <Tooltip title='Docker'>
+            <img src="docker.png" alt="Docker" />
+          </Tooltip>
+          <Tooltip title='HTML & CSS'>
+            <img src="htmlcss.svg" alt="PHP" style={{ width: '80px' }} />
+          </Tooltip>
         </OtherSkills>
       </>
     }
   />
 );
-// TODO php, html css, Docker
