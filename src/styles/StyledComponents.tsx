@@ -21,20 +21,22 @@ export const Profile = styled.div`
 `;
 
 export const ProfileImage = styled.img`
-  width: 80px;
-  height: 80px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: 50% 30%;
 `;
 
 export const ProfileInfo = styled.div`
   h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 2.5em;
   }
   p {
     margin: 5px 0;
     color: #666;
+    font-size: 1.5em;
   }
 `;
 
