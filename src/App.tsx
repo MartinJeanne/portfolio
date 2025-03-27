@@ -3,8 +3,6 @@ import { HeaderComponent } from './components/Header';
 import {
   IntroCard,
   WhatImLookingForCard,
-  ProjectCard,
-  DeveloperCard,
   EducationCard,
   InterestsCard
 } from './components/cards/PortfolioCards';
@@ -13,6 +11,8 @@ import { SpotifyCard } from './components/cards/SpotifyCard';
 import { LanguagesCard } from './components/cards/LanguagesCard';
 import { SocialNetworksCard } from './components/cards/SocialNetworksCard';
 import { SkillsCard } from './components/cards/SkillsCard';
+import { ProjectCard } from './components/cards/ProjectsCard';
+import { ExperiencesCard } from './components/cards/ExperiencesCard';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
         <SkillsCard />
         <WhatImLookingForCard />
         <ProjectCard />
-        <DeveloperCard />
+        <ExperiencesCard />
         <HobbiesCard />
         <EducationCard />
         <InterestsCard />
