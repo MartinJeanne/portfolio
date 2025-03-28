@@ -49,7 +49,7 @@ export const Card = styled(motion.div)`
   }
   
   h2 {
-    font-size: 28px;
+    font-size: 1.75rem;
     margin: 0 0 15px 0;
     color: #ff4757;
   }
