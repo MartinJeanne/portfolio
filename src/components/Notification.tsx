@@ -11,7 +11,7 @@ export const Notification: React.FC = () => {
     const timer = setTimeout(() => {
 
       api.info({
-        icon: <SmileOutlined style={{ color: '#108ee9' }} />,
+        icon: <SmileOutlined style={{ color: '#ff4757' }} />,
         message: `Ça vous plait ?`,
         description: (
           <p>
@@ -24,7 +24,7 @@ export const Notification: React.FC = () => {
         onClick: () => window.location.href = 'mailto:ton.martinjeanne.dev@gmail.com?subject=Contact&body=Bonjour',
         style: { cursor: 'pointer' },
       });
-    }, 1000);
+    }, 10000);
 
     return () => clearTimeout(timer);
   }, [api]);
