@@ -1,10 +1,12 @@
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub, FaJava } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
 import { BaseCard } from "./BaseCard";
 import styled from '@emotion/styled';
 import type { MenuProps } from 'antd';
 import { Dropdown, Space } from 'antd';
 import { ContentP } from "../../styles/StyledComponents";
+import { ReactNode } from "react";
+import { SiJavascript, SiTypescript } from "react-icons/si";
 
 const ProjectTitleLink = styled.a`
     font-size: 1.17em;
@@ -21,12 +23,25 @@ const ProjectContainer = styled.div`
     padding-bottom: 20px;
 `;
 
+const TechoImgsContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    gap: 10px;
+
+    img {
+    object-fit: contain;
+    width: 40px;
+    }
+`;
+
 interface Project {
   projectLink: string;
   codeLink: string;
   title: string;
   content: string;
-  techno: string;
+  techno: ReactNode[];
 }
 
 export const ProjectCard = () => {
@@ -36,23 +51,24 @@ export const ProjectCard = () => {
       codeLink: 'https://github.com/MartinJeanne/linkstart-bot',
       title: 'Bot discord DJ',
       content: 'Un bot discord qui peut de jouer de la musique dans les salons vocaux',
-      techno: 'TypeScript, Java, Spring Boot, Docker',
-    },
-    {
-      projectLink: 'https://whosbigger.martinjeanne.com/',
-      codeLink: 'https://github.com/MartinJeanne/whosbigger-front',
-      title: 'Who\'s bigger',
-      content: 'Une application web où le but est trouver la plus grande ville parmi deux villes de Normandie',
-      techno: 'TypeScript, React, Java, Spring Boot, Docker',
-
+      techno: [<SiTypescript size={30} color='#2596be' />, <img src="discord.png" alt="Docker" />, <img src="ffmpeg.png" alt="ffmpeg" />],
     },
     {
       projectLink: 'https://l1nkstart.web.app/',
       codeLink: 'https://github.com/MartinJeanne/live-chat',
       title: 'Live chat',
       content: 'Une application web de messagerie instantanée',
-      techno: 'JavaScript, Vue.js, Firebase, GCP',
+      techno: [<SiJavascript size={30} color='#edcf05' />, <img src="vuejs.png" alt="Vue.js" />, <img src="gcp.png" alt="GCP" />, <img src="firebase.png" alt="Firebase" />],
     },
+    {
+      projectLink: 'https://whosbigger.martinjeanne.com/',
+      codeLink: 'https://github.com/MartinJeanne/whosbigger-front',
+      title: 'Who\'s bigger',
+      content: 'Une application web où le but est trouver la plus grande ville parmi deux villes de Normandie',
+      techno: [<SiTypescript size={30} color='#2596be' />, <img src="react.svg" alt="React" />, <FaJava size={40} color="#eb2d2f" />, <img src="springboot.png" alt="Spring Boot" />],
+
+    },
+
   ];
 
   return (
@@ -69,7 +85,7 @@ export const ProjectCard = () => {
                 key: '1',
                 label: (
                   <a target="_blank" rel="noopener noreferrer" href={project.projectLink}>
-                    Go to project
+                    Voir le project
                   </a>
                 ),
                 icon: <CgWebsite size={24} />,
@@ -79,7 +95,7 @@ export const ProjectCard = () => {
                 key: '2',
                 label: (
                   <a target="_blank" rel="noopener noreferrer" href={project.codeLink}>
-                    Go to code
+                    Voir le code
                   </a>
                 ),
                 icon: <FaGithub size={24} />,
@@ -97,7 +113,7 @@ export const ProjectCard = () => {
                   </ProjectTitleLink>
                 </Dropdown>
                 <ContentP>{project.content}</ContentP>
-                <p style={{ color: '#ff4757' }}>{project.techno}</p>
+                <TechoImgsContainer>{project.techno}</TechoImgsContainer>
               </ProjectContainer>
             );
           })}
