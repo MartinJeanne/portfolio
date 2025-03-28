@@ -103,7 +103,6 @@ export const BaseCard = ({
       style={{
         background: variantStyles.background,
         color: variantStyles.color,
-        height: '360px',
         padding: '15px',
         textAlign: 'center',
         fontSize: '1.1rem',

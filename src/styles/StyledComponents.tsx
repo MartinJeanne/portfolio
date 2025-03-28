@@ -43,6 +43,7 @@ export const Card = styled(motion.div)`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
   overflow: hidden;
+  height: 360px;
   
   &:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
