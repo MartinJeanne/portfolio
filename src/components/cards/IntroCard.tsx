@@ -11,7 +11,7 @@ export const IntroCard = () => (
     hoverContent={
       <>
         <h3>À propos de moi</h3>
-        <ContentP style={{ marginTop: '10px'}}>
+        <ContentP style={{ marginTop: '10px' }}>
           Je suis un développeur diplômé d'un
           master en informatique, avec trois
           années d'expérience dans des

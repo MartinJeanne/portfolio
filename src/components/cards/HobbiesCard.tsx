@@ -10,7 +10,7 @@ const titleStyle: React.CSSProperties = {
   paddingLeft: '15px',
   textAlign: 'left',
   textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
-  borderBottom: '2px solid white'
+  borderBottom: '1px solid white'
 };
 
 const hobbieNameStyle: React.CSSProperties = {
