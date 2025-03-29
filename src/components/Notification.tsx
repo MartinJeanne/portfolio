@@ -11,7 +11,7 @@ export const Notification: React.FC = () => {
     const timer = setTimeout(() => {
 
       api.info({
-        icon: <SmileOutlined style={{ color: '#ff4757' }} />,
+        icon: <SmileOutlined style={{ color: '#00aaff' }} />,
         message: `Ça vous plait ?`,
         description: (
           <p>
