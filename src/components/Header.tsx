@@ -16,6 +16,7 @@ export const Profile = styled.div`
 export const ProfileImage = styled.img`
   width: 130px;
   height: 130px;
+  aspect-ratio: 1;
   border-radius: 50%;
   object-fit: cover;
   object-position: 50% 30%;
