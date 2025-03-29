@@ -18,7 +18,7 @@ const ProjectTitleLink = styled.a`
 // This style is not applied on the fist element
 const ProjectContainer = styled.div`
     &:not(:first-of-type) {
-        margin-top: 10px;
+        margin-top: 20px;
     }
     padding-bottom: 20px;
 `;
@@ -85,7 +85,7 @@ export const ProjectCard = () => {
                 key: '1',
                 label: (
                   <a target="_blank" rel="noopener noreferrer" href={project.projectLink}>
-                    Voir le project
+                    Voir le projet
                   </a>
                 ),
                 icon: <CgWebsite size={24} />,
