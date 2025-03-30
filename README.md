@@ -1,9 +1,15 @@
 # My Portfolio
 
-My portfolio made with React + TypeScript + Vite  
-Other technologies used: CI/CD (GitHub Action), Emotion, Antd
+Link: [martinjeanne.com](https://martinjeanne.com/)  
+- Built with modern web technologies (React, TypeScript, Vite)
+- Styled using Emotion and Ant Design (Antd)
+- Automated CI/CD pipeline with GitHub Actions
+- Fully responsive design
 
-- [martinjeanne.com](https://martinjeanne.com/)
+## Prerequisites
+Make sure you have the following installed:
+- [Node.js](https://nodejs.org/) (version 16 or higher recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
 ## Running locally
 Install dependencies:
