@@ -1,9 +1,10 @@
-import { FaExternalLinkAlt, FaGithub, FaJava } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub, FaJava, FaPaintBrush } from "react-icons/fa";
+import { FaGear } from "react-icons/fa6";
 import { CgWebsite } from "react-icons/cg";
 import { BaseCard } from "./BaseCard";
 import styled from '@emotion/styled';
 import type { MenuProps } from 'antd';
-import { Dropdown, Space } from 'antd';
+import { Dropdown, Space, Tooltip } from 'antd';
 import { ContentP } from "../../styles/StyledComponents";
 import { ReactNode } from "react";
 import { SiJavascript, SiTypescript } from "react-icons/si";
@@ -36,39 +37,89 @@ const TechoImgsContainer = styled.div`
     }
 `;
 
+
+interface CodeLink {
+  link: string;
+  icon: ReactNode;
+  label?: string;
+}
+
 interface Project {
-  projectLink: string;
-  codeLink: string;
+  codeLinks: CodeLink[];
   title: string;
   content: string;
   techno: ReactNode[];
 }
 
+
 export const ProjectCard = () => {
   const projects: Project[] = [
     {
-      projectLink: 'https://discord.com/oauth2/authorize?client_id=784536536459771925&permissions=8&scope=bot',
-      codeLink: 'https://github.com/MartinJeanne/linkstart-bot',
+      codeLinks: [
+        { link: 'https://discord.com/oauth2/authorize?client_id=784536536459771925&permissions=8&scope=bot', icon: <CgWebsite size={24} />, label: 'projet' },
+        { link: 'https://github.com/MartinJeanne/linkstart-api', icon: <FaPaintBrush size={24} />, label: 'code Front-end' },
+        { link: 'https://github.com/MartinJeanne/linkstart-bot', icon: <FaGear size={24} />, label: 'code Back-end' },
+      ],
       title: 'Bot discord DJ',
       content: 'Un bot discord qui peut de jouer de la musique dans les salons vocaux',
-      techno: [<SiTypescript size={30} color='#2596be' />, <img src="discord.png" alt="Docker" />, <img src="ffmpeg.png" alt="ffmpeg" />],
+      techno: [
+        <Tooltip title='TypeScript'>
+          <SiTypescript size={30} color='#2596be' />
+        </Tooltip>,
+        <Tooltip title='Discord.js'>
+          <img src="discord.png" alt="Docker" />
+        </Tooltip>,
+        <Tooltip title='FFmpeg'>
+          <img src="ffmpeg.png" alt="ffmpeg" />
+        </Tooltip>
+      ],
     },
     {
-      projectLink: 'https://l1nkstart.web.app/',
-      codeLink: 'https://github.com/MartinJeanne/live-chat',
+      codeLinks: [
+        { link: 'https://l1nkstart.web.app/', icon: <CgWebsite size={24} />, label: 'projet' },
+        { link: 'https://github.com/MartinJeanne/live-chat', icon: <FaGithub size={24} />, label: 'code' },
+      ],
       title: 'Live chat',
       content: 'Une application web de messagerie instantanée',
-      techno: [<SiJavascript size={30} color='#edcf05' />, <img src="vuejs.png" alt="Vue.js" />, <img src="gcp.png" alt="GCP" />, <img src="firebase.png" alt="Firebase" />],
+      techno: [
+        <Tooltip title='JavaScript'>
+          <SiJavascript size={30} color='#edcf05' />
+        </Tooltip>,
+        <Tooltip title='Vue.js'>
+          <img src="vuejs.png" alt="Vue.js" />
+        </Tooltip>,
+        <Tooltip title='GCP'>
+          <img src="gcp.png" alt="GCP" />
+        </Tooltip>,
+        <Tooltip title='Firebase'>
+          <img src="firebase.png" alt="Firebase" />
+        </Tooltip>
+      ],
     },
     {
-      projectLink: 'https://whosbigger.martinjeanne.com/',
-      codeLink: 'https://github.com/MartinJeanne/whosbigger-front',
+      codeLinks: [
+        { link: 'https://whosbigger.martinjeanne.com/', icon: <CgWebsite size={24} />, label: 'projet' },
+        { link: 'https://github.com/MartinJeanne/whosbigger-front', icon: <FaPaintBrush size={24} />, label: 'code Front-end' },
+        { link: 'https://github.com/MartinJeanne/whosbigger-back', icon: <FaGear size={24} />, label: 'code Back-end' },
+      ],
       title: 'Who\'s bigger',
       content: 'Une application web où le but est trouver la plus grande ville parmi deux villes de Normandie',
-      techno: [<SiTypescript size={30} color='#2596be' />, <img src="react.svg" alt="React" />, <FaJava size={40} color="#eb2d2f" />, <img src="springboot.png" alt="Spring Boot" />],
+      techno: [
+        <Tooltip title='TypeScript'>
+          <SiTypescript size={30} color='#2596be' />
+        </Tooltip>,
+        <Tooltip title='React'>
+          <img src="react.svg" alt="React" />
+        </Tooltip>,
+        <Tooltip title='Java'>
+          <FaJava size={40} color="#eb2d2f" />
+        </Tooltip>,
+        <Tooltip title='Spring Boot'>
+          <img src="springboot.png" alt="Spring Boot" />
+        </Tooltip>
+      ],
 
     },
-
   ];
 
   return (
@@ -80,28 +131,19 @@ export const ProjectCard = () => {
         <>
           {projects.map((project) => {
             // Créer un menu personnalisé pour chaque projet
-            const items: MenuProps['items'] = [
-              {
-                key: '1',
+            const items: MenuProps['items'] = [];
+            project.codeLinks.forEach((codeLink, index) => {
+              items.push({
+                key: `${index}`,
                 label: (
-                  <a target="_blank" rel="noopener noreferrer" href={project.projectLink}>
-                    Voir le projet
+                  <a target="_blank" rel="noopener noreferrer" href={codeLink.link}>
+                    Voir le {codeLink.label}
                   </a>
                 ),
-                icon: <CgWebsite size={24} />,
+                icon: codeLink.icon,
                 disabled: false,
-              },
-              {
-                key: '2',
-                label: (
-                  <a target="_blank" rel="noopener noreferrer" href={project.codeLink}>
-                    Voir le code
-                  </a>
-                ),
-                icon: <FaGithub size={24} />,
-                disabled: false,
-              }
-            ];
+              })
+            });
 
             return (
               <ProjectContainer key={project.content}>
