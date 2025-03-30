@@ -14,10 +14,10 @@ export const Notification: React.FC = () => {
         icon: <SmileOutlined style={{ color: '#00aaff' }} />,
         message: `Ça vous plait ?`,
         description: (
-          <p>
+          <div>
             N'hésitez-pas à m'envoyer un message !
             <p style={{ color: 'blue', textDecoration: 'underline' }}>martinjeanne.dev@gmail.com</p>
-          </p>
+          </div>
         ),
         placement: 'topRight',
         duration: null,
