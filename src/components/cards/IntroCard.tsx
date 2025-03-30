@@ -1,8 +1,16 @@
 import { FaQuestion } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 import { BaseCard } from "./BaseCard";
 import { ContentP } from "../../styles/StyledComponents";
 import { useTranslation } from 'react-i18next';
-import { LanguageSwitcher } from "../LanguageSwitcher";
+import styled from '@emotion/styled';
+
+const FlexSubtitle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+`;
 
 export const IntroCard = () => {
   const { t } = useTranslation();
@@ -11,19 +19,16 @@ export const IntroCard = () => {
     <BaseCard
       icon={<FaQuestion />}
       title={t('introCard.title')}
-      subtitle="Caen, FR"
-      actionText="À propos de moi"
+      subtitle={<FlexSubtitle><p>{t('introCard.subtitle')}</p> <FaLocationDot size={23}/></FlexSubtitle>}
+      actionText={t('introCard.actionText')}
       hoverContent={
         <>
-          <h3>À propos de moi</h3>
-          <LanguageSwitcher />
+          <h3>{t('introCard.h.title')}</h3>
           <ContentP style={{ marginTop: '10px' }}>
-            Je suis un développeur diplômé d'un
-            master en informatique, avec trois
-            années d'expérience dans des
-            environnements Agile. <br /> <br />
-            Aujourd'hui, je suis à la recherche de
-            nouveaux défis techniques !
+            {t('introCard.h.content1')}
+          </ContentP>
+          <ContentP style={{ marginTop: '15px' }}>
+            {t('introCard.h.content2')}
           </ContentP>
         </>
       }

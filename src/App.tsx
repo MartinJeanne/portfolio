@@ -14,7 +14,7 @@ import { Notification } from './components/Notification';
 
 function App() {
   return (
-    <Suspense fallback="...is loading">
+    <Suspense>
       <AppContainer>
         <HeaderComponent />
         <Notification />

@@ -36,7 +36,7 @@ interface BaseCardProps {
   color?: string;
   icon?: ReactNode;
   title: string;
-  subtitle?: string;
+  subtitle?: ReactNode;
   actionText?: string;
   justifyHoverContent?: 'center' | 'flex-start';
   variant?: 'default' | 'primary' | 'dark';

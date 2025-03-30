@@ -2,10 +2,11 @@
   "introCard": {
     "title": "Who am I?",
     "subtitle": "Caen, FR",
-    "actionText": "À propos de moi",
+    "actionText": "About me",
     "h": {
-      "title": "À propos de moi",
-      "content": ""
+      "title": "About me",
+      "content1": "I'm a developer who graduated with a Master's degree in computer science and has three years of experience in Agile environments.",
+      "content2": "Today, I'm seeking new challenges!"
     }
   }
 }

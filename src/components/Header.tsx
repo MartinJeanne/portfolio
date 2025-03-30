@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import pp from '@assets/pp.png';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 export const Header = styled.header`
   display: flex;
@@ -45,6 +46,7 @@ export const HeaderComponent = () => {
           <p>Portfolio</p>
         </ProfileInfo>
       </Profile>
+      <LanguageSwitcher />
     </Header>
   );
 }; 

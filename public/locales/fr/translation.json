@@ -5,7 +5,8 @@
     "actionText": "À propos de moi",
     "h": {
       "title": "À propos de moi",
-      "content": ""
+      "content1": "Je suis un développeur diplômé d'un master en informatique, avec trois années d'expérience dans des environnements Agile.",
+      "content2": "Aujourd'hui, je suis à la recherche de nouveaux défis techniques !"
     }
   }
 }
