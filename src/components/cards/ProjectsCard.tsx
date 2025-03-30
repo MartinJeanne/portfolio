@@ -1,4 +1,4 @@
-import { FaExternalLinkAlt, FaGithub, FaJava, FaPaintBrush } from "react-icons/fa";
+import { FaLink, FaGithub, FaJava, FaPaintBrush } from "react-icons/fa";
 import { FaGear } from "react-icons/fa6";
 import { CgWebsite } from "react-icons/cg";
 import { BaseCard } from "./BaseCard";
@@ -149,9 +149,7 @@ export const ProjectCard = () => {
               <ProjectContainer key={project.content}>
                 <Dropdown menu={{ items }}>
                   <ProjectTitleLink onClick={(e) => e.preventDefault()}>
-                    <Space>
-                      {project.title} <FaExternalLinkAlt size={17} />
-                    </Space>
+                      {project.title} <FaLink size={16} />
                   </ProjectTitleLink>
                 </Dropdown>
                 <ContentP>{project.content}</ContentP>
