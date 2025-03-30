@@ -9,6 +9,14 @@ import { ContentP } from "../../styles/StyledComponents";
 import { ReactNode } from "react";
 import { SiJavascript, SiTypescript } from "react-icons/si";
 
+import react from '@assets/react.svg'
+import discord from '@assets/discord.png'
+import ffmpeg from '@assets/ffmpeg.png'
+import firebase from '@assets/firebase.png'
+import gcp from '@assets/gcp.png'
+import springboot from '@assets/springboot.png'
+import vuejs from '@assets/vuejs.png'
+
 const ProjectTitleLink = styled.a`
     font-size: 1.17em;
     color: #ff4757;
@@ -67,10 +75,10 @@ export const ProjectCard = () => {
           <SiTypescript size={30} color='#2596be' />
         </Tooltip>,
         <Tooltip title='Discord.js'>
-          <img src="discord.png" alt="Docker" />
+          <img src={discord} alt="Discord" />
         </Tooltip>,
         <Tooltip title='FFmpeg'>
-          <img src="ffmpeg.png" alt="ffmpeg" />
+          <img src={ffmpeg} alt="ffmpeg" />
         </Tooltip>
       ],
     },
@@ -86,13 +94,13 @@ export const ProjectCard = () => {
           <SiJavascript size={30} color='#edcf05' />
         </Tooltip>,
         <Tooltip title='Vue.js'>
-          <img src="vuejs.png" alt="Vue.js" />
+          <img src={vuejs} alt="Vue.js" />
         </Tooltip>,
         <Tooltip title='GCP'>
-          <img src="gcp.png" alt="GCP" />
+          <img src={gcp} alt="GCP" />
         </Tooltip>,
         <Tooltip title='Firebase'>
-          <img src="firebase.png" alt="Firebase" />
+          <img src={firebase} alt="Firebase" />
         </Tooltip>
       ],
     },
@@ -109,13 +117,13 @@ export const ProjectCard = () => {
           <SiTypescript size={30} color='#2596be' />
         </Tooltip>,
         <Tooltip title='React'>
-          <img src="react.svg" alt="React" />
+          <img src={react} alt="React" />
         </Tooltip>,
         <Tooltip title='Java'>
           <FaJava size={40} color="#eb2d2f" />
         </Tooltip>,
         <Tooltip title='Spring Boot'>
-          <img src="springboot.png" alt="Spring Boot" />
+          <img src={springboot} alt="Spring Boot" />
         </Tooltip>
       ],
 

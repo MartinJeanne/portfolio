@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import pp from '@assets/pp.png';
 
 export const Header = styled.header`
   display: flex;
@@ -38,7 +39,7 @@ export const HeaderComponent = () => {
   return (
     <Header>
       <Profile>
-        <ProfileImage src="pp.png" alt="Profile" />
+        <ProfileImage src={pp} alt="Profile picture" />
         <ProfileInfo>
           <h1>Martin Jeanne</h1>
           <p>Portfolio</p>

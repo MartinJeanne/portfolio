@@ -1,5 +1,11 @@
 import { Carousel } from 'antd';
 import { Card } from "../../styles/StyledComponents";
+import codding from '@assets/codding.gif'
+import reading from '@assets/reading.gif'
+import climbing from '@assets/climbing.gif'
+import badminton from '@assets/badminton.gif'
+import spikeball from '@assets/spikeball.gif'
+
 
 const titleStyle: React.CSSProperties = {
   width: '100%',
@@ -24,11 +30,11 @@ const hobbieNameStyle: React.CSSProperties = {
 
 export const HobbiesCard = () => {
   const gifs = [
-    { src: "codding.gif", alt: "Coder" },
-    { src: "reading.gif", alt: "Lire" },
-    { src: "climbing.gif", alt: "Escalade" },
-    { src: "badminton.gif", alt: "Badminton" },
-    { src: "spikeball.gif", alt: "Spikeball" }
+    { src: codding, alt: "Coder" },
+    { src: reading, alt: "Lire" },
+    { src: climbing, alt: "Escalade" },
+    { src: badminton, alt: "Badminton" },
+    { src: spikeball, alt: "Spikeball" }
   ];
 
   return (

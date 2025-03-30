@@ -4,6 +4,12 @@ import { SiTypescript } from "react-icons/si";
 import { Flex, Progress, Tooltip } from 'antd';
 import styled from "@emotion/styled";
 
+import react from '@assets/react.svg'
+import docker from '@assets/docker.png'
+import htmlcss from '@assets/htmlcss.svg'
+import cicd from '@assets/cicd.png'
+import springboot from '@assets/springboot.png'
+
 const OtherSkills = styled.div`
   display: flex;
   flex-direction: colummn;
@@ -35,20 +41,20 @@ export const SkillsCard = () => (
           </Tooltip>
         </Flex>
         <Tooltip title='CI/CD'>
-          <Progress percent={75} strokeColor={'#fcb028'} type="circle" format={() => <img src="cicd.png" alt="React" style={{ width: '73px' }} />} size={100} />
+          <Progress percent={75} strokeColor={'#fcb028'} type="circle" format={() => <img src={cicd} alt="React" style={{ width: '73px' }} />} size={100} />
         </Tooltip>
         <OtherSkills>
           <Tooltip title='Spring Boot'>
-            <img src="springboot.png" alt="Spring Boot" />
+            <img src={springboot} alt="Spring Boot" />
           </Tooltip>
           <Tooltip title='React'>
-            <img src="react.svg" alt="React" />
+            <img src={react} alt="React" />
           </Tooltip>
           <Tooltip title='Docker'>
-            <img src="docker.png" alt="Docker" />
+            <img src={docker} alt="Docker" />
           </Tooltip>
           <Tooltip title='HTML & CSS'>
-            <img src="htmlcss.svg" alt="PHP" style={{ width: '80px' }} />
+            <img src={htmlcss} alt="PHP" style={{ width: '80px' }} />
           </Tooltip>
         </OtherSkills>
       </>
