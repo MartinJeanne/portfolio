@@ -16,14 +16,13 @@ export const ExperiencesCard = () => {
     {
       title: 'Développeur back-end Java',
       subtitle: 'Sinay, Caen 2022-2024',
-      content: 'Développement avec Java Spring Boot d\'API REST, servant pour des SaaS. Dans un cadre Agile Scrum avec du CI/CD.',
+      content: 'Développement avec Java Spring Boot d\'API REST, servant pour des SaaS. Dans un cadre Agile Scrum avec du CI/CD',
     },
     {
       title: 'Développeur JavaScript',
       subtitle: 'Léonard Solutions, Caen 2021-2022',
-      content: `Développement en JavaScript, création d'un SaaS permettant
-        de modéliser des batiments en 3D. J'ai beaucoup interagi avec les clients 
-        et appris à communiquer à différents niveaux d'abstraction.`,
+      content: `Développement en JavaScript, création de SaaS pour
+        modélisation de batiments en 3D`,
     },
   ];
 
@@ -33,7 +32,6 @@ export const ExperiencesCard = () => {
       icon={<BsBuilding />}
       title="Développeur back-end Java @Sinay"
       actionText="Voir toutes les expériences"
-      justifyHoverContent="flex-start"
       hoverContent={
         <>
           {experiences.map((experience, index) => (
