@@ -8,5 +8,23 @@
       "content1": "Je suis un développeur diplômé d'un master en informatique, avec trois années d'expérience dans des environnements Agile.",
       "content2": "Aujourd'hui, je suis à la recherche de nouveaux défis techniques !"
     }
+  },
+  "experienceCard": {
+    "title": "Développeur back-end Java @Sinay",
+    "actionText": "Voir toutes les expériences",
+    "h": {
+      "xps": [
+        {
+          "title": "Développeur back-end Java",
+          "subtitle": "Sinay, Caen 2022-2024",
+          "content": "Développement avec Java Spring Boot d'API REST, servant pour des SaaS. Dans un cadre Agile Scrum avec du CI/CD"
+        },
+        {
+          "title": "Développeur JavaScript",
+          "subtitle": "Léonard Solutions, Caen 2021-2022",
+          "content": "Développement en JavaScript, création de SaaS pour modélisation de batiments en 3D"
+        }
+      ]
+    }
   }
 }

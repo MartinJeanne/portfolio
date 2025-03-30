@@ -4,6 +4,7 @@ Link: [martinjeanne.com](https://martinjeanne.com/)
 - Built with modern web technologies (React, TypeScript, Vite)
 - Styled using Emotion and Ant Design (Antd)
 - Automated CI/CD pipeline with GitHub Actions
+- Multiple language support managed by i18next
 - Fully responsive design
 
 ## Prerequisites

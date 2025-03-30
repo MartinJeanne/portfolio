@@ -8,5 +8,23 @@
       "content1": "I'm a developer who graduated with a Master's degree in computer science and has three years of experience in Agile environments.",
       "content2": "Today, I'm seeking new challenges!"
     }
+  },
+  "experienceCard": {
+    "title": "Back-end Java Developer at @Sinay",
+    "actionText": "View all my experiences",
+    "h": {
+      "xps": [
+        {
+          "title": "Back-end Java Developer",
+          "subtitle": "Sinay, Caen 2022-2024",
+          "content": "Java Spring Boot development of REST APIs for SaaS. In a Agile Scrum framework, and applying CI/CD principles"
+        },
+        {
+          "title": "JavaScript Developer",
+          "subtitle": "Léonard Solutions, Caen 2021-2022",
+          "content": "Development in JavaScript, creating SaaS for 3D building modeling"
+        }
+      ]
+    }
   }
 }
