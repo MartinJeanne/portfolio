@@ -4,7 +4,7 @@ import { SiTypescript } from "react-icons/si";
 import { Flex, Progress, Tooltip } from 'antd';
 import styled from "@emotion/styled";
 
-export const OtherSkills = styled.div`
+const OtherSkills = styled.div`
   display: flex;
   flex-direction: colummn;
   width: 100%;
@@ -15,7 +15,7 @@ export const OtherSkills = styled.div`
 
   img {
     object-fit: contain;
-    width: 55px;
+    width: 50px;
   }
 `;
 
@@ -26,16 +26,16 @@ export const SkillsCard = () => (
     actionText="Voir plus"
     hoverContent={
       <>
-        <Flex gap='middle'>
+        <Flex gap='middle' style={{marginTop: '15px'}}>
           <Tooltip title='Java'>
-            <Progress percent={85} strokeColor={'#eb2d2f'} type="circle" format={() => <FaJava size={40} color="#eb2d2f" />} size={122} />
+            <Progress percent={85} strokeColor={'#eb2d2f'} type="circle" format={() => <FaJava size={35} color="#eb2d2f" />} size={100} />
           </Tooltip>
           <Tooltip title='TypeScript'>
-            <Progress percent={80} strokeColor={'#2596be'} type="circle" format={() => <SiTypescript size={40} color='#2596be' />} size={122} />
+            <Progress percent={80} strokeColor={'#2596be'} type="circle" format={() => <SiTypescript size={35} color='#2596be' />} size={100} />
           </Tooltip>
         </Flex>
         <Tooltip title='CI/CD'>
-          <Progress percent={75} strokeColor={'#fcb028'} type="circle" format={() => <img src="cicd.png" alt="React" style={{ width: '80px' }} />} size={122} />
+          <Progress percent={75} strokeColor={'#fcb028'} type="circle" format={() => <img src="cicd.png" alt="React" style={{ width: '73px' }} />} size={100} />
         </Tooltip>
         <OtherSkills>
           <Tooltip title='Spring Boot'>

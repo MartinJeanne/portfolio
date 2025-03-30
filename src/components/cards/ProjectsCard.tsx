@@ -4,7 +4,7 @@ import { CgWebsite } from "react-icons/cg";
 import { BaseCard } from "./BaseCard";
 import styled from '@emotion/styled';
 import type { MenuProps } from 'antd';
-import { Dropdown, Space, Tooltip } from 'antd';
+import { Dropdown, Tooltip } from 'antd';
 import { ContentP } from "../../styles/StyledComponents";
 import { ReactNode } from "react";
 import { SiJavascript, SiTypescript } from "react-icons/si";
@@ -57,8 +57,8 @@ export const ProjectCard = () => {
     {
       codeLinks: [
         { link: 'https://discord.com/oauth2/authorize?client_id=784536536459771925&permissions=8&scope=bot', icon: <CgWebsite size={24} />, label: 'projet' },
-        { link: 'https://github.com/MartinJeanne/linkstart-api', icon: <FaPaintBrush size={24} />, label: 'code Front-end' },
-        { link: 'https://github.com/MartinJeanne/linkstart-bot', icon: <FaGear size={24} />, label: 'code Back-end' },
+        { link: 'https://github.com/MartinJeanne/linkstart-bot', icon: <FaPaintBrush size={24} />, label: 'code Front-end' },
+        { link: 'https://github.com/MartinJeanne/linkstart-api', icon: <FaGear size={24} />, label: 'code Back-end' },
       ],
       title: 'Bot discord DJ',
       content: 'Un bot discord qui peut de jouer de la musique dans les salons vocaux',
