@@ -4,9 +4,9 @@ import { SiTypescript } from "react-icons/si";
 import { Flex, Progress, Tooltip } from 'antd';
 import styled from "@emotion/styled";
 
-import react from '@assets/react.svg'
+import react from '@assets/react.png'
 import docker from '@assets/docker.png'
-import htmlcss from '@assets/htmlcss.svg'
+import htmlcss from '@assets/htmlcss.png'
 import cicd from '@assets/cicd.png'
 import springboot from '@assets/springboot.png'
 

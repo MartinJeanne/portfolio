@@ -27,7 +27,7 @@
       ]
     }
   },
-  "projectCard": {
+  "projectsCard": {
     "title": "Mes projets coups de coeur ❤️",
     "actionText": "Voir les projets",
     "h": {
@@ -36,9 +36,18 @@
           "title": "Bot discord DJ",
           "content": "Un bot discord qui peut de jouer de la musique dans les salons vocaux",
           "technoIcons": [
-            "TypeScript",
-            "Discord.js",
-            "FFmpeg"
+            {
+              "label": "TypeScript",
+              "link": "typescript"
+            },
+            {
+              "label": "Discord.js",
+              "link": "discord"
+            },
+            {
+              "label": "FFmpeg",
+              "link": "ffmpeg"
+            }
           ],
           "codeLinks": [
             {
@@ -62,10 +71,22 @@
           "title": "Live chat",
           "content": "Une application web de messagerie instantanée",
           "technoIcons": [
-            "JavaScript",
-            "Vue.js",
-            "GCP",
-            "Firebase"
+            {
+              "label": "JavaScript",
+              "link": "javascript"
+            },
+            {
+              "label": "Vue.js",
+              "link": "vuejs"
+            },
+            {
+              "label": "GCP",
+              "link": "gcp"
+            },
+            {
+              "label": "Firebase",
+              "link": "firebase"
+            }
           ],
           "codeLinks": [
             {
@@ -84,10 +105,22 @@
           "title": "Who's bigger",
           "content": "Une application web où le but est trouver la plus grande ville parmi deux villes de Normandie",
           "technoIcons": [
-            "TypeScript",
-            "React",
-            "Java",
-            "Spring Boot"
+            {
+              "label": "TypeScript",
+              "link": "typescript"
+            },
+            {
+              "label": "React",
+              "link": "react"
+            },
+            {
+              "label": "Java",
+              "link": "java"
+            },
+            {
+              "label": "Spring Boot",
+              "link": "springboot"
+            }
           ],
           "codeLinks": [
             {
@@ -109,5 +142,30 @@
         }
       ]
     }
+  },
+  "hobbiesCard": {
+    "title": "Passions",
+    "gifs": [
+      {
+        "link": "coding",
+        "label": "Coder"
+      },
+      {
+        "link": "reading",
+        "label": "Lire"
+      },
+      {
+        "link": "climbing",
+        "label": "Escalade"
+      },
+      {
+        "link": "badminton",
+        "label": "Badminton"
+      },
+      {
+        "link": "spikeball",
+        "label": "Spikeball"
+      }
+    ]
   }
 }

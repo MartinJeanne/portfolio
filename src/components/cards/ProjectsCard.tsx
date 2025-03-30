@@ -1,3 +1,4 @@
+import { ReactNode, useEffect, useState } from "react";
 import { FaLink, FaGithub, FaPaintBrush } from "react-icons/fa";
 import { FaGear } from "react-icons/fa6";
 import { CgWebsite } from "react-icons/cg";
@@ -6,19 +7,7 @@ import styled from '@emotion/styled';
 import type { MenuProps } from 'antd';
 import { Dropdown, Tooltip } from 'antd';
 import { ContentP } from "../../styles/StyledComponents";
-import { ReactNode } from "react";
 import { useTranslation } from 'react-i18next';
-
-import java from '@assets/java.png'
-import javascript from '@assets/javascript.png'
-import typescript from '@assets/typescript.png'
-import react from '@assets/react.svg'
-import discord from '@assets/discord.png'
-import ffmpeg from '@assets/ffmpeg.png'
-import firebase from '@assets/firebase.png'
-import gcp from '@assets/gcp.png'
-import springboot from '@assets/springboot.png'
-import vuejs from '@assets/vuejs.png'
 
 const ProjectTitleLink = styled.a`
     font-size: 1.17em;
@@ -54,28 +43,40 @@ interface CodeLink {
   label: string;
 }
 
+interface TechnoIcons {
+  link: string;
+  label: string;
+}
+
 interface Project {
   codeLinks: CodeLink[];
   title: string;
   content: string;
-  technoIcons: string[];
+  technoIcons: TechnoIcons[];
 }
 
 export const ProjectCard = () => {
   const { t } = useTranslation();
+  const rawProjects: Project[] = t('projectsCard.h.projects', { returnObjects: true }) as Project[];
+  const [projects, setProjects] = useState<Project[]>([]);
 
-  const technoIconMapping: { [key: string]: string } = {
-    'Java': java,
-    'JavaScript': javascript,
-    'TypeScript': typescript,
-    'React': react,
-    'Vue.js': vuejs,
-    'Discord.js': discord,
-    'FFmpeg': ffmpeg,
-    'Firebase': firebase,
-    'GCP': gcp,
-    'Spring Boot': springboot
-  };
+  useEffect(() => {
+    const loadImages = async () => {
+      const images = await Promise.all(
+        rawProjects.map(async (project) => {
+          const loadedIcons = await Promise.all(
+            project.technoIcons.map(async (icon) => {
+              return { ...icon, link: (await import(`@assets/${icon.link}.png`)).default };
+            })
+          );
+          return { ...project, technoIcons: loadedIcons };
+        })
+      );
+      setProjects(images);
+    };
+
+    loadImages();
+  }, [rawProjects]);
 
   const submenuIconMapping: { [key: string]: ReactNode } = {
     project: <CgWebsite size={24} />,
@@ -84,12 +85,10 @@ export const ProjectCard = () => {
     backEnd: <FaGear size={24} />
   };
 
-  const projects: Project[] = t('projectCard.h.projects', { returnObjects: true }) as Project[];
-
   return (
     <BaseCard
-      title={t('projectCard.title')}
-      actionText={t('projectCard.actionText')}
+      title={t('projectsCard.title')}
+      actionText={t('projectsCard.actionText')}
       justifyHoverContent="flex-start"
       hoverContent={
         <>
@@ -120,8 +119,8 @@ export const ProjectCard = () => {
                 <TechoImgsContainer>
                   {project.technoIcons.map((icon) => {
                     return (
-                      <Tooltip key={icon} title={icon}>
-                        <img src={technoIconMapping[icon]} alt={icon} />
+                      <Tooltip key={icon.label} title={icon.label}>
+                        <img src={icon.link} alt={icon.label} />
                       </Tooltip>
                     )
                   })}

@@ -27,7 +27,7 @@
       ]
     }
   },
-  "projectCard": {
+  "projectsCard": {
     "title": "My favorite projects ❤️",
     "actionText": "View the projects",
     "h": {
@@ -36,9 +36,18 @@
           "title": "DJ Discord bot",
           "content": "A discord bot that can play music in voice rooms",
           "technoIcons": [
-            "TypeScript",
-            "Discord.js",
-            "FFmpeg"
+            {
+              "label": "TypeScript",
+              "link": "typescript"
+            },
+            {
+              "label": "Discord.js",
+              "link": "discord"
+            },
+            {
+              "label": "FFmpeg",
+              "link": "ffmpeg"
+            }
           ],
           "codeLinks": [
             {
@@ -62,10 +71,22 @@
           "title": "Live chat",
           "content": "A web-based instant messaging application",
           "technoIcons": [
-            "JavaScript",
-            "Vue.js",
-            "GCP",
-            "Firebase"
+            {
+              "label": "JavaScript",
+              "link": "javascript"
+            },
+            {
+              "label": "Vue.js",
+              "link": "vuejs"
+            },
+            {
+              "label": "GCP",
+              "link": "gcp"
+            },
+            {
+              "label": "Firebase",
+              "link": "firebase"
+            }
           ],
           "codeLinks": [
             {
@@ -84,10 +105,22 @@
           "title": "Who's bigger",
           "content": "A web application where the goal is to find the largest city among two towns in Normandy",
           "technoIcons": [
-            "TypeScript",
-            "React",
-            "Java",
-            "Spring Boot"
+            {
+              "label": "TypeScript",
+              "link": "typescript"
+            },
+            {
+              "label": "React",
+              "link": "react"
+            },
+            {
+              "label": "Java",
+              "link": "java"
+            },
+            {
+              "label": "Spring Boot",
+              "link": "springboot"
+            }
           ],
           "codeLinks": [
             {
@@ -109,5 +142,30 @@
         }
       ]
     }
+  },
+  "hobbiesCard": {
+    "title": "Hobbies",
+    "gifs": [
+      {
+        "link": "coding",
+        "label": "Coding"
+      },
+      {
+        "link": "reading",
+        "label": "Reading"
+      },
+      {
+        "link": "climbing",
+        "label": "Climbing"
+      },
+      {
+        "link": "badminton",
+        "label": "Badminton"
+      },
+      {
+        "link": "spikeball",
+        "label": "Spikeball"
+      }
+    ]
   }
 }
