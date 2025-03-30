@@ -22,7 +22,82 @@
         {
           "title": "JavaScript Developer",
           "subtitle": "Léonard Solutions, Caen 2021-2022",
-          "content": "Development in JavaScript, creating SaaS for 3D building modeling"
+          "content": "Development in JavaScript of SaaS for 3D building modeling"
+        }
+      ]
+    }
+  },
+  "projectCard": {
+    "title": "My favorite projects ❤️",
+    "actionText": "View the projects",
+    "h": {
+      "projects": [
+        {
+          "title": "DJ Discord bot",
+          "content": "A discord bot that can play music in voice rooms",
+          "technoIcons": [
+            "TypeScript",
+            "Discord.js",
+            "FFmpeg"
+          ],
+          "codeLinks": [
+            {
+              "link": "https://discord.com/oauth2/authorize?client_id=784536536459771925&permissions=8&scope=bot",
+              "type": "projet"
+            },
+            {
+              "link": "https://github.com/MartinJeanne/linkstart-bot",
+              "type": "front-end"
+            },
+            {
+              "link": "https://github.com/MartinJeanne/linkstart-api",
+              "type": "back-end"
+            }
+          ]
+        },
+        {
+          "title": "Live chat",
+          "content": "A web-based instant messaging application",
+          "technoIcons": [
+            "JavaScript",
+            "Vue.js",
+            "GCP",
+            "Firebase"
+          ],
+          "codeLinks": [
+            {
+              "link": "https://l1nkstart.web.app/",
+              "type": "projet"
+            },
+            {
+              "link": "https://github.com/MartinJeanne/live-chat",
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "title": "Who's bigger",
+          "content": "A web application where the goal is to find the largest city among two towns in Normandy",
+          "technoIcons": [
+            "TypeScript",
+            "React",
+            "Java",
+            "Spring Boot"
+          ],
+          "codeLinks": [
+            {
+              "link": "https://whosbigger.martinjeanne.com/",
+              "type": "projet"
+            },
+            {
+              "link": "https://github.com/MartinJeanne/whosbigger-front",
+              "type": "front-end"
+            },
+            {
+              "link": "https://github.com/MartinJeanne/whosbigger-back",
+              "type": "back-end"
+            }
+          ]
         }
       ]
     }

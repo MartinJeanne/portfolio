@@ -26,5 +26,80 @@
         }
       ]
     }
+  },
+  "projectCard": {
+    "title": "Mes projets coups de coeur ❤️",
+    "actionText": "Voir les projets",
+    "h": {
+      "projects": [
+        {
+          "title": "Bot discord DJ",
+          "content": "Un bot discord qui peut de jouer de la musique dans les salons vocaux",
+          "technoIcons": [
+            "TypeScript",
+            "Discord.js",
+            "FFmpeg"
+          ],
+          "codeLinks": [
+            {
+              "link": "https://discord.com/oauth2/authorize?client_id=784536536459771925&permissions=8&scope=bot",
+              "type": "projet"
+            },
+            {
+              "link": "https://github.com/MartinJeanne/linkstart-bot",
+              "type": "front-end"
+            },
+            {
+              "link": "https://github.com/MartinJeanne/linkstart-api",
+              "type": "back-end"
+            }
+          ]
+        },
+        {
+          "title": "Live chat",
+          "content": "Une application web de messagerie instantanée",
+          "technoIcons": [
+            "JavaScript",
+            "Vue.js",
+            "GCP",
+            "Firebase"
+          ],
+          "codeLinks": [
+            {
+              "link": "https://l1nkstart.web.app/",
+              "type": "projet"
+            },
+            {
+              "link": "https://github.com/MartinJeanne/live-chat",
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "title": "Who's bigger",
+          "content": "Une application web où le but est trouver la plus grande ville parmi deux villes de Normandie",
+          "technoIcons": [
+            "TypeScript",
+            "React",
+            "Java",
+            "Spring Boot"
+          ],
+          "codeLinks": [
+            {
+              "link": "https://whosbigger.martinjeanne.com/",
+              "type": "projet"
+            },
+            {
+              "link": "https://github.com/MartinJeanne/whosbigger-front",
+              "type": "front-end"
+            },
+            {
+              "link": "https://github.com/MartinJeanne/whosbigger-back",
+              "type": "back-end"
+            }
+          ]
+        }
+      ]
+    }
   }
 }
