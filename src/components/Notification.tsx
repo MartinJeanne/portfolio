@@ -22,7 +22,7 @@ export const Notification: React.FC = () => {
         placement: 'topRight',
         duration: null,
         //onClick: () => window.location.href = 'mailto:martinjeanne.dev@gmail.com?subject=Prise de contact&body=Bonjour Martin',
-        style: { cursor: 'pointer' },
+        //style: { cursor: 'pointer' },
       });
     }, 10000);
 
