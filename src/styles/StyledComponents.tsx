@@ -7,27 +7,9 @@ export const AppContainer = styled.div`
   padding: 20px;
 `;
 
-export const ButtonGroup = styled.div`
-  display: flex;
-  gap: 10px;
-`;
-
 export const ContentP = styled.p`
   fontSize: 1.1rem;
   color:rgb(102, 102, 102)
-`;
-
-export const Button = styled.button`
-  padding: 8px 16px;
-  border-radius: 20px;
-  border: 1px solid #ddd;
-  background: white;
-  cursor: pointer;
-  transition: all 0.2s;
-  
-  &:hover {
-    background: #f5f5f5;
-  }
 `;
 
 export const CardGrid = styled.div`

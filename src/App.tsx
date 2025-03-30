@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { AppContainer, CardGrid } from './styles/StyledComponents';
 import { HeaderComponent } from './components/Header';
 import { WhatImLookingForCard, EducationCard, InterestsCard } from './components/cards/PortfolioCards';
@@ -13,23 +14,25 @@ import { Notification } from './components/Notification';
 
 function App() {
   return (
-    <AppContainer>
-      <HeaderComponent />
-      <Notification />
-      <CardGrid>
-        <IntroCard />
-        <ExperiencesCard />
-        <ProjectCard />
-        <HobbiesCard />
-        <SkillsCard />
-        <EducationCard />
-        <WhatImLookingForCard />
-        <InterestsCard />
-        <LanguagesCard />
-        <SpotifyCard />
-        <SocialNetworksCard />
-      </CardGrid>
-    </AppContainer>
+    <Suspense fallback="...is loading">
+      <AppContainer>
+        <HeaderComponent />
+        <Notification />
+        <CardGrid>
+          <IntroCard />
+          <ExperiencesCard />
+          <ProjectCard />
+          <HobbiesCard />
+          <SkillsCard />
+          <EducationCard />
+          <WhatImLookingForCard />
+          <InterestsCard />
+          <LanguagesCard />
+          <SpotifyCard />
+          <SocialNetworksCard />
+        </CardGrid>
+      </AppContainer>
+    </Suspense>
   );
 }
 

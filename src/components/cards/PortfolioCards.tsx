@@ -35,15 +35,15 @@ export const EducationCard = () => (
     hoverContent={
       <>
         <div>
-          <h3>CESI - Master, 2022-2024</h3>
+          <h3>Master - CESI, 2022-2024</h3>
           <p style={{ color: 'white' }}>Master MAALSI, développement logiciel, management, gestion de projet</p>
         </div>
         <div style={{ marginTop: '25px' }}>
-          <h3>CaenSup - Licence, 2021-2022</h3>
-          <p style={{ color: 'white' }}>Licence Dev applicatif, optimisation, développement logiciel</p>
+          <h3>Licence - CaenSup, 2021-2022</h3>
+          <p style={{ color: 'white' }}>Licence développement logiciel & mobile, optimisation</p>
         </div>
         <div style={{ marginTop: '25px' }}>
-          <h3>CaenSup - BTS, 2018-2021</h3>
+          <h3>BTS - CaenSup, 2018-2021</h3>
           <p style={{ color: 'white' }}>BTS SIO, développement logiciel</p>
         </div>
       </>
