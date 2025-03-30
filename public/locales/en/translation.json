@@ -43,15 +43,18 @@
           "codeLinks": [
             {
               "link": "https://discord.com/oauth2/authorize?client_id=784536536459771925&permissions=8&scope=bot",
-              "type": "projet"
+              "type": "project",
+              "label": "See the project"
             },
             {
               "link": "https://github.com/MartinJeanne/linkstart-bot",
-              "type": "front-end"
+              "type": "frontEnd",
+              "label": "See the front-end"
             },
             {
               "link": "https://github.com/MartinJeanne/linkstart-api",
-              "type": "back-end"
+              "type": "backEnd",
+              "label": "See the back-end"
             }
           ]
         },
@@ -67,11 +70,13 @@
           "codeLinks": [
             {
               "link": "https://l1nkstart.web.app/",
-              "type": "projet"
+              "type": "project",
+              "label": "See the project"
             },
             {
               "link": "https://github.com/MartinJeanne/live-chat",
-              "type": "code"
+              "type": "code",
+              "label": "See the code"
             }
           ]
         },
@@ -87,15 +92,18 @@
           "codeLinks": [
             {
               "link": "https://whosbigger.martinjeanne.com/",
-              "type": "projet"
+              "type": "project",
+              "label": "See the project"
             },
             {
               "link": "https://github.com/MartinJeanne/whosbigger-front",
-              "type": "front-end"
+              "type": "frontEnd",
+              "label": "See the front-end"
             },
             {
               "link": "https://github.com/MartinJeanne/whosbigger-back",
-              "type": "back-end"
+              "type": "backEnd",
+              "label": "See the back-end"
             }
           ]
         }

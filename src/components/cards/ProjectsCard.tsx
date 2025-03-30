@@ -51,6 +51,7 @@ const TechoImgsContainer = styled.div`
 interface CodeLink {
   link: string;
   type: string;
+  label: string;
 }
 
 interface Project {
@@ -77,10 +78,10 @@ export const ProjectCard = () => {
   };
 
   const submenuIconMapping: { [key: string]: ReactNode } = {
-    'projet': <CgWebsite size={24} />,
-    'code': <FaGithub size={24} />,
-    'front-end': <FaPaintBrush size={24} />,
-    'back-end': <FaGear size={24} />
+    project: <CgWebsite size={24} />,
+    code: <FaGithub size={24} />,
+    frontEnd: <FaPaintBrush size={24} />,
+    backEnd: <FaGear size={24} />
   };
 
   const projects: Project[] = t('projectCard.h.projects', { returnObjects: true }) as Project[];
@@ -100,7 +101,7 @@ export const ProjectCard = () => {
                 key: `${index}`,
                 label: (
                   <a target="_blank" rel="noopener noreferrer" href={codeLink.link}>
-                    Voir le {codeLink.type}
+                    {codeLink.label}
                   </a>
                 ),
                 icon: submenuIconMapping[codeLink.type],
