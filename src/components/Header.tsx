@@ -4,13 +4,23 @@ import { LanguageSwitcher } from './LanguageSwitcher';
 
 export const Header = styled.header`
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-bottom: 40px;
+  align-items: center;
+  margin: 0 20px 40px 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+  }
 `;
 
 export const Profile = styled.div`
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 20px;
 `;
@@ -33,6 +43,10 @@ export const ProfileInfo = styled.div`
     margin: 5px 0;
     color: #666;
     font-size: 1.5em;
+  }
+
+  @media (max-width: 768px) {
+    width: 40%;
   }
 `;
 

@@ -8,6 +8,12 @@ const FlagImg = styled.img`
   cursor: pointer;
 `;
 
+const Container = styled.div`
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+`;
+
 interface FlagLinkLabel {
   src: string;
   alt: string;
@@ -22,7 +28,7 @@ export const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
 
   return (
-    <div style={{marginRight: '30px',display: 'flex', gap: '15px'}}>
+    <Container>
       {Object.keys(lngs).map((lng) => (
         <FlagImg
           key={lng}
@@ -31,6 +37,6 @@ export const LanguageSwitcher = () => {
           onClick={() => i18n.changeLanguage(lng)}
         />
       ))}
-    </div>
+    </Container>
   );
 }
