@@ -171,5 +171,25 @@
   "skillsCard": {
     "title": "Skills",
     "actionText": "View more"
+  },
+  "educationCard": {
+    "title": "I'm graduated from CESI",
+    "actionText": "All my studies",
+    "h": {
+      "studies": [
+        {
+          "title": "Master's Degree - CESI, 2022-2024",
+          "content": "Master MAALSI, software development, management, project management"
+        },
+        {
+          "title": "Bachelor's Degree - CaenSup, 2021-2022",
+          "content": "Bachelor's in Software & Mobile Development, optimization"
+        },
+        {
+          "title": "Higher technicien degree - CaenSup, 2018-2021",
+          "content": "BTS SIO, software development"
+        }
+      ]
+    }
   }
 }

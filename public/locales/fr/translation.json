@@ -212,5 +212,25 @@
         }
       ]
     }
+  },
+  "educationCard": {
+    "title": "Je suis diplômé du CESI",
+    "actionText": "Toutes mes études",
+    "h": {
+      "studies": [
+        {
+          "title": "Master - CESI, 2022-2024",
+          "content": "Master MAALSI, développement logiciel, management, gestion de projet"
+        },
+        {
+          "title": "Licence - CaenSup, 2021-2022",
+          "content": "Licence développement logiciel & mobile, optimisation"
+        },
+        {
+          "title": "BTS - CaenSup, 2018-2021",
+          "content": "BTS SIO, développement logiciel"
+        }
+      ]
+    }
   }
 }

@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { AppContainer, CardGrid } from './styles/StyledComponents';
 import { HeaderComponent } from './components/Header';
-import { WhatImLookingForCard, EducationCard, InterestsCard } from './components/cards/PortfolioCards';
+import { WhatImLookingForCard, InterestsCard } from './components/cards/PortfolioCards';
 import { HobbiesCard } from './components/cards/HobbiesCard';
 import { SpotifyCard } from './components/cards/SpotifyCard';
 import { LanguagesCard } from './components/cards/LanguagesCard';
@@ -11,6 +11,7 @@ import { ProjectCard } from './components/cards/ProjectsCard';
 import { ExperiencesCard } from './components/cards/ExperiencesCard';
 import { IntroCard } from './components/cards/IntroCard';
 import { Notification } from './components/Notification';
+import { EducationCard } from './components/cards/EducationCard';
 
 function App() {
   return (
