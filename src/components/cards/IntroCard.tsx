@@ -9,7 +9,7 @@ const FlexSubtitle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
 `;
 
 export const IntroCard = () => {
@@ -19,7 +19,7 @@ export const IntroCard = () => {
     <BaseCard
       icon={<FaQuestion />}
       title={t('introCard.title')}
-      subtitle={<FlexSubtitle><p>{t('introCard.subtitle')}</p> <FaLocationDot size={23}/></FlexSubtitle>}
+      subtitle={<FlexSubtitle><FaLocationDot size={23}/><p>{t('introCard.subtitle')}</p></FlexSubtitle>}
       actionText={t('introCard.actionText')}
       hoverContent={
         <>

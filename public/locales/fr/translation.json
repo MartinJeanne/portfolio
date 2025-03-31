@@ -1,7 +1,7 @@
 {
   "introCard": {
     "title": "Qui suis-je ?",
-    "subtitle": "Caen, FR",
+    "subtitle": "Caen, France",
     "actionText": "À propos de moi",
     "h": {
       "title": "À propos de moi",
@@ -32,6 +32,39 @@
     "actionText": "Voir les projets",
     "h": {
       "projects": [
+        {
+          "title": "Ce portfolio",
+          "content": "Ce que vous regardez actuellement !",
+          "technoIcons": [
+            {
+              "label": "TypeScript",
+              "link": "typescript"
+            },
+            {
+              "label": "React",
+              "link": "react"
+            },
+            {
+              "label": "Ant Design",
+              "link": "antd"
+            },
+            {
+              "label": "Emotion",
+              "link": "emotion"
+            },
+            {
+              "label": "i18next",
+              "link": "i18next"
+            }
+          ],
+          "codeLinks": [
+            {
+              "link": "https://github.com/MartinJeanne/portfolio",
+              "type": "code",
+              "label": "Voir le code"
+            }
+          ]
+        },
         {
           "title": "Bot discord DJ",
           "content": "Un bot discord qui peut de jouer de la musique dans les salons vocaux",
