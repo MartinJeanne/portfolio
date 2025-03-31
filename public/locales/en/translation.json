@@ -167,5 +167,9 @@
         "label": "Spikeball"
       }
     ]
+  },
+  "skillsCard": {
+    "title": "Skills",
+    "actionText": "View more"
   }
 }

@@ -167,5 +167,50 @@
         "label": "Spikeball"
       }
     ]
+  },
+  "skillsCard": {
+    "title": "Compétences",
+    "actionText": "Voir plus",
+    "h": {
+      "importantSkills": [
+        {
+          "link": "java",
+          "label": "Java",
+          "percent": 90,
+          "strokeColor": "#eb2d2f"
+        },
+        {
+          "link": "typescript",
+          "label": "TypeScript",
+          "percent": 80,
+          "strokeColor": "#2596be"
+        },
+        {
+          "link": "cicd",
+          "label": "CI/CD",
+          "percent": 75,
+          "strokeColor": "#fcb028",
+          "width": "70px"
+        }
+      ],
+      "otherSkills": [
+        {
+          "link": "springboot",
+          "label": "Spring Boot"
+        },
+        {
+          "link": "react",
+          "label": "React"
+        },
+        {
+          "link": "docker",
+          "label": "Docker"
+        },
+        {
+          "link": "htmlcss",
+          "label": "HTML & CSS"
+        }
+      ]
+    }
   }
 }

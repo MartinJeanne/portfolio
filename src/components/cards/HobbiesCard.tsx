@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Carousel } from 'antd';
 import { Card } from "../../styles/StyledComponents";
 import { useTranslation } from 'react-i18next';
+import { ImgLinkLabel } from '../../types/commonTypes';
 
 const titleStyle: React.CSSProperties = {
   width: '100%',
@@ -22,15 +23,10 @@ const hobbieNameStyle: React.CSSProperties = {
     '1px 1px 0 rgb(0, 0, 0)',
 };
 
-interface HobbiesGifs {
-  link: string;
-  label: string;
-}
-
 export const HobbiesCard = () => {
   const { t } = useTranslation();
-  const rawGifs = t('hobbiesCard.gifs', { returnObjects: true }) as HobbiesGifs[];
-  const [gifs, setGifs] = useState<HobbiesGifs[]>([]);
+  const rawGifs = t('hobbiesCard.gifs', { returnObjects: true }) as ImgLinkLabel[];
+  const [gifs, setGifs] = useState<ImgLinkLabel[]>([]);
 
   useEffect(() => {
     const loadImages = async () => {
@@ -65,8 +61,7 @@ export const HobbiesCard = () => {
               <h2 style={hobbieNameStyle}>{gif.label}</h2>
             </div>
           </div>
-        )
-        )}
+        ))}
       </Carousel>
     </Card>
   );
