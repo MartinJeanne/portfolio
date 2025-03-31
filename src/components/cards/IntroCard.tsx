@@ -1,7 +1,7 @@
 import { FaQuestion } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { BaseCard } from "./BaseCard";
-import { ContentP } from "../../styles/StyledComponents";
+import { ContentP } from "@/styles/StyledComponents";
 import { useTranslation } from 'react-i18next';
 import styled from '@emotion/styled';
 

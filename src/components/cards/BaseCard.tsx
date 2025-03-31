@@ -1,5 +1,5 @@
 import { ReactNode, useState } from 'react';
-import { Card } from '../../styles/StyledComponents';
+import { Card } from '@/styles/StyledComponents';
 import { AnimatePresence, motion } from 'framer-motion';
 import styled from '@emotion/styled';
 

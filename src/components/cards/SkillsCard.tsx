@@ -4,7 +4,7 @@ import { BaseCard } from "./BaseCard";
 import { Progress, Tooltip } from 'antd';
 import styled from "@emotion/styled";
 import { useTranslation } from 'react-i18next';
-import { ImgLinkLabel } from "../../types/commonTypes";
+import { ImgLinkLabel } from "@/types/commonTypes";
 
 const FlexContainer = styled.div`
   width: 80%;
