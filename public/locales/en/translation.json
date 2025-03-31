@@ -191,5 +191,16 @@
         }
       ]
     }
+  },
+  "whatImLookingForCard": {
+    "title": "My Dream Job",
+    "actionText": "Discover it",
+    "h": {
+      "title": "A developer position with",
+      "li1": "challenges",
+      "li2": "a permanent/fixed-term/VIE contract",
+      "li3": "A developer position with",
+      "li4": "work-life balance"
+    }
   }
 }

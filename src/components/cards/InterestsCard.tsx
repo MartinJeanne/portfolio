@@ -1,26 +1,5 @@
-import { AiOutlineHome } from 'react-icons/ai';
-import { MdInterests } from 'react-icons/md';
-import { BaseCard } from './BaseCard';
-
-export const WhatImLookingForCard = () => (
-  <BaseCard
-    icon={<AiOutlineHome />}
-    title="Mon job de rêve"
-    actionText="Découvrez le"
-    hoverContent={
-      <>
-        <h2>Un poste de développeur avec</h2>
-        <ul style={{ marginTop: '15px', lineHeight: '1.6', textAlign: 'left', color: 'rgb(102, 102, 102)' }}>
-          <li>du challenge</li>
-          <li>une collaboration internationale</li>
-          <li>un contrat CDI/CDD/VIE</li>
-          <li>un équilibre vie pro/perso</li>
-        </ul>
-      </>
-    }
-  />
-);
-
+import { MdInterests } from "react-icons/md";
+import { BaseCard } from "./BaseCard";
 
 export const InterestsCard = () => (
   <BaseCard

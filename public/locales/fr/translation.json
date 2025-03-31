@@ -232,5 +232,16 @@
         }
       ]
     }
+  },
+  "whatImLookingForCard": {
+    "title": "Mon job de rêve",
+    "actionText": "Découvrez le",
+    "h": {
+      "title": "Un poste de développeur avec",
+      "li1": "du challenge",
+      "li2": "un contrat CDI/CDD/VIE",
+      "li3": "Un poste de développeur avec",
+      "li4": "un équilibre vie pro/perso"
+    }
   }
 }
