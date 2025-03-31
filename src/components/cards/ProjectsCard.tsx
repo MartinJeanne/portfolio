@@ -89,7 +89,6 @@ export const ProjectCard = () => {
     <BaseCard
       title={t('projectsCard.title')}
       actionText={t('projectsCard.actionText')}
-      justifyHoverContent="flex-start"
       hoverContent={
         <>
           {projects.map((project) => {

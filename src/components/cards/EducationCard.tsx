@@ -24,7 +24,6 @@ export const EducationCard = () => {
       icon={<FaGraduationCap />}
       title={t('educationCard.title')}
       actionText={t('educationCard.actionText')}
-      justifyHoverContent='center'
       hoverContent={
         <>
           {educations.map((education, index) => (

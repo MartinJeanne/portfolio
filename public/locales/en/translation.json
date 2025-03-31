@@ -136,7 +136,7 @@
         },
         {
           "title": "Who's bigger",
-          "content": "A web application where the goal is to find the largest city among two towns in Normandy",
+          "content": "A web application where the goal is to find the largest city between two towns in Normandy",
           "technoIcons": [
             {
               "label": "TypeScript",
@@ -203,7 +203,48 @@
   },
   "skillsCard": {
     "title": "Skills",
-    "actionText": "View more"
+    "actionText": "View more",
+    "h": {
+      "importantSkills": [
+        {
+          "link": "java",
+          "label": "Java",
+          "percent": 90,
+          "strokeColor": "#eb2d2f"
+        },
+        {
+          "link": "typescript",
+          "label": "TypeScript",
+          "percent": 80,
+          "strokeColor": "#2596be"
+        },
+        {
+          "link": "cicd",
+          "label": "CI/CD",
+          "percent": 75,
+          "strokeColor": "#fcb028",
+          "width": "70px"
+        }
+      ],
+      "otherSkills": [
+        {
+          "link": "springboot",
+          "label": "Spring Boot"
+        },
+        {
+          "link": "react",
+          "label": "React"
+        },
+        {
+          "link": "docker",
+          "label": "Docker"
+        },
+        {
+          "link": "htmlcss",
+          "label": "HTML & CSS"
+        }
+      ]
+    }
   },
   "educationCard": {
     "title": "I'm graduated from CESI",

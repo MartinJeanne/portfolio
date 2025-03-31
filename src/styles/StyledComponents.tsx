@@ -20,13 +20,13 @@ export const CardGrid = styled.div`
 `;
 
 export const Card = styled(motion.div)`
+  min-height: 360px;
   background: white;
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
   overflow: hidden;
-  height: 360px;
-  
+
   &:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
@@ -37,20 +37,19 @@ export const Card = styled(motion.div)`
     color: #ff4757;
   }
 
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
 
-    &::-webkit-scrollbar {
-      width: 6px;
-    }
-
-    &::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: rgba(0, 0, 0, 0.2);
-      border-radius: 3px;
-    
+  &::-webkit-scrollbar {
+    width: 6px;
   }
-`; 
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+  }
+`;
