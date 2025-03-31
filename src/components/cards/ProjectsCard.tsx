@@ -1,4 +1,5 @@
-import { FaLink, FaGithub, FaJava, FaPaintBrush } from "react-icons/fa";
+import { ReactNode, useEffect, useState } from "react";
+import { FaLink, FaGithub, FaPaintBrush } from "react-icons/fa";
 import { FaGear } from "react-icons/fa6";
 import { CgWebsite } from "react-icons/cg";
 import { BaseCard } from "./BaseCard";
@@ -6,8 +7,7 @@ import styled from '@emotion/styled';
 import type { MenuProps } from 'antd';
 import { Dropdown, Tooltip } from 'antd';
 import { ContentP } from "../../styles/StyledComponents";
-import { ReactNode } from "react";
-import { SiJavascript, SiTypescript } from "react-icons/si";
+import { useTranslation } from 'react-i18next';
 
 const ProjectTitleLink = styled.a`
     font-size: 1.17em;
@@ -37,95 +37,58 @@ const TechoImgsContainer = styled.div`
     }
 `;
 
-
 interface CodeLink {
   link: string;
-  icon: ReactNode;
-  label?: string;
+  type: string;
+  label: string;
+}
+
+interface TechnoIcons {
+  link: string;
+  label: string;
 }
 
 interface Project {
   codeLinks: CodeLink[];
   title: string;
   content: string;
-  techno: ReactNode[];
+  technoIcons: TechnoIcons[];
 }
 
-
 export const ProjectCard = () => {
-  const projects: Project[] = [
-    {
-      codeLinks: [
-        { link: 'https://discord.com/oauth2/authorize?client_id=784536536459771925&permissions=8&scope=bot', icon: <CgWebsite size={24} />, label: 'projet' },
-        { link: 'https://github.com/MartinJeanne/linkstart-bot', icon: <FaPaintBrush size={24} />, label: 'code Front-end' },
-        { link: 'https://github.com/MartinJeanne/linkstart-api', icon: <FaGear size={24} />, label: 'code Back-end' },
-      ],
-      title: 'Bot discord DJ',
-      content: 'Un bot discord qui peut de jouer de la musique dans les salons vocaux',
-      techno: [
-        <Tooltip title='TypeScript'>
-          <SiTypescript size={30} color='#2596be' />
-        </Tooltip>,
-        <Tooltip title='Discord.js'>
-          <img src="discord.png" alt="Docker" />
-        </Tooltip>,
-        <Tooltip title='FFmpeg'>
-          <img src="ffmpeg.png" alt="ffmpeg" />
-        </Tooltip>
-      ],
-    },
-    {
-      codeLinks: [
-        { link: 'https://l1nkstart.web.app/', icon: <CgWebsite size={24} />, label: 'projet' },
-        { link: 'https://github.com/MartinJeanne/live-chat', icon: <FaGithub size={24} />, label: 'code' },
-      ],
-      title: 'Live chat',
-      content: 'Une application web de messagerie instantanée',
-      techno: [
-        <Tooltip title='JavaScript'>
-          <SiJavascript size={30} color='#edcf05' />
-        </Tooltip>,
-        <Tooltip title='Vue.js'>
-          <img src="vuejs.png" alt="Vue.js" />
-        </Tooltip>,
-        <Tooltip title='GCP'>
-          <img src="gcp.png" alt="GCP" />
-        </Tooltip>,
-        <Tooltip title='Firebase'>
-          <img src="firebase.png" alt="Firebase" />
-        </Tooltip>
-      ],
-    },
-    {
-      codeLinks: [
-        { link: 'https://whosbigger.martinjeanne.com/', icon: <CgWebsite size={24} />, label: 'projet' },
-        { link: 'https://github.com/MartinJeanne/whosbigger-front', icon: <FaPaintBrush size={24} />, label: 'code Front-end' },
-        { link: 'https://github.com/MartinJeanne/whosbigger-back', icon: <FaGear size={24} />, label: 'code Back-end' },
-      ],
-      title: 'Who\'s bigger',
-      content: 'Une application web où le but est trouver la plus grande ville parmi deux villes de Normandie',
-      techno: [
-        <Tooltip title='TypeScript'>
-          <SiTypescript size={30} color='#2596be' />
-        </Tooltip>,
-        <Tooltip title='React'>
-          <img src="react.svg" alt="React" />
-        </Tooltip>,
-        <Tooltip title='Java'>
-          <FaJava size={40} color="#eb2d2f" />
-        </Tooltip>,
-        <Tooltip title='Spring Boot'>
-          <img src="springboot.png" alt="Spring Boot" />
-        </Tooltip>
-      ],
+  const { t } = useTranslation();
+  const rawProjects: Project[] = t('projectsCard.h.projects', { returnObjects: true }) as Project[];
+  const [projects, setProjects] = useState<Project[]>([]);
 
-    },
-  ];
+  useEffect(() => {
+    const loadImages = async () => {
+      const images = await Promise.all(
+        rawProjects.map(async (project) => {
+          const loadedIcons = await Promise.all(
+            project.technoIcons.map(async (icon) => {
+              return { ...icon, link: (await import(`@assets/${icon.link}.png`)).default };
+            })
+          );
+          return { ...project, technoIcons: loadedIcons };
+        })
+      );
+      setProjects(images);
+    };
+
+    loadImages();
+  }, [rawProjects]);
+
+  const submenuIconMapping: { [key: string]: ReactNode } = {
+    project: <CgWebsite size={24} />,
+    code: <FaGithub size={24} />,
+    frontEnd: <FaPaintBrush size={24} />,
+    backEnd: <FaGear size={24} />
+  };
 
   return (
     <BaseCard
-      title="Mes projets coups de coeur ❤️"
-      actionText="Voir les projets"
+      title={t('projectsCard.title')}
+      actionText={t('projectsCard.actionText')}
       justifyHoverContent="flex-start"
       hoverContent={
         <>
@@ -137,23 +100,31 @@ export const ProjectCard = () => {
                 key: `${index}`,
                 label: (
                   <a target="_blank" rel="noopener noreferrer" href={codeLink.link}>
-                    Voir le {codeLink.label}
+                    {codeLink.label}
                   </a>
                 ),
-                icon: codeLink.icon,
+                icon: submenuIconMapping[codeLink.type],
                 disabled: false,
               })
             });
 
             return (
-              <ProjectContainer key={project.content}>
+              <ProjectContainer key={project.title}>
                 <Dropdown menu={{ items }}>
                   <ProjectTitleLink onClick={(e) => e.preventDefault()}>
-                      {project.title} <FaLink size={16} />
+                    {project.title} <FaLink size={16} />
                   </ProjectTitleLink>
                 </Dropdown>
                 <ContentP>{project.content}</ContentP>
-                <TechoImgsContainer>{project.techno}</TechoImgsContainer>
+                <TechoImgsContainer>
+                  {project.technoIcons.map((icon) => {
+                    return (
+                      <Tooltip key={icon.label} title={icon.label}>
+                        <img src={icon.link} alt={icon.label} />
+                      </Tooltip>
+                    )
+                  })}
+                </TechoImgsContainer>
               </ProjectContainer>
             );
           })}

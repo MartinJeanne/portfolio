@@ -1,7 +1,7 @@
 import { BsBuilding } from "react-icons/bs";
 import { BaseCard } from "./BaseCard";
 import styled from '@emotion/styled';
-
+import { useTranslation } from 'react-i18next';
 
 // This style is not applied on the fist element
 const ExperienceContainer = styled.div`
@@ -11,27 +11,23 @@ const ExperienceContainer = styled.div`
     padding-bottom: 20px;
 `;
 
+interface Experience {
+  title: string;
+  subtitle: string;
+  content: string;
+}
+
 export const ExperiencesCard = () => {
-  const experiences = [
-    {
-      title: 'Développeur back-end Java',
-      subtitle: 'Sinay, Caen 2022-2024',
-      content: 'Développement avec Java Spring Boot d\'API REST, servant pour des SaaS. Dans un cadre Agile Scrum avec du CI/CD',
-    },
-    {
-      title: 'Développeur JavaScript',
-      subtitle: 'Léonard Solutions, Caen 2021-2022',
-      content: `Développement en JavaScript, création de SaaS pour
-        modélisation de batiments en 3D`,
-    },
-  ];
+  const { t } = useTranslation();
+
+  const experiences: Experience[] = t('experienceCard.h.xps', { returnObjects: true }) as Experience[];
 
   return (
     <BaseCard
       variant="primary"
       icon={<BsBuilding />}
-      title="Développeur back-end Java @Sinay"
-      actionText="Voir toutes les expériences"
+      title={t('experienceCard.title')}
+      actionText={t('experienceCard.actionText')}
       hoverContent={
         <>
           {experiences.map((experience, index) => (

@@ -1,0 +1,241 @@
+{
+  "introCard": {
+    "title": "Who am I?",
+    "subtitle": "Caen, FR",
+    "actionText": "About me",
+    "h": {
+      "title": "About me",
+      "content1": "I'm a developer who graduated with a Master's degree in computer science and has three years of experience in Agile environments.",
+      "content2": "Today, I'm seeking new challenges!"
+    }
+  },
+  "experienceCard": {
+    "title": "Back-end Java Developer at @Sinay",
+    "actionText": "View all my experiences",
+    "h": {
+      "xps": [
+        {
+          "title": "Back-end Java Developer",
+          "subtitle": "Sinay, Caen 2022-2024",
+          "content": "Java Spring Boot development of REST APIs for SaaS. In a Agile Scrum framework, and applying CI/CD principles"
+        },
+        {
+          "title": "JavaScript Developer",
+          "subtitle": "Léonard Solutions, Caen 2021-2022",
+          "content": "Development in JavaScript of SaaS for 3D building modeling"
+        }
+      ]
+    }
+  },
+  "projectsCard": {
+    "title": "My favorite projects ❤️",
+    "actionText": "View the projects",
+    "h": {
+      "projects": [
+        {
+          "title": "DJ Discord bot",
+          "content": "A discord bot that can play music in voice rooms",
+          "technoIcons": [
+            {
+              "label": "TypeScript",
+              "link": "typescript"
+            },
+            {
+              "label": "Discord.js",
+              "link": "discord"
+            },
+            {
+              "label": "FFmpeg",
+              "link": "ffmpeg"
+            }
+          ],
+          "codeLinks": [
+            {
+              "link": "https://discord.com/oauth2/authorize?client_id=784536536459771925&permissions=8&scope=bot",
+              "type": "project",
+              "label": "See the project"
+            },
+            {
+              "link": "https://github.com/MartinJeanne/linkstart-bot",
+              "type": "frontEnd",
+              "label": "See the front-end"
+            },
+            {
+              "link": "https://github.com/MartinJeanne/linkstart-api",
+              "type": "backEnd",
+              "label": "See the back-end"
+            }
+          ]
+        },
+        {
+          "title": "Live chat",
+          "content": "A web-based instant messaging application",
+          "technoIcons": [
+            {
+              "label": "JavaScript",
+              "link": "javascript"
+            },
+            {
+              "label": "Vue.js",
+              "link": "vuejs"
+            },
+            {
+              "label": "GCP",
+              "link": "gcp"
+            },
+            {
+              "label": "Firebase",
+              "link": "firebase"
+            }
+          ],
+          "codeLinks": [
+            {
+              "link": "https://l1nkstart.web.app/",
+              "type": "project",
+              "label": "See the project"
+            },
+            {
+              "link": "https://github.com/MartinJeanne/live-chat",
+              "type": "code",
+              "label": "See the code"
+            }
+          ]
+        },
+        {
+          "title": "Who's bigger",
+          "content": "A web application where the goal is to find the largest city among two towns in Normandy",
+          "technoIcons": [
+            {
+              "label": "TypeScript",
+              "link": "typescript"
+            },
+            {
+              "label": "React",
+              "link": "react"
+            },
+            {
+              "label": "Java",
+              "link": "java"
+            },
+            {
+              "label": "Spring Boot",
+              "link": "springboot"
+            }
+          ],
+          "codeLinks": [
+            {
+              "link": "https://whosbigger.martinjeanne.com/",
+              "type": "project",
+              "label": "See the project"
+            },
+            {
+              "link": "https://github.com/MartinJeanne/whosbigger-front",
+              "type": "frontEnd",
+              "label": "See the front-end"
+            },
+            {
+              "link": "https://github.com/MartinJeanne/whosbigger-back",
+              "type": "backEnd",
+              "label": "See the back-end"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hobbiesCard": {
+    "title": "Hobbies",
+    "gifs": [
+      {
+        "link": "coding",
+        "label": "Coding"
+      },
+      {
+        "link": "reading",
+        "label": "Reading"
+      },
+      {
+        "link": "climbing",
+        "label": "Climbing"
+      },
+      {
+        "link": "badminton",
+        "label": "Badminton"
+      },
+      {
+        "link": "spikeball",
+        "label": "Spikeball"
+      }
+    ]
+  },
+  "skillsCard": {
+    "title": "Skills",
+    "actionText": "View more"
+  },
+  "educationCard": {
+    "title": "I'm graduated from CESI",
+    "actionText": "All my studies",
+    "h": {
+      "studies": [
+        {
+          "title": "Master's Degree - CESI, 2022-2024",
+          "content": "Master MAALSI, software development, management, project management"
+        },
+        {
+          "title": "Bachelor's Degree - CaenSup, 2021-2022",
+          "content": "Bachelor's in Software & Mobile Development, optimization"
+        },
+        {
+          "title": "Higher technicien degree - CaenSup, 2018-2021",
+          "content": "BTS SIO, software development"
+        }
+      ]
+    }
+  },
+  "whatImLookingForCard": {
+    "title": "My Dream Job",
+    "actionText": "Discover it",
+    "h": {
+      "title": "A developer position with",
+      "li1": "challenges",
+      "li2": "a permanent/fixed-term/VIE contract",
+      "li3": "A developer position with",
+      "li4": "work-life balance"
+    }
+  },
+  "interestsCard": {
+    "title": "Interested in:",
+    "subtitle": "React, AI, blockchain, and puppies.",
+    "h": {
+      "title": "Interests",
+      "subtitle1": "React",
+      "content1": "Modern application development",
+      "subtitle2": "Artificial Intelligence",
+      "content2": "Machine Learning and Deep Learning",
+      "subtitle3": "Blockchain",
+      "content3": "Smart contracts and DApps",
+      "subtitle4": "Puppies",
+      "content4": "Because who doesn't love puppies?"
+    }
+  },
+  "languagesCard": {
+    "title": "I speak french, english and german",
+    "h": {
+      "fr": "French",
+      "en": "English",
+      "de": "German"
+    }
+  },
+  "socialNetworksCard": {
+    "dc": {
+      "mail": "My email",
+      "linkedin": "My LinkedIn profile",
+      "github": "My GitHub profile",
+      "leetcode": "LeetCode Profile"
+    }
+  },
+  "notification": {
+    "title": "Like what you see?",
+    "content": "Send me a message!"
+  }
+}

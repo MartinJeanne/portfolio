@@ -1,0 +1,282 @@
+{
+  "introCard": {
+    "title": "Qui suis-je ?",
+    "subtitle": "Caen, FR",
+    "actionText": "À propos de moi",
+    "h": {
+      "title": "À propos de moi",
+      "content1": "Je suis un développeur diplômé d'un master en informatique, avec trois années d'expérience dans des environnements Agile.",
+      "content2": "Aujourd'hui, je suis à la recherche de nouveaux défis techniques !"
+    }
+  },
+  "experienceCard": {
+    "title": "Développeur back-end Java @Sinay",
+    "actionText": "Voir toutes les expériences",
+    "h": {
+      "xps": [
+        {
+          "title": "Développeur back-end Java",
+          "subtitle": "Sinay, Caen 2022-2024",
+          "content": "Développement avec Java Spring Boot d'API REST, servant pour des SaaS. Dans un cadre Agile Scrum avec du CI/CD"
+        },
+        {
+          "title": "Développeur JavaScript",
+          "subtitle": "Léonard Solutions, Caen 2021-2022",
+          "content": "Développement en JavaScript, création de SaaS pour modélisation de batiments en 3D"
+        }
+      ]
+    }
+  },
+  "projectsCard": {
+    "title": "Mes projets coups de coeur ❤️",
+    "actionText": "Voir les projets",
+    "h": {
+      "projects": [
+        {
+          "title": "Bot discord DJ",
+          "content": "Un bot discord qui peut de jouer de la musique dans les salons vocaux",
+          "technoIcons": [
+            {
+              "label": "TypeScript",
+              "link": "typescript"
+            },
+            {
+              "label": "Discord.js",
+              "link": "discord"
+            },
+            {
+              "label": "FFmpeg",
+              "link": "ffmpeg"
+            }
+          ],
+          "codeLinks": [
+            {
+              "link": "https://discord.com/oauth2/authorize?client_id=784536536459771925&permissions=8&scope=bot",
+              "type": "project",
+              "label": "Voir le projet"
+            },
+            {
+              "link": "https://github.com/MartinJeanne/linkstart-bot",
+              "type": "frontEnd",
+              "label": "Voir le projet"
+            },
+            {
+              "link": "https://github.com/MartinJeanne/linkstart-api",
+              "type": "backEnd",
+              "label": "Voir le projet"
+            }
+          ]
+        },
+        {
+          "title": "Live chat",
+          "content": "Une application web de messagerie instantanée",
+          "technoIcons": [
+            {
+              "label": "JavaScript",
+              "link": "javascript"
+            },
+            {
+              "label": "Vue.js",
+              "link": "vuejs"
+            },
+            {
+              "label": "GCP",
+              "link": "gcp"
+            },
+            {
+              "label": "Firebase",
+              "link": "firebase"
+            }
+          ],
+          "codeLinks": [
+            {
+              "link": "https://l1nkstart.web.app/",
+              "type": "project",
+              "label": "Voir le projet"
+            },
+            {
+              "link": "https://github.com/MartinJeanne/live-chat",
+              "type": "code",
+              "label": "Voir le projet"
+            }
+          ]
+        },
+        {
+          "title": "Who's bigger",
+          "content": "Une application web où le but est trouver la plus grande ville parmi deux villes de Normandie",
+          "technoIcons": [
+            {
+              "label": "TypeScript",
+              "link": "typescript"
+            },
+            {
+              "label": "React",
+              "link": "react"
+            },
+            {
+              "label": "Java",
+              "link": "java"
+            },
+            {
+              "label": "Spring Boot",
+              "link": "springboot"
+            }
+          ],
+          "codeLinks": [
+            {
+              "link": "https://whosbigger.martinjeanne.com/",
+              "type": "project",
+              "label": "Voir le projet"
+            },
+            {
+              "link": "https://github.com/MartinJeanne/whosbigger-front",
+              "type": "frontEnd",
+              "label": "Voir le projet"
+            },
+            {
+              "link": "https://github.com/MartinJeanne/whosbigger-back",
+              "type": "backEnd",
+              "label": "Voir le projet"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hobbiesCard": {
+    "title": "Passions",
+    "gifs": [
+      {
+        "link": "coding",
+        "label": "Coder"
+      },
+      {
+        "link": "reading",
+        "label": "Lire"
+      },
+      {
+        "link": "climbing",
+        "label": "Escalade"
+      },
+      {
+        "link": "badminton",
+        "label": "Badminton"
+      },
+      {
+        "link": "spikeball",
+        "label": "Spikeball"
+      }
+    ]
+  },
+  "skillsCard": {
+    "title": "Compétences",
+    "actionText": "Voir plus",
+    "h": {
+      "importantSkills": [
+        {
+          "link": "java",
+          "label": "Java",
+          "percent": 90,
+          "strokeColor": "#eb2d2f"
+        },
+        {
+          "link": "typescript",
+          "label": "TypeScript",
+          "percent": 80,
+          "strokeColor": "#2596be"
+        },
+        {
+          "link": "cicd",
+          "label": "CI/CD",
+          "percent": 75,
+          "strokeColor": "#fcb028",
+          "width": "70px"
+        }
+      ],
+      "otherSkills": [
+        {
+          "link": "springboot",
+          "label": "Spring Boot"
+        },
+        {
+          "link": "react",
+          "label": "React"
+        },
+        {
+          "link": "docker",
+          "label": "Docker"
+        },
+        {
+          "link": "htmlcss",
+          "label": "HTML & CSS"
+        }
+      ]
+    }
+  },
+  "educationCard": {
+    "title": "Je suis diplômé du CESI",
+    "actionText": "Toutes mes études",
+    "h": {
+      "studies": [
+        {
+          "title": "Master - CESI, 2022-2024",
+          "content": "Master MAALSI, développement logiciel, management, gestion de projet"
+        },
+        {
+          "title": "Licence - CaenSup, 2021-2022",
+          "content": "Licence développement logiciel & mobile, optimisation"
+        },
+        {
+          "title": "BTS - CaenSup, 2018-2021",
+          "content": "BTS SIO, développement logiciel"
+        }
+      ]
+    }
+  },
+  "whatImLookingForCard": {
+    "title": "Mon job de rêve",
+    "actionText": "Découvrez le",
+    "h": {
+      "title": "Un poste de développeur avec",
+      "li1": "du challenge",
+      "li2": "un contrat CDI/CDD/VIE",
+      "li3": "Un poste de développeur avec",
+      "li4": "un équilibre vie pro/perso"
+    }
+  },
+  "interestsCard": {
+    "title": "Intéressé par :",
+    "subtitle": "React, l'IA, la blochaine et les chiots.",
+    "h": {
+      "title": "Centres d'intérêt",
+      "subtitle1": "React",
+      "content1": "Développement d'applications modernes",
+      "subtitle2": "Intelligence Artificielle",
+      "content2": "Machine Learning et Deep Learning",
+      "subtitle3": "Blockchain",
+      "content3": "Smart contracts et DApps",
+      "subtitle4": "Chiots",
+      "content4": "Parce que qui n'aime pas les chiots ?"
+    }
+  },
+  "languagesCard": {
+    "title": "Je parle français, anglais et allemand",
+    "h": {
+      "fr": "Français",
+      "en": "Anglais",
+      "de": "Allemand"
+    }
+  },
+  "socialNetworksCard": {
+    "dc": {
+      "mail": "Mon email",
+      "linkedin": "Mon profil Linkedin",
+      "github": "Mon profil Github",
+      "leetcode": "Profil LeetCode"
+    }
+  },
+  "notification": {
+    "title": "Ça vous plait ?",
+    "content": "N'hésitez-pas à m'envoyer un message !"
+  }
+}

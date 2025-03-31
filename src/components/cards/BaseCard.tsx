@@ -36,7 +36,7 @@ interface BaseCardProps {
   color?: string;
   icon?: ReactNode;
   title: string;
-  subtitle?: string;
+  subtitle?: ReactNode;
   actionText?: string;
   justifyHoverContent?: 'center' | 'flex-start';
   variant?: 'default' | 'primary' | 'dark';
@@ -78,7 +78,7 @@ export const BaseCard = ({
       <>
         {icon && <IconContainer>{icon}</IconContainer>}
         {title && <h2 style={{ fontSize: '1.75rem', marginBottom: '15px', color: variantStyles.color }}>{title}</h2>}
-        {subtitle && <p style={{ fontSize: '1.1rem', marginBottom: '20px', color: variantStyles.color }}>{subtitle}</p>}
+        {subtitle}
         {actionText && (
           <motion.p
             style={{
