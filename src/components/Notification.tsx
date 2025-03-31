@@ -1,21 +1,22 @@
 import React, { useEffect, useMemo } from 'react';
 import { SmileOutlined } from '@ant-design/icons';
 import { notification } from 'antd';
+import { useTranslation } from 'react-i18next';
 
 const Context = React.createContext({ name: 'Default' });
 
 export const Notification: React.FC = () => {
+  const { t } = useTranslation();
   const [api, contextHolder] = notification.useNotification();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-
       api.info({
         icon: <SmileOutlined style={{ color: '#00aaff' }} />,
-        message: `Ça vous plait ?`,
+        message: t('notification.title'),
         description: (
           <div>
-            N'hésitez-pas à m'envoyer un message !
+            {t('notification.content')}
             <p style={{ color: 'blue', textDecoration: 'underline' }}>martinjeanne.dev@gmail.com</p>
           </div>
         ),
@@ -27,7 +28,7 @@ export const Notification: React.FC = () => {
     }, 10000);
 
     return () => clearTimeout(timer);
-  }, [api]);
+  }, [api, t]);
 
 
   const contextValue = useMemo(() => ({ name: 'Ant Design' }), []);

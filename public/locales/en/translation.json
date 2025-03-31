@@ -233,5 +233,9 @@
       "github": "My GitHub profile",
       "leetcode": "LeetCode Profile"
     }
+  },
+  "notification": {
+    "title": "Like what you see?",
+    "content": "Send me a message!"
   }
 }

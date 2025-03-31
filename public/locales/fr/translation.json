@@ -274,5 +274,9 @@
       "github": "Mon profil Github",
       "leetcode": "Profil LeetCode"
     }
+  },
+  "notification": {
+    "title": "Ça vous plait ?",
+    "content": "N'hésitez-pas à m'envoyer un message !"
   }
 }
