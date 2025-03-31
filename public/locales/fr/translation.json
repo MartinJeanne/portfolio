@@ -266,5 +266,13 @@
       "en": "Anglais",
       "de": "Allemand"
     }
+  },
+  "socialNetworksCard": {
+    "dc": {
+      "mail": "Mon email",
+      "linkedin": "Mon profil Linkedin",
+      "github": "Mon profil Github",
+      "leetcode": "Profil LeetCode"
+    }
   }
 }

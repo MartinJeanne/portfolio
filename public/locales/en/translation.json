@@ -225,5 +225,13 @@
       "en": "English",
       "de": "German"
     }
+  },
+  "socialNetworksCard": {
+    "dc": {
+      "mail": "My email",
+      "linkedin": "My LinkedIn profile",
+      "github": "My GitHub profile",
+      "leetcode": "LeetCode Profile"
+    }
   }
 }
