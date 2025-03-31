@@ -243,5 +243,20 @@
       "li3": "Un poste de développeur avec",
       "li4": "un équilibre vie pro/perso"
     }
+  },
+  "interestsCard": {
+    "title": "Intéressé par :",
+    "subtitle": "React, l'IA, la blochaine et les chiots.",
+    "h": {
+      "title": "Centres d'intérêt",
+      "subtitle1": "React",
+      "content1": "Développement d'applications modernes",
+      "subtitle2": "Intelligence Artificielle",
+      "content2": "Machine Learning et Deep Learning",
+      "subtitle3": "Blockchain",
+      "content3": "Smart contracts et DApps",
+      "subtitle4": "Chiots",
+      "content4": "Parce que qui n'aime pas les chiots ?"
+    }
   }
 }

@@ -202,5 +202,20 @@
       "li3": "A developer position with",
       "li4": "work-life balance"
     }
+  },
+  "interestsCard": {
+    "title": "Interested in:",
+    "subtitle": "React, AI, blockchain, and puppies.",
+    "h": {
+      "title": "Interests",
+      "subtitle1": "React",
+      "content1": "Modern application development",
+      "subtitle2": "Artificial Intelligence",
+      "content2": "Machine Learning and Deep Learning",
+      "subtitle3": "Blockchain",
+      "content3": "Smart contracts and DApps",
+      "subtitle4": "Puppies",
+      "content4": "Because who doesn't love puppies?"
+    }
   }
 }
