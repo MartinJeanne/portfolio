@@ -21,6 +21,7 @@ export const CardGrid = styled.div`
 
 export const Card = styled(motion.div)`
   min-height: 360px;
+  max-height: 360px;
   background: white;
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
