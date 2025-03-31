@@ -217,5 +217,13 @@
       "subtitle4": "Puppies",
       "content4": "Because who doesn't love puppies?"
     }
+  },
+  "languagesCard": {
+    "title": "I speak french, english and german",
+    "h": {
+      "fr": "French",
+      "en": "English",
+      "de": "German"
+    }
   }
 }

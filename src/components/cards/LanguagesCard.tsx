@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { BaseCard } from "./BaseCard";
 import { FaLanguage } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
 
 interface LanguageBarProps {
   level: number;
@@ -32,22 +33,26 @@ const LanguageContainer = styled.div`
   }
 `;
 
-export const LanguagesCard = () => (
-  <BaseCard
-    icon={<FaLanguage />}
-    title="Je parle Français, Anglais et Allemand"
-    hoverContent={
-      <>
-        <LanguageContainer>
-          <LanguageBar level={100}>Français</LanguageBar>
-        </LanguageContainer>
-        <LanguageContainer>
-          <LanguageBar level={88}>Anglais</LanguageBar>
-        </LanguageContainer>
-        <LanguageContainer>
-          <LanguageBar level={40}>Allemand</LanguageBar>
-        </LanguageContainer>
-      </>
-    }
-  />
-);
+export const LanguagesCard = () => {
+  const { t } = useTranslation();
+
+  return (
+    <BaseCard
+      icon={<FaLanguage />}
+      title={t('languagesCard.title')}
+      hoverContent={
+        <>
+          <LanguageContainer>
+            <LanguageBar level={100}>{t('languagesCard.h.fr')}</LanguageBar>
+          </LanguageContainer>
+          <LanguageContainer>
+            <LanguageBar level={88}>{t('languagesCard.h.en')}</LanguageBar>
+          </LanguageContainer>
+          <LanguageContainer>
+            <LanguageBar level={40}>{t('languagesCard.h.de')}</LanguageBar>
+          </LanguageContainer>
+        </>
+      }
+    />
+  )
+};

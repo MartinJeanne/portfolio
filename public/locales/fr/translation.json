@@ -258,5 +258,13 @@
       "subtitle4": "Chiots",
       "content4": "Parce que qui n'aime pas les chiots ?"
     }
+  },
+  "languagesCard": {
+    "title": "Je parle français, anglais et allemand",
+    "h": {
+      "fr": "Français",
+      "en": "Anglais",
+      "de": "Allemand"
+    }
   }
 }
