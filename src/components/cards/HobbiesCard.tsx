@@ -5,13 +5,12 @@ import { useTranslation } from 'react-i18next';
 
 const titleStyle: React.CSSProperties = {
   width: '100%',
-  textAlign: 'center',
   height: '55px',
   color: 'white',
-  fontSize: '2rem',
   margin: '0',
-  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
-  borderBottom: '1px solid white'
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center'
 };
 
 const hobbieNameStyle: React.CSSProperties = {
