@@ -63,4 +63,4 @@ export const HeaderComponent = () => {
       <LanguageSwitcher />
     </Header>
   );
-}; 
+};

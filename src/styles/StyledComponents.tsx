@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 export const AppContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 8px;
 `;
 
 export const ContentP = styled.p`
-  fontSize: 1.1rem;
+  font-size: 1.1rem;
   color:rgb(102, 102, 102)
 `;
 
@@ -20,13 +20,14 @@ export const CardGrid = styled.div`
 `;
 
 export const Card = styled(motion.div)`
+  height: 360px;
+  min-width: 320px;
   background: white;
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
   overflow: hidden;
-  height: 360px;
-  
+
   &:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
@@ -37,20 +38,19 @@ export const Card = styled(motion.div)`
     color: #ff4757;
   }
 
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
 
-    &::-webkit-scrollbar {
-      width: 6px;
-    }
-
-    &::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: rgba(0, 0, 0, 0.2);
-      border-radius: 3px;
-    
+  &::-webkit-scrollbar {
+    width: 6px;
   }
-`; 
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+  }
+`;

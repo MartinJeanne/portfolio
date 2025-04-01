@@ -1,5 +1,5 @@
 import { ReactNode, useState } from 'react';
-import { Card } from '../../styles/StyledComponents';
+import { Card } from '@/styles/StyledComponents';
 import { AnimatePresence, motion } from 'framer-motion';
 import styled from '@emotion/styled';
 
@@ -40,6 +40,8 @@ interface BaseCardProps {
   actionText?: string;
   justifyHoverContent?: 'center' | 'flex-start';
   variant?: 'default' | 'primary' | 'dark';
+  columnSpan?: number;
+  rowSpan?: number;
   onAction?: () => void;
 }
 
@@ -66,6 +68,8 @@ export const BaseCard = ({
   actionText,
   justifyHoverContent = 'center',
   variant = 'default',
+  columnSpan,
+  rowSpan,
   onAction
 }: BaseCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -107,6 +111,8 @@ export const BaseCard = ({
         textAlign: 'center',
         fontSize: '1.1rem',
         overflowY: 'auto',
+        gridColumn: columnSpan ? `span ${columnSpan}` : '',
+        gridRow: rowSpan ? `span ${rowSpan}` : ''
       }}
     >
       <AnimatePresence mode="wait">

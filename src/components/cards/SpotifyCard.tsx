@@ -1,4 +1,4 @@
-import { Card } from "../../styles/StyledComponents";
+import { Card } from "@/styles/StyledComponents";
 
 export const SpotifyCard = () => (
   <Card>

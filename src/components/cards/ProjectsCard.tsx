@@ -6,7 +6,7 @@ import { BaseCard } from "./BaseCard";
 import styled from '@emotion/styled';
 import type { MenuProps } from 'antd';
 import { Dropdown, Tooltip } from 'antd';
-import { ContentP } from "../../styles/StyledComponents";
+import { ContentP } from "@/styles/StyledComponents";
 import { useTranslation } from 'react-i18next';
 
 const ProjectTitleLink = styled.a`

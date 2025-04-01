@@ -1,7 +1,7 @@
 {
   "introCard": {
     "title": "Qui suis-je ?",
-    "subtitle": "Caen, FR",
+    "subtitle": "Caen, France",
     "actionText": "À propos de moi",
     "h": {
       "title": "À propos de moi",
@@ -32,6 +32,39 @@
     "actionText": "Voir les projets",
     "h": {
       "projects": [
+        {
+          "title": "Ce portfolio",
+          "content": "Ce que vous regardez actuellement !",
+          "technoIcons": [
+            {
+              "label": "TypeScript",
+              "link": "typescript"
+            },
+            {
+              "label": "React",
+              "link": "react"
+            },
+            {
+              "label": "Ant Design",
+              "link": "antd"
+            },
+            {
+              "label": "Emotion",
+              "link": "emotion"
+            },
+            {
+              "label": "i18next",
+              "link": "i18next"
+            }
+          ],
+          "codeLinks": [
+            {
+              "link": "https://github.com/MartinJeanne/portfolio",
+              "type": "code",
+              "label": "Voir le code"
+            }
+          ]
+        },
         {
           "title": "Bot discord DJ",
           "content": "Un bot discord qui peut de jouer de la musique dans les salons vocaux",
@@ -170,48 +203,7 @@
   },
   "skillsCard": {
     "title": "Compétences",
-    "actionText": "Voir plus",
-    "h": {
-      "importantSkills": [
-        {
-          "link": "java",
-          "label": "Java",
-          "percent": 90,
-          "strokeColor": "#eb2d2f"
-        },
-        {
-          "link": "typescript",
-          "label": "TypeScript",
-          "percent": 80,
-          "strokeColor": "#2596be"
-        },
-        {
-          "link": "cicd",
-          "label": "CI/CD",
-          "percent": 75,
-          "strokeColor": "#fcb028",
-          "width": "70px"
-        }
-      ],
-      "otherSkills": [
-        {
-          "link": "springboot",
-          "label": "Spring Boot"
-        },
-        {
-          "link": "react",
-          "label": "React"
-        },
-        {
-          "link": "docker",
-          "label": "Docker"
-        },
-        {
-          "link": "htmlcss",
-          "label": "HTML & CSS"
-        }
-      ]
-    }
+    "actionText": "Voir plus"
   },
   "educationCard": {
     "title": "Je suis diplômé du CESI",
@@ -237,11 +229,12 @@
     "title": "Mon job de rêve",
     "actionText": "Découvrez le",
     "h": {
-      "title": "Un poste de développeur avec",
-      "li1": "du challenge",
-      "li2": "un contrat CDI/CDD/VIE",
-      "li3": "Un poste de développeur avec",
-      "li4": "un équilibre vie pro/perso"
+      "title": "Le mieux, ça serait :",
+      "li1": "un poste de dev/DevOps",
+      "li2": "avec du challenge",
+      "li3": "un contrat CDI/CDD/VIE",
+      "li4": "une collaboration internationale",
+      "li5": "un équilibre vie pro/perso"
     }
   },
   "interestsCard": {

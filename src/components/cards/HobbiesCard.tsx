@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Carousel } from 'antd';
-import { Card } from "../../styles/StyledComponents";
+import { Card } from "@/styles/StyledComponents";
 import { useTranslation } from 'react-i18next';
-import { ImgLinkLabel } from '../../types/commonTypes';
+import { ImgLinkLabel } from '@/types/commonTypes';
 
 const titleStyle: React.CSSProperties = {
   width: '100%',

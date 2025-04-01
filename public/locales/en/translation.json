@@ -1,7 +1,7 @@
 {
   "introCard": {
     "title": "Who am I?",
-    "subtitle": "Caen, FR",
+    "subtitle": "Caen, France",
     "actionText": "About me",
     "h": {
       "title": "About me",
@@ -33,6 +33,39 @@
     "h": {
       "projects": [
         {
+          "title": "This portfolio",
+          "content": "The thing you're looking at!",
+          "technoIcons": [
+            {
+              "label": "TypeScript",
+              "link": "typescript"
+            },
+            {
+              "label": "React",
+              "link": "react"
+            },
+            {
+              "label": "Ant Design",
+              "link": "antd"
+            },
+            {
+              "label": "Emotion",
+              "link": "emotion"
+            },
+            {
+              "label": "i18next",
+              "link": "i18next"
+            }
+          ],
+          "codeLinks": [
+            {
+              "link": "https://github.com/MartinJeanne/portfolio",
+              "type": "code",
+              "label": "Go the code"
+            }
+          ]
+        },
+        {
           "title": "DJ Discord bot",
           "content": "A discord bot that can play music in voice rooms",
           "technoIcons": [
@@ -53,17 +86,17 @@
             {
               "link": "https://discord.com/oauth2/authorize?client_id=784536536459771925&permissions=8&scope=bot",
               "type": "project",
-              "label": "See the project"
+              "label": "Go to project"
             },
             {
               "link": "https://github.com/MartinJeanne/linkstart-bot",
               "type": "frontEnd",
-              "label": "See the front-end"
+              "label": "Go to front-end"
             },
             {
               "link": "https://github.com/MartinJeanne/linkstart-api",
               "type": "backEnd",
-              "label": "See the back-end"
+              "label": "Go to back-end"
             }
           ]
         },
@@ -92,18 +125,18 @@
             {
               "link": "https://l1nkstart.web.app/",
               "type": "project",
-              "label": "See the project"
+              "label": "Go to project"
             },
             {
               "link": "https://github.com/MartinJeanne/live-chat",
               "type": "code",
-              "label": "See the code"
+              "label": "Go to code"
             }
           ]
         },
         {
           "title": "Who's bigger",
-          "content": "A web application where the goal is to find the largest city among two towns in Normandy",
+          "content": "A web application where the goal is to find the largest city between two towns in Normandy",
           "technoIcons": [
             {
               "label": "TypeScript",
@@ -126,17 +159,17 @@
             {
               "link": "https://whosbigger.martinjeanne.com/",
               "type": "project",
-              "label": "See the project"
+              "label": "Go to project"
             },
             {
               "link": "https://github.com/MartinJeanne/whosbigger-front",
               "type": "frontEnd",
-              "label": "See the front-end"
+              "label": "Go to front-end"
             },
             {
               "link": "https://github.com/MartinJeanne/whosbigger-back",
               "type": "backEnd",
-              "label": "See the back-end"
+              "label": "Go to back-end"
             }
           ]
         }
@@ -170,7 +203,48 @@
   },
   "skillsCard": {
     "title": "Skills",
-    "actionText": "View more"
+    "actionText": "View more",
+    "h": {
+      "importantSkills": [
+        {
+          "link": "java",
+          "label": "Java",
+          "percent": 90,
+          "strokeColor": "#eb2d2f"
+        },
+        {
+          "link": "typescript",
+          "label": "TypeScript",
+          "percent": 80,
+          "strokeColor": "#2596be"
+        },
+        {
+          "link": "cicd",
+          "label": "CI/CD",
+          "percent": 75,
+          "strokeColor": "#fcb028",
+          "width": "70px"
+        }
+      ],
+      "otherSkills": [
+        {
+          "link": "springboot",
+          "label": "Spring Boot"
+        },
+        {
+          "link": "react",
+          "label": "React"
+        },
+        {
+          "link": "docker",
+          "label": "Docker"
+        },
+        {
+          "link": "htmlcss",
+          "label": "HTML & CSS"
+        }
+      ]
+    }
   },
   "educationCard": {
     "title": "I'm graduated from CESI",
@@ -196,11 +270,12 @@
     "title": "My Dream Job",
     "actionText": "Discover it",
     "h": {
-      "title": "A developer position with",
-      "li1": "challenges",
-      "li2": "a permanent/fixed-term/VIE contract",
-      "li3": "A developer position with",
-      "li4": "work-life balance"
+      "title": "The best would be:",
+      "li1": "a dev/DevOps position",
+      "li2": "with challenges",
+      "li3": "a permanent/fixed-term/VIE contract",
+      "li4": "international collaboration",
+      "li5": "a good work-life balance"
     }
   },
   "interestsCard": {
