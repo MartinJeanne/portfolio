@@ -270,11 +270,12 @@
     "title": "My Dream Job",
     "actionText": "Discover it",
     "h": {
-      "title": "A developer position with",
-      "li1": "challenges",
-      "li2": "a permanent/fixed-term/VIE contract",
-      "li3": "A developer position with",
-      "li4": "work-life balance"
+      "title": "The best would be:",
+      "li1": "a dev/DevOps position",
+      "li2": "with challenges",
+      "li3": "a permanent/fixed-term/VIE contract",
+      "li4": "international collaboration",
+      "li5": "a good work-life balance"
     }
   },
   "interestsCard": {

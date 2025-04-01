@@ -18,6 +18,7 @@ export const WhatImLookingForCard = () => {
             <li>{t('whatImLookingForCard.h.li2')}</li>
             <li>{t('whatImLookingForCard.h.li3')}</li>
             <li>{t('whatImLookingForCard.h.li4')}</li>
+            <li>{t('whatImLookingForCard.h.li5')}</li>
           </ul>
         </>
       }
