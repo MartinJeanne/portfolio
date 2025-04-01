@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 export const AppContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 8px;
 `;
 
 export const ContentP = styled.p`
-  fontSize: 1.1rem;
+  font-size: 1.1rem;
   color:rgb(102, 102, 102)
 `;
 
@@ -20,8 +20,8 @@ export const CardGrid = styled.div`
 `;
 
 export const Card = styled(motion.div)`
-  min-height: 360px;
-  max-height: 360px;
+  height: 360px;
+  min-width: 320px;
   background: white;
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
