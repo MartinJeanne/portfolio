@@ -2,9 +2,9 @@ import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 
 export const AppContainer = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 8px;
+  max-width: min(1200px, calc(100% - 2rem));
+  margin-inline: auto;
+  margin-block: 2rem;
 `;
 
 export const ContentP = styled.p`
@@ -14,14 +14,17 @@ export const ContentP = styled.p`
 
 export const CardGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
   margin-top: 20px;
+
+  @media (max-width: 330px) {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  }
 `;
 
 export const Card = styled(motion.div)`
   height: 360px;
-  min-width: 320px;
   background: white;
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
