@@ -1,4 +1,5 @@
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
+import ReactGA from "react-ga4";
 import { AppContainer, CardGrid } from './styles/StyledComponents';
 import { HeaderComponent } from './components/Header';
 import { HobbiesCard } from './components/cards/HobbiesCard';
@@ -13,15 +14,13 @@ import { Notification } from './components/Notification';
 import { EducationCard } from './components/cards/EducationCard';
 import { WhatImLookingForCard } from './components/cards/WhatImLookingForCard';
 import { InterestsCard } from './components/cards/InterestsCard';
-import ReactGA from "react-ga4";
 
 function App() {
-  ReactGA.initialize('G-3Z7WZFW4DY');
-  ReactGA.send({
-    hitType: 'pageview',
-    page: '/',
-    title: 'Home page',
-  });
+
+  useEffect(() => {
+    ReactGA.initialize("G-3Z7WZFW4DY");
+    ReactGA.send("pageview");
+  }, []);
 
   return (
     <Suspense>
