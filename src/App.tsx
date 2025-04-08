@@ -13,8 +13,16 @@ import { Notification } from './components/Notification';
 import { EducationCard } from './components/cards/EducationCard';
 import { WhatImLookingForCard } from './components/cards/WhatImLookingForCard';
 import { InterestsCard } from './components/cards/InterestsCard';
+import ReactGA from "react-ga4";
 
 function App() {
+  ReactGA.initialize('G-3Z7WZFW4DY');
+  ReactGA.send({
+    hitType: 'pageview',
+    page: '/',
+    title: 'Home page',
+  });
+
   return (
     <Suspense>
       <AppContainer>
