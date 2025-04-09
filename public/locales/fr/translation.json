@@ -271,5 +271,12 @@
   "notification": {
     "title": "Ça vous plait ?",
     "content": "N'hésitez-pas à m'envoyer un message !"
+  },
+  "contactCard": {
+    "title": "Me contacter",
+    "authorInput": "Votre nom",
+    "messageInput": "Votre message",
+    "submit": "Envoyer",
+    "submitted": "Message envoyé"
   }
 }

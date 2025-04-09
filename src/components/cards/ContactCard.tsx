@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Card } from "@/styles/StyledComponents";
 import styled from '@emotion/styled';
+import { useTranslation } from 'react-i18next';
 
 const Container = styled.div`
   padding: 20px;
@@ -59,6 +60,7 @@ const Button = styled.button`
 
 
 export const ContactCard = () => {
+  const { t } = useTranslation();
   const [author, setAuthor] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -87,7 +89,7 @@ export const ContactCard = () => {
     if (res.status === 403) { // todo should be '401'
       const newToken = await refreshToken();
       res = await sendMessage(newToken);
-    } 
+    }
 
     if (!res) throw new Error("HandleSubmit error");
     if (res.ok) {
@@ -132,25 +134,25 @@ export const ContactCard = () => {
   return (
     <Card>
       <Container>
-        <Title>Me contacter 📬</Title>
+        <Title>{t('contactCard.title')} 📬</Title>
         <Form onSubmit={handleSubmit}>
           <Input
             type="text"
-            placeholder={submitted ? "" : "Votre nom"}
+            placeholder={submitted ? "" : t('contactCard.authorInput')}
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
             required
             disabled={submitted}
           />
           <Textarea
-            placeholder={submitted ? "" : "Votre message"}
+            placeholder={submitted ? "" : t('contactCard.messageInput')}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
             disabled={submitted}
           />
           <Button type="submit" disabled={submitted}>
-            {submitted ? "Message envoyé ✅" : "Envoyer ✉️"}
+            {submitted ? t('contactCard.submitted') + " ✅" : t('contactCard.submit') + " ✉️"}
           </Button>
         </Form>
       </Container>

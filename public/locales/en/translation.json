@@ -312,5 +312,12 @@
   "notification": {
     "title": "Like what you see?",
     "content": "Send me a message!"
+  },
+  "contactCard": {
+    "title": "Contact me",
+    "authorInput": "Your name",
+    "messageInput": "Your message",
+    "submit": "Send",
+    "submitted": "Message sent"
   }
 }
