@@ -65,20 +65,68 @@ export const ContactCard = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    //todo auth
-    await fetch("http://localhost:8081/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ author, message }),
-    })
-      .then(data => console.log(data.json()))
-      .catch(console.error);
+
+    async function sendMessage(t: string) {
+      return await fetch("http://localhost:8081/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${t}`
+        },
+        body: JSON.stringify(body)
+      })
+        .catch(console.error);
+    }
+
+    const token = await getToken();
+    const body = { author, message };
+    let res = await sendMessage(token);
+
+
+    if (!res) throw new Error("HandleSubmit error");
+    if (res.status === 403) { // todo should be '401'
+      const newToken = await refreshToken();
+      res = await sendMessage(newToken);
+    } 
+
+    if (!res) throw new Error("HandleSubmit error");
+    if (res.ok) {
+      setSubmitted(true);
+    } else {
+      throw new Error("Erreur lors de l'envoi.");
+    }
 
     setAuthor("");
     setMessage("");
     setSubmitted(true);
+  };
+
+  async function getToken(): Promise<string> {
+    const token = localStorage.getItem("jwtToken");
+    return token || (await refreshToken());
+  };
+
+  async function refreshToken(): Promise<string> {
+    const res = await fetch("http://localhost:8081/api/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: "martin",
+        password: "martin",
+      }),
+    })
+      .catch(console.error);
+
+    if (!res || !res.ok) throw new Error("Login error");
+
+    const data = await res.json();
+    const newToken = data.token;
+
+    localStorage.setItem("jwtToken", newToken);
+    return newToken;
+
   };
 
   return (
