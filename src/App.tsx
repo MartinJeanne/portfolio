@@ -14,6 +14,7 @@ import { Notification } from './components/Notification';
 import { EducationCard } from './components/cards/EducationCard';
 import { WhatImLookingForCard } from './components/cards/WhatImLookingForCard';
 import { InterestsCard } from './components/cards/InterestsCard';
+import { ContactCard } from './components/cards/ContactCard';
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
           <LanguagesCard />
           <SpotifyCard />
           <SocialNetworksCard />
+          <ContactCard />
         </CardGrid>
       </AppContainer>
     </Suspense>
