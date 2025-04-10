@@ -72,7 +72,7 @@ export const ContactCard = ({ ref }: ContactCardProps) => {
     e.preventDefault();
 
     async function sendMessage(t: string) {
-      return await fetch("http://localhost:8081/api/contact", {
+      return await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -112,7 +112,7 @@ export const ContactCard = ({ ref }: ContactCardProps) => {
   };
 
   async function refreshToken(): Promise<string> {
-    const res = await fetch("http://localhost:8081/api/auth/login", {
+    const res = await fetch("/api/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
