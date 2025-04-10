@@ -1,4 +1,4 @@
-import { Suspense, useEffect } from 'react';
+import { Suspense, useEffect, useRef } from 'react';
 import ReactGA from "react-ga4";
 import { AppContainer, CardGrid } from './styles/StyledComponents';
 import { HeaderComponent } from './components/Header';
@@ -14,8 +14,20 @@ import { Notification } from './components/Notification';
 import { EducationCard } from './components/cards/EducationCard';
 import { WhatImLookingForCard } from './components/cards/WhatImLookingForCard';
 import { InterestsCard } from './components/cards/InterestsCard';
+import { ContactCard } from './components/cards/ContactCard';
 
 function App() {
+  const contactRef = useRef<HTMLDivElement>(null);
+
+  function scrollToContactCard() {
+    const cRef = contactRef.current;
+    if (!cRef) return;
+    cRef.scrollIntoView({
+      behavior: 'smooth',
+      block: 'end',
+      inline: 'center'
+    });
+  }
 
   useEffect(() => {
     ReactGA.initialize("G-3Z7WZFW4DY");
@@ -26,7 +38,7 @@ function App() {
     <Suspense>
       <AppContainer>
         <HeaderComponent />
-        <Notification />
+        <Notification scrollTo={scrollToContactCard} />
         <CardGrid>
           <IntroCard />
           <ExperiencesCard />
@@ -39,6 +51,7 @@ function App() {
           <LanguagesCard />
           <SpotifyCard />
           <SocialNetworksCard />
+          <ContactCard ref={contactRef} />
         </CardGrid>
       </AppContainer>
     </Suspense>

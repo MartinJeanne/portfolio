@@ -3,9 +3,13 @@ import { SmileOutlined } from '@ant-design/icons';
 import { notification } from 'antd';
 import { useTranslation } from 'react-i18next';
 
+interface NotificationCardProps {
+  scrollTo: () => void;
+}
+
 const Context = React.createContext({ name: 'Default' });
 
-export const Notification: React.FC = () => {
+export const Notification = ({ scrollTo }: NotificationCardProps) => {
   const { t } = useTranslation();
   const [api, contextHolder] = notification.useNotification();
 
@@ -17,18 +21,17 @@ export const Notification: React.FC = () => {
         description: (
           <div>
             {t('notification.content')}
-            <p style={{ color: 'blue', textDecoration: 'underline' }}>martinjeanne.dev@gmail.com</p>
           </div>
         ),
         placement: 'topRight',
         duration: null,
-        //onClick: () => window.location.href = 'mailto:martinjeanne.dev@gmail.com?subject=Prise de contact&body=Bonjour Martin',
-        //style: { cursor: 'pointer' },
+        onClick: () => scrollTo(),
+        style: { cursor: 'pointer' },
       });
     }, 10000);
 
     return () => clearTimeout(timer);
-  }, [api, t]);
+  }, [api, scrollTo, t]);
 
 
   const contextValue = useMemo(() => ({ name: 'Ant Design' }), []);

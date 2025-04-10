@@ -8,8 +8,11 @@ jobs:
   send-file-to-vps:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+    - uses: actions/checkout@v3
+    - name: Create .env file
+      run: |
+        echo "VITE_AUTH_USERNAME=${{ secrets.VITE_AUTH_USERNAME }}" > .env.prod
+        echo "VITE_AUTH_PASSWORD=${{ secrets.VITE_AUTH_PASSWORD }}" >> .env.prod
 
     - name: Set up Node.js
       uses: actions/setup-node@v4
