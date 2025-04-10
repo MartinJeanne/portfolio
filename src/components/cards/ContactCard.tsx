@@ -67,12 +67,13 @@ export const ContactCard = ({ ref }: ContactCardProps) => {
   const [author, setAuthor] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
-
+  const apiPrefix = import.meta.env.VITE_API_PREFIX ?? '';
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     async function sendMessage(t: string) {
-      return await fetch("/api/contact", {
+      return await fetch(`${apiPrefix}/api/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -112,7 +113,7 @@ export const ContactCard = ({ ref }: ContactCardProps) => {
   };
 
   async function refreshToken(): Promise<string> {
-    const res = await fetch("/api/auth/login", {
+    const res = await fetch(`${apiPrefix}/api/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -124,7 +125,8 @@ export const ContactCard = ({ ref }: ContactCardProps) => {
     })
       .catch(console.error);
 
-    if (!res || !res.ok) throw new Error("Login error");
+    if (!res) throw new Error("Login error");
+    else if (!res.ok) throw new Error(await res.text());
 
     const data = await res.json();
     const newToken = data.token;
