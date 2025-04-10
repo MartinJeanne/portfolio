@@ -8,6 +8,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
+  color: black;
 `;
 
 const Title = styled.h2`
@@ -89,13 +90,13 @@ export const ContactCard = ({ ref }: ContactCardProps) => {
     let res = await sendMessage(token);
 
 
-    if (!res) throw new Error("HandleSubmit error");
+    if (!res) throw new Error("HandleSubmit error: no response");
     if (res.status === 401) {
       const newToken = await refreshToken();
       res = await sendMessage(newToken);
     }
 
-    if (!res) throw new Error("HandleSubmit error");
+    if (!res) throw new Error("HandleSubmit error: no response");
     if (res.ok) {
       setSubmitted(true);
     } else {
@@ -125,7 +126,7 @@ export const ContactCard = ({ ref }: ContactCardProps) => {
     })
       .catch(console.error);
 
-    if (!res) throw new Error("Login error");
+    if (!res) throw new Error("Login error: no response");
     else if (!res.ok) throw new Error(await res.text());
 
     const data = await res.json();
@@ -146,6 +147,7 @@ export const ContactCard = ({ ref }: ContactCardProps) => {
             placeholder={submitted ? "" : t('contactCard.authorInput')}
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
+            maxLength={50}
             required
             disabled={submitted}
           />
@@ -153,6 +155,7 @@ export const ContactCard = ({ ref }: ContactCardProps) => {
             placeholder={submitted ? "" : t('contactCard.messageInput')}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
+            maxLength={1000}
             required
             disabled={submitted}
           />
