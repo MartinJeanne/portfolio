@@ -86,7 +86,7 @@ export const ContactCard = () => {
 
 
     if (!res) throw new Error("HandleSubmit error");
-    if (res.status === 403) { // todo should be '401'
+    if (res.status === 401) {
       const newToken = await refreshToken();
       res = await sendMessage(newToken);
     }
@@ -115,8 +115,8 @@ export const ContactCard = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        username: "martin",
-        password: "martin",
+        username: import.meta.env.VITE_AUTH_USERNAME,
+        password: import.meta.env.VITE_AUTH_PASSWORD,
       }),
     })
       .catch(console.error);

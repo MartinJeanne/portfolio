@@ -18,6 +18,8 @@ Install dependencies:
 npm i
 ```
 
+Rename ".env.example" in ".env.dev", and fill the necessary values in it.
+
 Run in dev mode:
 ```bash
 npm run dev
