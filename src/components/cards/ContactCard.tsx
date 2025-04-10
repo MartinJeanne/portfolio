@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { RefObject, useState } from "react";
 import { Card } from "@/styles/StyledComponents";
 import styled from '@emotion/styled';
 import { useTranslation } from 'react-i18next';
@@ -58,8 +58,11 @@ const Button = styled.button`
   }
 `;
 
+interface ContactCardProps {
+  ref: RefObject<HTMLDivElement | null>;
+}
 
-export const ContactCard = () => {
+export const ContactCard = ({ ref }: ContactCardProps) => {
   const { t } = useTranslation();
   const [author, setAuthor] = useState("");
   const [message, setMessage] = useState("");
@@ -132,7 +135,7 @@ export const ContactCard = () => {
   };
 
   return (
-    <Card>
+    <Card ref={ref}>
       <Container>
         <Title>{t('contactCard.title')} 📬</Title>
         <Form onSubmit={handleSubmit}>
