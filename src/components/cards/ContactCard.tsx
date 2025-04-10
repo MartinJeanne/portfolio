@@ -8,6 +8,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
+  color: black;
 `;
 
 const Title = styled.h2`
@@ -146,6 +147,7 @@ export const ContactCard = ({ ref }: ContactCardProps) => {
             placeholder={submitted ? "" : t('contactCard.authorInput')}
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
+            maxLength={50}
             required
             disabled={submitted}
           />
@@ -153,6 +155,7 @@ export const ContactCard = ({ ref }: ContactCardProps) => {
             placeholder={submitted ? "" : t('contactCard.messageInput')}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
+            maxLength={1000}
             required
             disabled={submitted}
           />
