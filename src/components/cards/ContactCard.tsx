@@ -89,13 +89,13 @@ export const ContactCard = ({ ref }: ContactCardProps) => {
     let res = await sendMessage(token);
 
 
-    if (!res) throw new Error("HandleSubmit error");
+    if (!res) throw new Error("HandleSubmit error: no response");
     if (res.status === 401) {
       const newToken = await refreshToken();
       res = await sendMessage(newToken);
     }
 
-    if (!res) throw new Error("HandleSubmit error");
+    if (!res) throw new Error("HandleSubmit error: no response");
     if (res.ok) {
       setSubmitted(true);
     } else {
