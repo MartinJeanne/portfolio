@@ -125,7 +125,7 @@ export const ContactCard = ({ ref }: ContactCardProps) => {
     })
       .catch(console.error);
 
-    if (!res) throw new Error("Login error");
+    if (!res) throw new Error("Login error: no response");
     else if (!res.ok) throw new Error(await res.text());
 
     const data = await res.json();
