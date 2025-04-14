@@ -91,12 +91,12 @@
             {
               "link": "https://github.com/MartinJeanne/linkstart-bot",
               "type": "frontEnd",
-              "label": "Voir le projet"
+              "label": "Voir le front-end"
             },
             {
               "link": "https://github.com/MartinJeanne/linkstart-api",
               "type": "backEnd",
-              "label": "Voir le projet"
+              "label": "Voir le back-end"
             }
           ]
         },
@@ -130,7 +130,7 @@
             {
               "link": "https://github.com/MartinJeanne/live-chat",
               "type": "code",
-              "label": "Voir le projet"
+              "label": "Voir le code"
             }
           ]
         },
@@ -164,12 +164,12 @@
             {
               "link": "https://github.com/MartinJeanne/whosbigger-front",
               "type": "frontEnd",
-              "label": "Voir le projet"
+              "label": "Voir le front-end"
             },
             {
               "link": "https://github.com/MartinJeanne/whosbigger-back",
               "type": "backEnd",
-              "label": "Voir le projet"
+              "label": "Voir le back-end"
             }
           ]
         }
